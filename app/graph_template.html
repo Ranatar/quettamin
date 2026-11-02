@@ -197,6 +197,7 @@ a.ext { color: var(--accent); font-size: 12.5px; }
 
 .node text { font-family: var(--f-form); font-size: 12.5px; fill: var(--ink); paint-order: stroke; stroke: var(--bg); stroke-width: 3px; stroke-linejoin: round; }
 .node text .lm { font-size: 11px; }
+.node text .wm { fill: var(--warn, #b4541a); font-family: var(--f-ui); font-size: 10.5px; }
 .node text .more { fill: var(--accent); font-family: var(--f-ui); font-size: 10.5px; }
 /* a link picked by a click: it and its two nodes stand out, the rest fade */
 .edge-hit { fill: none; stroke: transparent; stroke-width: 11px; cursor: pointer; pointer-events: stroke; }
@@ -215,9 +216,13 @@ g.edge-sel .node:not(.esel) { opacity: .28; }
 .node { cursor: pointer; }
 .node.sel .ring { stroke: var(--focus); }
 .node.dep { opacity: .55; }
+.node.oth { opacity: .55; }
+.node.oth .shape { stroke-dasharray: 2 2; }
+.node.nam { opacity: .7; }
+.node.nam .shape { stroke-dasharray: 4 2; }
 .node.pinned .shape { stroke-width: 2.6px; }
 .edge.via { opacity: .7; }
-.links button.dep { opacity: .7; }
+.links button.dep, .links button.oth, .links button.nam { opacity: .7; }
 .switches label { display: flex; align-items: flex-start; gap: 6px; font-size: 12.5px; cursor: pointer; margin-bottom: 4px; }
 .switches input { margin-top: 3px; }
 .switches .par-mode { flex-direction: column; align-items: stretch; gap: 4px; cursor: default; }
@@ -232,6 +237,7 @@ g.edge-sel .node:not(.esel) { opacity: .28; }
 .edge { fill: none; stroke-width: 1.5; }
 .edge.nm { opacity: .45; }
 .edge.sc { stroke-dasharray: 2 4; stroke-width: 1.1; opacity: .7; }
+.edge.st { stroke-dasharray: 7 3 1 3; opacity: .55; }     /* only by a reference Tolkien struck out */
 .legend .sc-toggle { align-items: flex-start; margin-top: 8px; color: var(--muted); }
 .legend .sc-toggle input { margin-top: 3px; }
 
@@ -298,6 +304,8 @@ g.edge-sel .node:not(.esel) { opacity: .28; }
       <div class="sec switches">
         <h3 data-i18n="legend.show">Показывать</h3>
         <label><input type="checkbox" id="show-dep"> <span data-i18n="filter.deprecated">заменённые слова (Eldamo не советует их для нео-эльдарина)</span></label>
+        <label><input type="checkbox" id="show-nam"> <span data-i18n="filter.names">имена (места, лица, народы)</span></label>
+        <label><input type="checkbox" id="show-oth"> <span data-i18n="filter.other">прочие слова с ⚠️ вне перечней (ранние, отвергнутые, вычеркнутые, без значения)</span></label>
         <label class="par-mode"><span data-i18n="par.label">Формы других концепций</span>
           <select id="par-mode">
             <option value="bands" data-i18n="par.bands">полосами: поздняя, средняя, ранняя</option>
@@ -496,6 +504,8 @@ const relOn = Object.fromEntries(G.rels.map(r => [r, true]));
 // < ✶-ndūr < √(N)DUR): hidden unless switched on, so the path through the form shows
 let showShortcuts = false;
 let showDeprecated = false;     // Eldamo's deprecated words
+let showOther = false;          // other words Eldamo marks ⚠️ and lists nowhere
+let showNames = false;          // names (places, persons, peoples)
 // forms of other conceptions: 'bands' -- one column with their word, the conceptions in horizontal
 // bands (late with neo, middle, early); 'stack' -- under their word, as on Eldamo's page; 'free'
 let parMode = 'bands';
@@ -511,7 +521,8 @@ const ORIGIN = new Set(['deriv', 'element', 'combine', 'see', 'deprecated', 'cog
 const PARALLEL = new Set(['combine', 'merged', 'filed']);
 const passes = i => {
   const n = G.nodes[i];
-  return langOn[n.l] !== false && (showDeprecated || n.x !== 'd');
+  return langOn[n.l] !== false && (showDeprecated || n.x !== 'd') && (showOther || n.x !== 'o' || !!n.iv)
+    && (showNames || n.x !== 'n' || !!n.iv);
 };
 
 // ---------------------------------------------------------------- state
@@ -570,6 +581,7 @@ function downstream(i, depth, cap) {
 
 function focus(i, keep) {
   if (i < 0) return;
+  unknownMsg = '';
   if (!keep) { visible.clear(); pos.clear(); owners.clear(); expanded.clear(); }
   setMode('graph');
   focusNode = i;
@@ -807,6 +819,7 @@ function dependents(d) {
 }
 // the end of a link on the node's edge, from the side it comes; a ring (selected, focus) is wider
 const radius = d => (d.i === selected || d.i === focusNode ? 15 : 9);
+let settled = true;             // the graph is at rest: the links get their smoothed routes
 function linkPath(d) {
   const s = d.source, tg = d.target;
   const dx = tg.x - s.x;
@@ -816,33 +829,155 @@ function linkPath(d) {
   }
   const dir = dx > 0 ? 1 : -1;
   const sx = s.x + dir * 8, tx = tg.x - dir * radius(tg);
-  // the plain S-curve, as long as it misses every node on its way; where it would cross a node (with
-  // its label), the curve is bent to pass that stretch of nodes level through the nearest gap, and the
-  // rest of it stays a smooth curve (monotone, so it never swings beyond its passing points)
+  // the plain S-curve, as long as it misses every node on its way. Where it would cross a stretch of
+  // nodes (with their labels), it is made to pass that stretch at the free height nearest its course:
+  // first through one point in the middle of the stretch, so it keeps its slope; if that still clips a
+  // box, level across the stretch. At its own ends (the column of the source or of the target) the link
+  // eases in the gap around the end's height instead of turning sharply just before the node. Between
+  // the points the curve is monotone, so it never swings beyond them
   const runs = runsBetween(s, tg, sx, tx, dir);
-  const pass = [];                       // [enter x, leave x, y] by the stretches it must go through
+  const plan = new Map();               // run -> {mode: 'point' | 'ease' | 'flat', y}
   let curve = plainCurve(sx, s.y, tx, tg.y);
-  for (let round = 0; round < 6 && runs.length; round++) {
-    const k = runs.findIndex(run => !run.used && crosses(curve.pts, run));
-    if (k < 0) break;
-    const run = runs[k];
-    run.used = true;
+  for (let round = 0; round < 10 && runs.length; round++) {
+    // the first stretch the curve still clips that can be passed more carefully
+    const run = runs.find(r => !(plan.get(r) && plan.get(r).mode === 'flat') && crosses(curve.pts, r));
+    if (!run) break;
     const enter = dir > 0 ? Math.max(sx, run.l) : Math.min(sx, run.r);
     const leave = dir > 0 ? Math.min(tx, run.r) : Math.max(tx, run.l);
-    // at an end the link stays at that end's height; elsewhere where the curve stood
-    const want = leave === tx ? tg.y : enter === sx ? s.y : yAt(curve.pts, (enter + leave) / 2);
-    pass.push([enter, leave, freeY(run.boxes, want)]);
-    pass.sort((a, b) => dir * (a[0] - b[0]));
-    const knots = [[sx, s.y]];
-    for (const [a, b, y] of pass) {
-      if (Math.abs(a - knots[knots.length - 1][0]) > 0.5) knots.push([a, y]);
-      else knots[knots.length - 1][1] = y;
-      if (Math.abs(b - a) > 0.5) knots.push([b, y]);
+    const atEnd = leave === tx, atStart = enter === sx;
+    const p = plan.get(run);
+    if (!p) {
+      if (atEnd || atStart) {
+        // ease within the gap around the end's height, coming from where the curve stands
+        const endY = atEnd ? tg.y : s.y;
+        const [gt, gb] = gapAround(run.boxes, endY);
+        const from = yAt(curve.pts, atEnd ? enter : leave);
+        plan.set(run, { mode: 'ease', y: Math.max(gt + 2, Math.min(gb - 2, from)), enter, leave, atEnd });
+      } else {
+        const want = yAt(curve.pts, (enter + leave) / 2);
+        plan.set(run, { mode: 'point', y: freeY(run.boxes, want), enter, leave });
+      }
+    } else {
+      p.mode = 'flat';
+      if (p.atEnd !== undefined) p.y = p.atEnd ? tg.y : s.y;
     }
-    if (Math.abs(tx - knots[knots.length - 1][0]) > 0.5) knots.push([tx, tg.y]); else knots[knots.length - 1][1] = tg.y;
-    curve = monotoneCurve(knots);
+    curve = monotoneCurve(knotsOf(sx, s.y, tx, tg.y, runs, plan));
+  }
+  // (the smoothing is left for when the graph settles: while nodes move it would be redone every frame)
+  if (!plan.size || !settled) return curve.d;
+  // the planned curve is clear of the boxes but bends only between stretches, sharply where they stand
+  // close. The smoothest way along the same side of every box: the taut string through the corridor
+  // the boxes leave (it touches only the corners it must go round), drawn as a monotone curve through
+  // those corners; kept when it clears every box too
+  for (const m of [3, 6]) {
+    const smooth = corridorCurve(s, tg, sx, tx, dir, curve.pts, runs, m);
+    if (smooth && !runs.some(r => crosses(smooth.pts, r))) return smooth.d;
   }
   return curve.d;
+}
+// The taut string from (sx, s.y) to (tx, tg.y) between the boxes, each kept on the side of the guide
+// curve it is on, with a margin m; as a monotone curve through its corners. Null when there is no room
+function corridorCurve(s, tg, sx, tx, dir, guide, runs, m) {
+  const U = x => dir * x;                          // along the link
+  const u0 = U(sx), u1 = U(tx);
+  const bs = [];
+  for (const run of runs) for (const b of run.boxes) {
+    const a = Math.max(u0, Math.min(U(b.l), U(b.r))), z = Math.min(u1, Math.max(U(b.l), U(b.r)));
+    if (z <= a) continue;
+    const gy = yAt(guide, dir * ((a + z) / 2));
+    bs.push({ a, z, above: (b.t + b.b) / 2 < gy, t: b.t - m, b: b.b + m });
+  }
+  const cuts = [...new Set(bs.flatMap(b => [b.a, b.z]).filter(u => u > u0 && u < u1))].sort((p, q) => p - q);
+  const edges = [u0, ...cuts, u1];
+  const band = [];                                 // per interval: [lowest y, highest y] allowed
+  for (let k = 0; k + 1 < edges.length; k++) {
+    const mid = (edges[k] + edges[k + 1]) / 2;
+    let lo = -Infinity, hi = Infinity;
+    for (const b of bs) {
+      if (b.a > mid || b.z < mid) continue;
+      if (b.above) lo = Math.max(lo, b.b); else hi = Math.min(hi, b.t);
+    }
+    if (lo > hi) return null;
+    band.push([lo, hi]);
+  }
+  const portals = [];
+  for (let k = 1; k + 1 < edges.length; k++) {
+    const lo = Math.max(band[k - 1][0], band[k][0]), hi = Math.min(band[k - 1][1], band[k][1]);
+    if (lo > hi) return null;
+    if (lo === -Infinity && hi === Infinity) continue;
+    // which side of the cut the box that sets each bound stands on: 'L' (it ends here), 'R' (it begins)
+    const side = (v, l, r) => (v === l && v === r ? 'B' : v === l ? 'L' : 'R');
+    portals.push({ u: edges[k], lo, hi, sideLo: side(lo, band[k - 1][0], band[k][0]), sideHi: side(hi, band[k - 1][1], band[k][1]) });
+  }
+  if (s.y < band[0][0] || s.y > band[0][1] || tg.y < band[band.length - 1][0] || tg.y > band[band.length - 1][1]) return null;
+  portals.push({ u: u1, lo: tg.y, hi: tg.y });
+  // the funnel: from the apex, the tightest slopes to the upper and lower bounds; where they cross,
+  // the string bends at the corner that caused it
+  const path = [];
+  let ax = u0, ay = s.y, start = 0;
+  for (let guard = 0; guard < 200; guard++) {
+    let up = Infinity, low = -Infinity, upAt = -1, lowAt = -1, bent = false;
+    for (let k = start; k < portals.length; k++) {
+      const p = portals[k], dx = p.u - ax;
+      if (dx < 1e-6) continue;
+      const su = (p.hi - ay) / dx, sl = (p.lo - ay) / dx;
+      if (su < low) { const q = portals[lowAt]; path.push([q.u, q.lo, q.sideLo]); ax = q.u; ay = q.lo; start = lowAt + 1; bent = true; break; }
+      if (sl > up) { const q = portals[upAt]; path.push([q.u, q.hi, q.sideHi]); ax = q.u; ay = q.hi; start = upAt + 1; bent = true; break; }
+      if (su < up) { up = su; upAt = k; }
+      if (sl > low) { low = sl; lowAt = k; }
+    }
+    if (!bent) break;
+  }
+  // a corner is passed along the side of the box: the slope there is that of the string on the box's
+  // side (before the corner for a box that ends there, after it for one that begins), so the curve
+  // turns only once clear of the box
+  const ks = [[u0, s.y, 'E'], ...path.filter(([u]) => u > u0 + 0.5 && u < u1 - 0.5), [u1, tg.y, 'E']];
+  const sec = k => (ks[k + 1][1] - ks[k][1]) / (ks[k + 1][0] - ks[k][0]);
+  const slopes = ks.map(([, , side], k) => (side === 'L' ? sec(k - 1) : side === 'R' ? sec(k) : 0));
+  return hermiteCurve(ks.map(([u, y]) => [u, y]), slopes, dir);
+}
+// a curve through the knots (in the link's own direction u = dir * x) with the given slopes dy/du
+function hermiteCurve(knots, slopes, dir) {
+  let d = `M${dir * knots[0][0]},${knots[0][1]}`;
+  const pts = [[dir * knots[0][0], knots[0][1]]];
+  for (let k = 0; k + 1 < knots.length; k++) {
+    const [u0, y0] = knots[k], [u1, y1] = knots[k + 1], h = u1 - u0;
+    const c1 = [u0 + h / 3, y0 + slopes[k] * h / 3], c2 = [u1 - h / 3, y1 - slopes[k + 1] * h / 3];
+    d += `C${dir * c1[0]},${c1[1]} ${dir * c2[0]},${c2[1]} ${dir * u1},${y1}`;
+    for (let q = 1; q <= 10; q++) {
+      const t = q / 10, w = 1 - t;
+      pts.push([dir * (w * w * w * u0 + 3 * w * w * t * c1[0] + 3 * w * t * t * c2[0] + t * t * t * u1),
+        w * w * w * y0 + 3 * w * w * t * c1[1] + 3 * w * t * t * c2[1] + t * t * t * y1]);
+    }
+  }
+  return { d, pts };
+}
+// the knots of a planned link, in its direction
+function knotsOf(sx, sy, tx, ty, runs, plan) {
+  const knots = [[sx, sy]];
+  const put = (x, y) => {
+    const last = knots[knots.length - 1];
+    if (Math.abs(x - last[0]) > 0.5) knots.push([x, y]); else last[1] = y;
+  };
+  for (const run of runs) {
+    const p = plan.get(run);
+    if (!p) continue;
+    if (p.mode === 'point') put((p.enter + p.leave) / 2, p.y);
+    else if (p.mode === 'ease') { if (p.atEnd) put(p.enter, p.y); else { put(p.enter, sy); put(p.leave, p.y); } }
+    else { put(p.enter, p.y); put(p.leave, p.y); }
+  }
+  put(tx, ty);
+  return knots;
+}
+// the free gap (between the boxes of a stretch) that holds the height y
+function gapAround(bs, y) {
+  let top = -Infinity, bottom = Infinity;
+  for (const b of bs) {
+    if (b.b <= y && b.b > top) top = b.b;
+    if (b.t >= y && b.t < bottom) bottom = b.t;
+    if (b.t < y && b.b > y) return [y, y];          // y itself is covered: no room to ease
+  }
+  return [top, bottom];
 }
 // the S-curve of a link between two points: level at both ends
 function plainCurve(x0, y0, x1, y1) {
@@ -888,15 +1023,20 @@ function yAt(pts, x) {
     const [x0, y0] = pts[k], [x1, y1] = pts[k + 1];
     if ((x - x0) * (x - x1) <= 0) return x1 === x0 ? y0 : y0 + (y1 - y0) * (x - x0) / (x1 - x0);
   }
-  return pts[pts.length - 1][1];
+  // beyond the curve: the height of its nearer end
+  const first = pts[0], last = pts[pts.length - 1];
+  return Math.abs(x - first[0]) < Math.abs(x - last[0]) ? first[1] : last[1];
 }
 // does the sampled curve pass through a box of the stretch
 function crosses(pts, run) {
+  const xa = Math.min(pts[0][0], pts[pts.length - 1][0]), xb = Math.max(pts[0][0], pts[pts.length - 1][0]);
   for (const b of run.boxes) {
+    const l = Math.max(b.l, xa), r = Math.min(b.r, xb);    // only where the curve is
+    if (r <= l) continue;
     let lo = Infinity, hi = -Infinity;
     const take = y => { if (y < lo) lo = y; if (y > hi) hi = y; };
-    take(yAt(pts, b.l)); take(yAt(pts, b.r));
-    for (const [x, y] of pts) if (x > b.l && x < b.r) take(y);
+    take(yAt(pts, l)); take(yAt(pts, r));
+    for (const [x, y] of pts) if (x > l && x < r) take(y);
     if (lo < b.b && hi > b.t) return true;
   }
   return false;
@@ -913,10 +1053,12 @@ function runsBetween(s, tg, sx, tx, dir) {
   const runs = [];
   for (const bx of boxes) {
     if (bx.l >= hi) break;
-    if (bx.r <= lo || bx.d === s || bx.d === tg) continue;
+    if (bx.r <= lo) continue;
+    // the two ends: only their labels are in the way (the link runs from and into the circles)
+    const own = bx.d === s || bx.d === tg ? { d: bx.d, l: bx.l, r: bx.r, t: bx.t, b: bx.d.y - 6 } : bx;
     const last = runs[runs.length - 1];
-    if (last && bx.l <= last.r + 6) { last.r = Math.max(last.r, bx.r); last.boxes.push(bx); }
-    else runs.push({ l: bx.l, r: bx.r, boxes: [bx] });
+    if (last && own.l <= last.r + 6) { last.r = Math.max(last.r, own.r); last.boxes.push(own); }
+    else runs.push({ l: own.l, r: own.r, boxes: [own] });
   }
   if (dir < 0) runs.reverse();
   return runs;
@@ -1074,6 +1216,22 @@ function layout(data, links) {
   for (const k of keys) place(k, true, parents);                 // left to right, by parents
   for (const k of [...keys].reverse()) place(k, false, children); // right to left, by children
   for (const k of keys) place(k, colOrder !== 'branch' && colOrder !== 'alpha', parents);  // by parents again
+  // room to bend: a gap between two columns grows with the steepest drop a link makes across it (a
+  // link over several gaps shares its drop among them), so that links keep a gentle slope instead of
+  // diving between narrow columns and turning sharply at their ends
+  const ranksUsed = data.map(d => d.rank);
+  const top = Math.max(0, ...ranksUsed);
+  const need = new Array(top + 1).fill(0);
+  for (const l of links) {
+    const a = l.source, z = l.target;
+    if (!a || !z || l.inGroup || a.anchor || z.anchor || a.rank === z.rank) continue;
+    const r0 = Math.min(a.rank, z.rank), r1 = Math.max(a.rank, z.rank);
+    const drop = Math.abs(z.ty - a.ty) / (r1 - r0);
+    for (let r = r0; r < r1; r++) need[r] = Math.max(need[r], drop);
+  }
+  const colX = [0];
+  for (let r = 0; r < top; r++) colX.push(colX[r] + COL + Math.min(COL * 1.3, Math.max(0, need[r] * 0.6 - COL * 0.45)));
+  for (const d of data) if (!d.anchor) d.tx = colX[d.rank];
   for (const d of data) {
     if (!d.anchor) continue;
     d.tx = d.anchor.tx; d.ty = d.anchor.ty + d.stack * STACK; d.band = d.anchor.band;
@@ -1083,7 +1241,9 @@ function layout(data, links) {
 
 let fitPending = false;
 let lastCounts = null;
+let unknownMsg = '';            // an address with a page not on the graph, until another node is focused
 function showNote() {
+  if (unknownMsg && mode === 'graph') { $('note').textContent = unknownMsg; return; }
   if (mode === 'roots') $('note').textContent = t('ov.note', { r: ovCounts.roots, p: ovCounts.proto, w: ovCounts.words });
   else if (lastCounts) $('note').textContent = t('note.onScreen', { nodes: lastCounts[0], edges: lastCounts[1] });
 }
@@ -1123,6 +1283,7 @@ function render(refit) {
     .attr('stroke-width', d => d.rel === 'element' && !d.via ? 2 : 1.5)
     .classed('nm', d => !!(d.x && d.x.nm))
     .classed('sc', d => !!(d.x && d.x.sc))
+    .classed('st', d => !!(d.x && d.x.st))
     .classed('via', d => !!d.via)
     .attr('marker-end', d => `url(#arrow-${d.rel})`);
   const hits = gHits.selectAll('path').data(links, d => d.k).join(
@@ -1137,6 +1298,7 @@ function render(refit) {
     if (d.via) tip += '\n' + t('edge.via');
     if (d.x && d.x.nm) tip += '\n' + t('edge.nm');
     if (d.x && d.x.sc) tip += '\n' + t('edge.sc');
+    if (d.x && d.x.st) tip += '\n' + t('edge.st');
     for (const [src, chain] of (d.x && d.x.w) || []) tip += '\n' + t('card.written', { src, chain: chain.join(' > ') });
     return tip;
   }
@@ -1153,7 +1315,7 @@ function render(refit) {
         // a node is dragged with what hangs on it alone (its derivatives without another parent on
         // the graph); with Shift alone. What is moved stays where it is put; "Re-layout" frees it
         .on('start', (ev, d) => {
-          if (!ev.active && sim) sim.alphaTarget(0.1).restart();
+          if (!ev.active && sim) { settled = false; sim.alphaTarget(0.1).restart(); }
           d._group = ev.sourceEvent && ev.sourceEvent.shiftKey ? [d] : dependents(d);
           for (const m of d._group) { m._dx = m.x - d.x; m._dy = m.y - d.y; m.fx = m.x; m.fy = m.y; }
         })
@@ -1163,6 +1325,8 @@ function render(refit) {
   });
   ns.classed('sel', d => d.i === selected)
     .classed('dep', d => G.nodes[d.i].x === 'd')
+    .classed('oth', d => G.nodes[d.i].x === 'o')
+    .classed('nam', d => G.nodes[d.i].x === 'n')
     .classed('pinned', d => d.fx != null);
   ns.select('.shape').attr('d', d => shapePath(d.i))
     .attr('fill', d => shapeFill(d.i)).attr('stroke', d => nodeColor(d.i))
@@ -1176,6 +1340,7 @@ function render(refit) {
     label.selectAll('*').remove();
     const hin = hiddenIn(d.i), hout = hiddenOut(d.i);
     if (hin) label.append('tspan').attr('class', 'more').text('+' + hin + '  ');
+    if (warnMark(d.i)) label.append('tspan').attr('class', 'wm').text('⚠ ');
     label.append('tspan').attr('class', 'lm').style('fill', langColor(n.l, isR)).text(codeMarker(n.l, isR));
     if (al) label.append('tspan').attr('class', 'lm').style('fill', langColor(al, isR)).text('[' + codeMarker(al, isR) + ']');
     label.append('tspan').attr('font-style', isR ? 'normal' : 'italic')
@@ -1188,6 +1353,8 @@ function render(refit) {
   ns.select('title').text(d => {
     const hin = hiddenIn(d.i), hout = hiddenOut(d.i);
     let tip = `${marker(d.i)} ${shown(d.i)}${G.nodes[d.i].g ? ' “' + G.nodes[d.i].g + '”' : ''}`;
+    const ws = wordWarnings(d.i);
+    if (ws.length) tip += '\n⚠ ' + ws.join(', ');
     if (hin) tip += '\n' + t('hidden.in', { n: hin });
     if (hout) tip += '\n' + t('hidden.out', { n: hout });
     return tip;
@@ -1204,8 +1371,13 @@ function render(refit) {
     .velocityDecay(0.45)
     .on('tick', draw);
   fitPending = refit;
-  if (reduced) { sim.stop(); for (let k = 0; k < 300; k++) sim.tick(); draw(); fitView(false); fitPending = false; }
-  else sim.alpha(refit ? 1 : 0.4).restart().on('end', () => { if (fitPending) { fitView(true); fitPending = false; } });
+  settled = false;
+  if (reduced) { sim.stop(); for (let k = 0; k < 300; k++) sim.tick(); settled = true; draw(); fitView(false); fitPending = false; }
+  else sim.alpha(refit ? 1 : 0.4).restart().on('end', () => {
+    settled = true;
+    draw();
+    if (fitPending) { fitView(true); fitPending = false; }
+  });
   if (refit && !reduced) setTimeout(() => { if (fitPending) { fitView(true); fitPending = false; } }, 1100);
 
   // the bands behind the graph
@@ -1235,6 +1407,19 @@ function render(refit) {
   markEdge();
 }
 
+// Eldamo's ⚠️ on a word (vocabulary and deprecation pages): deprecated, deleted, rejected,
+// doubtful, unglossed, early. The label shows ⚠ for all but an early form alone (its band and
+// marker say that already); the card names them
+const isDeprecated = i => G.nodes[i].x === 'd' || (G.nodes[i].wn || []).includes(G.warn.indexOf('deprecated'));
+function warnMark(i) {
+  const n = G.nodes[i];
+  return n.k !== 'root' && (n.x === 'o' || (n.wn || []).some(w => G.warn[w] !== 'early'));
+}
+function wordWarnings(i, skipDeprecated) {
+  const n = G.nodes[i];
+  if (n.k === 'root') return [];
+  return (n.wn || []).map(w => G.warn[w]).filter(w => !(skipDeprecated && w === 'deprecated')).map(w => t('warnw.' + w));
+}
 function shapePath(i) {
   const n = G.nodes[i];
   if (n.k === 'root') return d3.symbol(d3.symbolDiamond, 150)();
@@ -1271,7 +1456,7 @@ $('relayout').addEventListener('click', () => { for (const i of visible) pos.del
 function nodeButton(i) {
   const n = G.nodes[i];
   const cls = n.k === 'root' ? 'fm root-fm' : 'fm';
-  return `<button type="button" data-node="${i}"${n.x === 'd' ? ' class="dep"' : ''}>${markerHtml(i)}${n.k === 'root' ? '' : ' '}<span class="${cls}">${esc(shown(i))}</span></button>`
+  return `<button type="button" data-node="${i}"${n.x === 'd' ? ' class="dep"' : n.x === 'o' ? ' class="oth"' : n.x === 'n' ? ' class="nam"' : ''}>${markerHtml(i)}${n.k === 'root' ? '' : ' '}<span class="${cls}">${esc(shown(i))}</span></button>`
     + (n.g ? ` <span class="gl">“${esc(n.g)}”</span>` : '');
 }
 function relTag(rel) {
@@ -1294,6 +1479,7 @@ function selectEdge(d) {
   if (d.via) flags.push(`<span class="tag">${esc(t('edge.via'))}</span>`);
   if (x.nm) flags.push(`<span class="tag warn">${esc(t('tag.nm'))}</span>`);
   if (x.sc) flags.push(`<span class="tag" title="${esc(t('tag.direct.title'))}">${esc(t('tag.direct'))}</span>`);
+  if (x.st) flags.push(`<span class="tag warn" title="${esc(t('edge.st'))}">${esc(t('tag.struck'))}</span>`);
   $('card').innerHTML = `<div class="card-head edge-card">
       <div class="meta">${esc(t('card.edge'))}</div>
       <div class="big">${relTag(d.rel)}</div>
@@ -1320,17 +1506,23 @@ function select(i) {
   const n = G.nodes[i];
   const id = G.ids[i];
   const lang = langName(n.l);
-  const kind = t(n.k === 'root' ? 'kind.root' : n.k === 'protoform' ? 'kind.protoform' : n.k === 'form' ? 'kind.form'
+  const kind = t(n.k === 'root' ? 'kind.root' : n.x === 'n' ? 'kind.name' : n.x === 'o' ? (PRIM.has(n.l) ? 'kind.primitiveWord' : 'kind.word')
+    : n.k === 'protoform' ? 'kind.protoform' : n.k === 'form' ? 'kind.form'
     : (n.l === 'p' || n.l === 'mp' || n.l === 'np') ? 'kind.primitiveWord' : 'kind.word');
   const tags = [];
-  if (n.x === 'd') tags.push(`<span class="tag warn" title="${esc(t('tag.deprecatedWord.title'))}">⚠ ${esc(t('tag.deprecatedWord'))}</span>`);
+  if (isDeprecated(i)) tags.push(n.ins && n.ins.length
+    ? `<span class="tag warn" title="${esc(t('tag.deprecatedWord.title'))}">⚠ ${esc(t('tag.deprecatedWord'))}</span>`
+    : `<span class="tag warn" title="${esc(t('tag.deprecatedNone.title'))}">⚠ ${esc(t('tag.deprecatedNone'))}</span>`);
+  if (n.k !== 'root') for (const w of wordWarnings(i, true)) tags.push(`<span class="tag warn">⚠ ${esc(w)}</span>`);
   if (n.x === 'm') tags.push(`<span class="tag" title="${esc(t('tag.mergedForm.title'))}">${esc(t('tag.mergedForm'))}</span>`);
+  if (n.x === 'o') tags.push(`<span class="tag warn" title="${esc(t('tag.outside.title'))}">⚠ ${esc(t('tag.outside'))}</span>`);
+  if (n.x === 'n') tags.push(`<span class="tag" title="${esc(t('tag.name.title'))}">${esc(t('tag.name'))}</span>`);
   if (n.grp && !n.x) tags.push(`<span class="tag">${esc(t('group.' + n.grp))}</span>`);
   if (n.s) tags.push(`<span class="tag">${esc(speech(n.s))}</span>`);
-  if (n.k === 'word') tags.push(n.r ? `<span class="tag">${esc(t('tag.roots', { rule: has('rule.' + n.r) ? t('rule.' + n.r) : n.r }))}</span>` : `<span class="tag warn">${esc(t('tag.noRoot'))}</span>`);
+  if (n.k === 'word' || n.x === 'o' || n.x === 'n') tags.push(n.r ? `<span class="tag">${esc(t('tag.roots', { rule: has('rule.' + n.r) ? t('rule.' + n.r) : n.r }))}</span>` : `<span class="tag warn">${esc(t('tag.noRoot'))}</span>`);
   if (n.u) tags.push(`<span class="tag warn" title="${esc(t('tag.indirect.title'))}">${esc(t('tag.indirect'))}</span>`);
   if (n.k === 'root' && n.rec === 1) tags.push(`<span class="tag ok">${esc(t('tag.recommended'))}</span>`);
-  for (const w of n.wn || []) tags.push(`<span class="tag warn">⚠ ${esc(t('warn.' + G.warn[w]))}</span>`);
+  if (n.k === 'root') for (const w of n.wn || []) tags.push(`<span class="tag warn">⚠ ${esc(t('warn.' + G.warn[w]))}</span>`);
   if (n.nl) tags.push(`<span class="tag" title="${esc(t('tag.notListed.title'))}">${esc(t('tag.notListed'))}</span>`);
   if (n.dc) tags.push(`<span class="tag">${esc(t('tag.derivatives', { n: n.dc }))}</span>`);
   if (n.ds) tags.push(`<span class="tag">${esc(t('tag.noRootDerivatives', { n: n.ds }))}</span>`);
@@ -1364,7 +1556,7 @@ function select(i) {
       const rel = relName(e[2]);
       const x = e[3] || {};
       const written = (x.w || []).map(([src, chain]) => `<span class="written">${esc(t('card.written', { src, chain: chain.join(' > ') }))}</span>`).join('');
-      return `<li>${relTag(rel)} ${nodeButton(e[0])}${x.nm ? ` <span class="tag warn">${esc(t('tag.nm'))}</span>` : ''}${x.sc ? ` <span class="tag" title="${esc(t('tag.direct.title'))}">${esc(t('tag.direct'))}</span>` : ''}${written}</li>`;
+      return `<li>${relTag(rel)} ${nodeButton(e[0])}${x.nm ? ` <span class="tag warn">${esc(t('tag.nm'))}</span>` : ''}${x.sc ? ` <span class="tag" title="${esc(t('tag.direct.title'))}">${esc(t('tag.direct'))}</span>` : ''}${x.st ? ` <span class="tag warn" title="${esc(t('edge.st'))}">${esc(t('tag.struck'))}</span>` : ''}${written}</li>`;
     }).join('')}</ul></div>`;
   }
   if (replaces.length) {
@@ -1422,6 +1614,8 @@ function search() {
     const n = G.nodes[i];
     if (scope === 'root' ? n.k !== 'root' : scope ? n.grp !== scope : !(n.grp || n.k === 'root')) continue;
     if (n.x === 'd' && !showDeprecated) continue;          // deprecated words with their switch on
+    if (n.x === 'o' && !showOther && !n.iv) continue;
+    if (n.x === 'n' && !showNames && !n.iv) continue;
     const [f, sp, g] = K[i];
     let s = -1;
     if (q && (f === q || sp === q)) s = 0;
@@ -1435,7 +1629,8 @@ function search() {
   hits.sort((a, b) => a[0] - b[0] || a[1] - b[1] || a[2] - b[2]);
   box.innerHTML = hits.slice(0, 40).map(([, , , i]) => {
     const n = G.nodes[i];
-    const tag = n.x === 'd' ? ` <span class="tag warn">⚠ ${esc(t('tag.deprecatedWord'))}</span>` : n.x === 'm' ? ` <span class="tag">${esc(t('tag.mergedForm'))}</span>` : '';
+    const tag = n.x === 'd' ? ` <span class="tag warn">⚠ ${esc(t('tag.deprecatedWord'))}</span>` : n.x === 'm' ? ` <span class="tag">${esc(t('tag.mergedForm'))}</span>`
+      : n.x === 'o' ? ` <span class="tag warn">⚠ ${esc(t('tag.outside'))}</span>` : n.x === 'n' ? ` <span class="tag">${esc(t('tag.name'))}</span>` : '';
     return `<button type="button" data-hit="${i}">${markerHtml(i)}${n.k === 'root' ? '' : ' '}<span class="${n.k === 'root' ? 'fm root-fm' : 'fm'}">${esc(shown(i))}</span>`
       + `${n.g ? ` <span class="gl">“${esc(n.g)}”</span>` : ''}${tag}</button>`;
   }).join('') || `<div class="none">${esc(t('search.none'))}</div>`;
@@ -1473,6 +1668,8 @@ function ovCategory(i) {
   if (n.k === 'root') return ('rec' in n) && !n.nl ? 'roots' : null;
   if (!n.nr || n.x === 'm') return null;                 // a merged form stands with its word
   if (n.x === 'd' && !showDeprecated) return null;
+  if (n.x === 'o' && !showOther && !n.iv) return null;
+  if (n.x === 'n' && !showNames && !n.iv) return null;
   return PRIM.has(n.l) ? 'proto' : 'words';
 }
 function ovFill(i) {
@@ -1762,6 +1959,7 @@ async function exportAs(kind) {
       edges: currentLinks.map(l => Object.assign({ from: G.ids[l.a], to: G.ids[l.b], rel: l.rel },
         l.via ? { through_hidden: true } : {}, l.x && l.x.nm ? { not_matched: true } : {},
         l.x && l.x.sc ? { shortcut: true } : {},
+        l.x && l.x.st ? { struck: true } : {},
         l.x && l.x.w ? { written: l.x.w.map(([src, chain]) => ({ source: src, chain })) } : {})),
     };
     await saveFile(fileStem() + '.json', JSON.stringify(out, null, 1));
@@ -1805,6 +2003,8 @@ function legend() {
     [t('legend.n.rootWarn'), d3.symbol(d3.symbolDiamond, 150)(), css('--bg'), css('--n-root'), '2 2'],
     [t('legend.n.merged'), d3.symbol(d3.symbolCircle, 120)(), css('--bg'), css('--n-nq'), null],
     [t('legend.n.dep'), d3.symbol(d3.symbolCircle, 120)(), css('--n-nq'), css('--n-nq'), null, 0.45],
+    [t('legend.n.other'), d3.symbol(d3.symbolCircle, 120)(), css('--n-form'), css('--n-form'), '2 2', 0.55],
+    [t('legend.n.name'), d3.symbol(d3.symbolCircle, 120)(), css('--n-nq'), css('--n-nq'), '4 2', 0.7],
   ];
   $('legend-nodes').innerHTML = nodeItems.map(([label, d, fill, stroke, dash, op]) =>
     `<label><svg width="16" height="16" viewBox="-8 -8 16 16" aria-hidden="true"><path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="1.6"${dash ? ` stroke-dasharray="${dash}"` : ''}${op ? ` opacity="${op}"` : ''}/></svg>${esc(label)}</label>`).join('');
@@ -1841,7 +2041,20 @@ $('legend-langs').addEventListener('change', ev => {
   legendLangs();
   refilter();
 });
-$('show-dep').addEventListener('change', ev => { showDeprecated = ev.target.checked; refilter(); });
+// a kind of words switched on also joins the focus's own neighbourhood (its tree and derivatives), as if
+// it had been on when the node was opened; switched off, it just goes
+function switchKind(on) {
+  if (on && focusNode >= 0 && mode === 'graph') {
+    const sel = selected;
+    focus(focusNode, true);
+    if (sel >= 0 && visible.has(sel)) select(sel);
+    if (ovBuilt) buildOverview();
+    if (!$('results').hidden) search();
+  } else refilter();
+}
+$('show-dep').addEventListener('change', ev => { showDeprecated = ev.target.checked; switchKind(showDeprecated); });
+$('show-oth').addEventListener('change', ev => { showOther = ev.target.checked; switchKind(showOther); });
+$('show-nam').addEventListener('change', ev => { showNames = ev.target.checked; switchKind(showNames); });
 $('col-order').value = colOrder;
 $('col-order').addEventListener('change', ev => {
   colOrder = ev.target.value;
@@ -1884,9 +2097,11 @@ new MutationObserver(recolor).observe(document.documentElement, { attributes: tr
 // ---------------------------------------------------------------- start
 const words = G.nodes.filter(isListed).length;
 const depWords = G.nodes.filter(n => n.x === 'd').length;
+const otherWords = G.nodes.filter(n => n.x === 'o').length;
+const nameWords = G.nodes.filter(n => n.x === 'n').length;
 const rootsCount = G.nodes.filter(n => n.k === 'root').length;
 function showStat() {
-  $('stat').textContent = t('page.stat', { v: G.version, words: num(words), dep: num(depWords), roots: num(rootsCount), edges: num(G.edges.length) });
+  $('stat').textContent = t('page.stat', { v: G.version, words: num(words), dep: num(depWords), oth: num(otherWords), nam: num(nameWords), roots: num(rootsCount), edges: num(G.edges.length) });
 }
 function applyLanguage() {
   translateStatic();
@@ -1937,10 +2152,22 @@ function fromHash() {
 window.addEventListener('hashchange', () => {
   if (location.hash === '#all-roots') { setMode('roots'); return; }
   const i = fromHash(); if (i >= 0 && i !== focusNode) focus(i);
+  else if (i < 0) {
+    const h = location.hash;
+    try { history.replaceState(null, '', '#n-' + G.ids[focusNode]); } catch (e) { /* the frame may refuse */ }
+    unknownNode(h);
+  }
 });
+// an address with a page that is not on the graph (a name, a phrase...): said so, not passed over
+function unknownNode(hash = location.hash) {
+  const m = /^#n-(\w+)$/.exec(hash);
+  if (m && !indexOf.has(m[1])) { unknownMsg = t('note.unknown', { id: m[1] }); showNote(); }
+}
 const wantRoots = location.hash === '#all-roots';
+const startHash = location.hash;          // focus() rewrites the address
 const start = fromHash();
 focus(start >= 0 ? start : indexOf.get('3583944535'));     // Q. Elda
 if (wantRoots) setMode('roots');
+if (start < 0) unknownNode(startHash);
 })();
 </script>

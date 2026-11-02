@@ -8,8 +8,8 @@
   "en": "Graph of the origin of words and roots"
  },
  "page.stat": {
-  "ru": "Eldamo {v} · слов трёх перечней: {words} (и заменённых: {dep}) · корней: {roots} · связей: {edges}",
-  "en": "Eldamo {v} · words of the three lists: {words} (and deprecated: {dep}) · roots: {roots} · links: {edges}"
+  "ru": "Eldamo {v} · слов трёх перечней: {words} (и заменённых: {dep}, прочих с ⚠️: {oth}, имён: {nam}) · корней: {roots} · связей: {edges}",
+  "en": "Eldamo {v} · words of the three lists: {words} (and deprecated: {dep}, other ⚠️: {oth}, names: {nam}) · roots: {roots} · links: {edges}"
  },
  "lang.switch": {
   "ru": "English",
@@ -56,8 +56,8 @@
   "en": "show direct links from a root to a word when the same root also leads to the word through an intermediate form"
  },
  "legend.hint": {
-  "ru": "Щелчок — карточка узла; двойной — развернуть соседей (с Shift — только производные, с Ctrl или Alt — только источники), повторный двойной — свернуть то, что развернул этот узел; тройной — свернуть всё, что выводится из узла (кроме центра и его дерева). Число «+N» справа от подписи — сколько производных узла ещё не показано, слева — сколько источников. Щелчок по связи выделяет её и её концы. Узел перетаскивается вместе с тем, что держится только на нём; с Shift — один. Перемещённое остаётся на месте (обведено толще); «Перестроить» снимает закрепления. Колёсико и перетаскивание фона — масштаб и сдвиг.",
-  "en": "Click a node for its card; double-click to expand its neighbours (with Shift the derivatives only, with Ctrl or Alt the sources only), double-click again to collapse what that node expanded; triple-click to fold everything derived from the node (except the focus and its tree). The “+N” right of a label is the number of the node’s derivatives not shown yet, left of it its sources. Click a link to pick it and its ends. A node is dragged together with what hangs on it alone; with Shift, alone. What you move stays put (thicker outline); “Re-layout” frees it. Use the wheel and drag the background to zoom and pan."
+  "ru": "Щелчок — карточка узла; двойной — развернуть соседей (с Shift — только производные, с Ctrl или Alt — только источники), повторный двойной — свернуть то, что развернул этот узел; тройной — свернуть всё, что выводится из узла (кроме центра и его дерева). Число «+N» справа от подписи — сколько производных узла ещё не показано, слева — сколько источников. Щелчок по связи выделяет её и её концы. Знак ⚠ перед словом — как ⚠️ у Eldamo: слово заменено (с заменой или без), вычеркнуто, отвергнуто, сомнительно или без значения; причина — в карточке. Узел перетаскивается вместе с тем, что держится только на нём; с Shift — один. Перемещённое остаётся на месте (обведено толще); «Перестроить» снимает закрепления. Колёсико и перетаскивание фона — масштаб и сдвиг.",
+  "en": "Click a node for its card; double-click to expand its neighbours (with Shift the derivatives only, with Ctrl or Alt the sources only), double-click again to collapse what that node expanded; triple-click to fold everything derived from the node (except the focus and its tree). The “+N” right of a label is the number of the node’s derivatives not shown yet, left of it its sources. Click a link to pick it and its ends. A ⚠ before a word is Eldamo’s ⚠️: the word is deprecated (with a replacement or without), deleted, rejected, doubtful or unglossed; the card says which. A node is dragged together with what hangs on it alone; with Shift, alone. What you move stays put (thicker outline); “Re-layout” frees it. Use the wheel and drag the background to zoom and pan."
  },
  "legend.n.nq": {
   "ru": "слово ᴺQ.-перечня",
@@ -818,5 +818,109 @@
  "export.failed": {
   "ru": "Не удалось сохранить файл: {e}",
   "en": "Could not save the file: {e}"
+ },
+ "edge.st": {
+  "ru": "только по ссылке, которую Толкин зачеркнул (Eldamo приводит и такие деривации)",
+  "en": "only by a reference Tolkien struck out (Eldamo lists such derivations too)"
+ },
+ "tag.struck": {
+  "ru": "зачёркнуто",
+  "en": "struck out"
+ },
+ "rule.struck": {
+  "ru": "по зачёркнутой ссылке",
+  "en": "by a struck reference"
+ },
+ "warnw.deprecated": {
+  "ru": "заменено",
+  "en": "deprecated"
+ },
+ "warnw.deleted": {
+  "ru": "вычеркнуто",
+  "en": "deleted"
+ },
+ "warnw.rejected": {
+  "ru": "отвергнуто Толкином",
+  "en": "rejected"
+ },
+ "warnw.doubtful": {
+  "ru": "сомнительно",
+  "en": "doubtful"
+ },
+ "warnw.unglossed": {
+  "ru": "без значения",
+  "en": "unglossed"
+ },
+ "warnw.early": {
+  "ru": "ранняя концепция",
+  "en": "early"
+ },
+ "tag.deprecatedNone": {
+  "ru": "не советуется, замены нет",
+  "en": "deprecated, no replacement"
+ },
+ "tag.deprecatedNone.title": {
+  "ru": "Eldamo не советует это слово для нео-эльдарина и замены не предлагает",
+  "en": "Eldamo advises against this word for Neo-Eldarin and suggests no replacement"
+ },
+ "filter.other": {
+  "ru": "прочие слова с ⚠️ вне перечней (ранние, отвергнутые, вычеркнутые, без значения)",
+  "en": "other ⚠️ words outside the lists (early, rejected, deleted, unglossed)"
+ },
+ "legend.n.other": {
+  "ru": "слово вне перечней (⚠️ у Eldamo)",
+  "en": "word outside the lists (⚠️ in Eldamo)"
+ },
+ "tag.outside": {
+  "ru": "вне перечней",
+  "en": "outside the lists"
+ },
+ "tag.outside.title": {
+  "ru": "Eldamo помечает это слово ⚠️ и не включает ни в перечень, ни в список заменённых",
+  "en": "Eldamo marks this word ⚠️ and puts it neither in a vocabulary list nor among the deprecated words"
+ },
+ "note.unknown": {
+  "ru": "Страницы Eldamo {id} на графе нет: граф берёт слова перечней, заменённые, формы других концепций, прочие слова с ⚠️ и имена, но не фразы и грамматику.",
+  "en": "Eldamo page {id} is not on the graph: it takes the words of the lists, deprecated words, forms of other conceptions, other ⚠️ words and names, but not phrases or grammar."
+ },
+ "filter.names": {
+  "ru": "имена (места, лица, народы)",
+  "en": "names (places, persons, peoples)"
+ },
+ "legend.n.name": {
+  "ru": "имя (вне перечней)",
+  "en": "name (outside the lists)"
+ },
+ "tag.name": {
+  "ru": "имя",
+  "en": "name"
+ },
+ "tag.name.title": {
+  "ru": "Имя собственное: Eldamo не включает имена в перечни, но их элементы и деривации такие же, как у слов",
+  "en": "A proper name: Eldamo keeps names out of its vocabulary lists, but their elements and derivations are those of words"
+ },
+ "kind.name": {
+  "ru": "имя",
+  "en": "name"
+ },
+ "speech.place-name": {
+  "ru": "топоним",
+  "en": "place name"
+ },
+ "speech.masc-name": {
+  "ru": "мужское имя",
+  "en": "masculine name"
+ },
+ "speech.fem-name": {
+  "ru": "женское имя",
+  "en": "feminine name"
+ },
+ "speech.proper-name": {
+  "ru": "имя собственное",
+  "en": "proper name"
+ },
+ "speech.collective-name": {
+  "ru": "собирательное имя",
+  "en": "collective name"
  }
 }

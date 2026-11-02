@@ -14,6 +14,7 @@ from __future__ import annotations
 import json
 
 from . import root_index
+from .languages import BRANCHES, languages
 from .io import embed_json, write_text
 from .source import ROOT, meta
 
@@ -40,6 +41,26 @@ def _rule(e: dict) -> str | None:
     if not r.get('via') and len(r.get('path') or []) > 1:
         return 'intermediate'
     return VIA_RULE.get(r.get('via', ''), 'deriv')
+
+
+EARLY = {c for b in BRANCHES for c, l in languages(b).items() if l['era'] == 'early'} | {'en', 'eilk'}
+
+
+def word_warnings(e: dict) -> list:
+    """Eldamo's ⚠️ on a word, as neo-roots gives it (make_graph.py: warnings): deprecated, deleted
+    (|), rejected (-), doubtful (‽), unglossed, early."""
+    out = []
+    if (e.get('links') or {}).get('deprecated'):
+        out.append('deprecated')
+    m = e.get('mark') or ''
+    for sign, w in (('|', 'deleted'), ('-', 'rejected'), ('‽', 'doubtful')):
+        if sign in m:
+            out.append(w)
+    if not e.get('gloss') or e.get('gloss') == '[unglossed]':
+        out.append('unglossed')
+    if e['lang'] in EARLY:
+        out.append('early')
+    return out
 
 
 def build(branches: dict) -> dict:
@@ -73,6 +94,11 @@ def build(branches: dict) -> dict:
                 n['x'] = 'd'
             elif links.get('combine'):
                 n['x'] = 'm'
+            elif (e.get('speech') or '').endswith('name'):
+                n['x'] = 'n'      # a name (Q. Tareldar), shown with its switch, as in neo-roots
+            w = word_warnings(e)
+            if w:
+                n['wn'] = [WARN.index(x) for x in w]
             nodes[e['id']] = n
     for rid, r in roots.items():
         n = {'f': r['f'], 'l': r['l'], 'k': 'root'}
@@ -110,6 +136,7 @@ def build(branches: dict) -> dict:
         p = entries.get(parent)
         return [[src, [v, *inter, p['form']]] for src, v, inter in (p.get('written') or {}).get(child, [])] if p else []
 
+    in_tree = set()     # nodes some word's way to its roots passes through
     for wid, e in entries.items():
         recs = [[r.get('path') or []] + (r.get('more') or []) for r in e.get('roots') or []]
         recs += [[g.get('path') or []] for g in e.get('root_gaps') or []]
@@ -119,6 +146,7 @@ def build(branches: dict) -> dict:
                 sc = any(len(q) > len(path) and q[:len(path) - 1] == path[:-1] for q in paths)
                 parent = wid
                 for k, (step, nid) in enumerate(path):
+                    in_tree.add(nid)
                     rel = STEPS.get(step, 'deriv')
                     edge(nid, parent, rel, written(parent, nid) if rel == 'deriv' else None,
                          sc=sc and k == len(path) - 1)
@@ -141,6 +169,9 @@ def build(branches: dict) -> dict:
             edge(wid, t, 'instead')
         if ins and wid in nodes:
             nodes[wid]['ins'] = ins
+    for i in in_tree:
+        if i in nodes and nodes[i].get('x') == 'n':
+            nodes[i]['iv'] = 1      # a name on another's way to a root: shown without its switch
     for rid, r in roots.items():
         for x in r.get('merged', ()):
             edge(x, rid, 'merged')
@@ -221,6 +252,10 @@ ADAPT = [
     ("const LANG_KEY = 'neo-roots-lang';", "const LANG_KEY = 'quettamin-lang';"),
     ("const THEME_KEY = 'neo-roots-theme';", "const THEME_KEY = 'quettamin-theme';"),
     ("localStorage.getItem('neo-roots-order')", "localStorage.getItem('quettamin-graph-order')"),
+    # Quettamin has no lists of Eldamo's vocabulary pages: no words outside them to switch on (names are)
+    ('        <label><input type="checkbox" id="show-oth"> <span data-i18n="filter.other">',
+     '        <label hidden><input type="checkbox" id="show-oth"> <span data-i18n="filter.other">'),
+    ("    [t('legend.n.other'), d3.symbol(d3.symbolCircle, 120)(), css('--n-form'), css('--n-form'), '2 2', 0.55],\n", ''),
     ("localStorage.setItem('neo-roots-order', colOrder)", "localStorage.setItem('quettamin-graph-order', colOrder)"),
     # exported files named after Quettamin
     ("return 'neo-roots-' + (f || 'graph');", "return 'quettamin-' + (f || 'graph');"),
@@ -229,8 +264,8 @@ ADAPT = [
 MESSAGES = {
     'page.title': ('Quettamin — граф происхождения', 'Quettamin — the graph of origins'),
     'page.h1': ('Quettamin: граф происхождения', 'Quettamin: the graph of origins'),
-    'page.stat': ('Eldamo {v} · слов: {words} (и заменённых: {dep}) · корней: {roots} · связей: {edges}',
-                  'Eldamo {v} · words: {words} (and deprecated: {dep}) · roots: {roots} · links: {edges}'),
+    'page.stat': ('Eldamo {v} · слов: {words} (и заменённых: {dep}, имён: {nam}) · корней: {roots} · связей: {edges}',
+                  'Eldamo {v} · words: {words} (and deprecated: {dep}, names: {nam}) · roots: {roots} · links: {edges}'),
     'group.nq': ('квенья', 'Quenya'),
     'group.ns': ('синдарин', 'Sindarin'),
     'group.np': ('праэльфийский', 'Primitive Elvish'),
