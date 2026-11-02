@@ -142,7 +142,7 @@ def build(branches: dict) -> dict:
 
     in_tree = set()     # nodes some word's way to its roots passes through
     for wid, e in entries.items():
-        recs = [[r.get('path') or []] + (r.get('more') or []) for r in e.get('roots') or []]
+        recs = [[r.get('path') or []] + (r.get('more') or []) for r in (e.get('roots') or []) + (e.get('also') or [])]
         recs += [[g.get('path') or []] for g in e.get('root_gaps') or []]
         for paths in recs:
             for path in paths:

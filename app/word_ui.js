@@ -283,6 +283,8 @@ function cardHtml(s) {
     const via = parts && list.some(r => r.via) ? 'element' : (list.find(r => !r.gap) || list[0]).via;
     bits.push(T(via ? 'card.root.' + via : 'card.root') + ' ' + rootsHtml(list));
   }
+  // roots only references Tolkien struck out give, beside those (ᴹQ. Elda: ᴹ√LED, Ety/ELED)
+  if ((e.also || []).length) bits.push(`<span class="muted">${T('card.also.struck')}</span> ` + rootsHtml(alsoRoots(b, e)));
   const pr = e.starts || (e.stages && (e.stages.p || e.stages.mp || e.stages.ep)) || e.written_origins || e.proto_forms;
   if (pr) bits.push(T('card.primitive') + ' ' + pr.map(x => `<span class="form">${esc(x)}</span>`).join(', '));
   const kind = WF.affixKind(e);
@@ -306,7 +308,7 @@ function cardHtml(s) {
       e.unruled.map(([code, a, b2]) => `<span class="marker">${esc(marker(E, code))}</span> <span class="form">${esc(a)} → ${esc(b2)}</span>`).join('; ')}.
       ${T('card.unruledNote')}</div>` : ''}
     ${e.starts ? `<div class="small"><a href="#" data-ref-derivations="${esc(e.id)}" data-branch="${esc(b)}">${T('card.derivations')}</a></div>` : ''}
-    ${(e.roots || e.root_gaps) ? originTree(s, entryRoots(b, e)) : ''}`;
+    ${(e.roots || e.root_gaps) ? originTree(s, entryRoots(b, e).concat(alsoRoots(b, e))) : ''}`;
 }
 
 // ---------------------------------------------------------------- the tree of a word's origin
@@ -491,6 +493,10 @@ function linkedIds(id) {
   return [...(linkIndex.get(id) || [])];
 }
 // the roots of an entry as records for rootsHtml
+function alsoRoots(b, e) {
+  const E = engine(b);
+  return (e.also_refs || []).map(([lang, id, via, , paths], i) => ({ id, form: e.also[i], marker: rootMarker(E, lang), via: via || 'struck', part: null, paths: paths || [] }));
+}
 function entryRoots(b, e) {
   const E = engine(b);
   const out = (e.root_refs || []).map(([lang, id, via, part, paths], i) => ({ id, form: e.roots[i], marker: rootMarker(E, lang), via: via || '', part, paths: paths || [] }));

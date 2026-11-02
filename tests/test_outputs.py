@@ -186,3 +186,13 @@ class GraphPage(unittest.TestCase):
         g = build(data)
         at = {x: k for k, x in enumerate(g['ids'])}
         self.assertTrue(any(ed[1] == at[e['id']] and len(ed) > 3 and ed[3].get('st') for ed in g['edges']))
+
+    def test_paths_of_another_shape_and_struck_beside(self):
+        # Q. Elda < ✶elenā = √EL + -ā, and < ✶edelā < √DEL², < ✶edelō < √DEL¹: alternatives of one part;
+        # ᴹQ. Elda < ᴹ√ELED, and by references Tolkien struck out ᴹ√LED, ᴹ√EDE(L): shown beside, not used
+        data = branches()
+        q = next(x for x in data['quenya']['lexicon'] if x['lang'] == 'q' and x['form'] == 'Elda')
+        self.assertTrue({'EL', 'DEL¹', 'DEL²'} <= {r['form'] for r in q['roots']})
+        mq = next(x for x in data['quenya']['lexicon'] if x['lang'] == 'mq' and x['form'] == 'Elda')
+        self.assertEqual([r['form'] for r in mq['roots']], ['ELED'])
+        self.assertIn('LED', [r['form'] for r in mq.get('also', [])])

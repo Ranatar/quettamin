@@ -23,6 +23,10 @@
   "ru": "синдарин",
   "en": "Sindarin"
  },
+ "card.also.struck": {
+  "ru": "также по ссылке, которую Толкин зачеркнул:",
+  "en": "also by a reference Tolkien struck out:"
+ },
  "card.altLang": {
   "ru": "Язык, который Eldamo печатает в скобках: отсюда слово взято (статья, слитая с ним, или вложенная)",
   "en": "The language Eldamo prints in brackets: where the word comes from (a page merged into it, or nested in it)"

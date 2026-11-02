@@ -116,6 +116,11 @@ def wordform_payload(name: str, data: dict) -> dict:
             # and the paths from the word to the root, for the tree of its origin: [[[step, page], ...], ...]
             x['root_refs'] = [[r['lang'], r['id'], r.get('via', ''), r.get('part'), [r.get('path', [])] + r.get('more', [])]
                               for r in e['roots']]
+        if e.get('also'):
+            # roots only struck references give, beside the word's roots (as root_refs)
+            x['also_refs'] = [[r['lang'], r['id'], r.get('via', 'struck'), None, [r.get('path', [])] + r.get('more', [])]
+                              for r in e['also']]
+            x['also'] = [r['form'] for r in e['also']]
         if e.get('root_gaps'):
             # elements without a root, in their place among the parts: [part, language, page, form]
             x['root_gaps'] = [[g['part'], g['lang'], g['id'], g['form'], g.get('path', [])] for g in e['root_gaps']]

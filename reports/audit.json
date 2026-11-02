@@ -11532,20 +11532,6 @@
    },
    {
     "quenya": [
-     "q",
-     "Eldalótë",
-     "3465788703",
-     "EL + LOT(H)"
-    ],
-    "sindarin": [
-     "s",
-     "Edhellos",
-     "2246643897",
-     "DEL²/DEL¹ + LOT(H)"
-    ]
-   },
-   {
-    "quenya": [
      "eq",
      "Eldamar",
      "2091931097",
@@ -12039,7 +12025,7 @@
      "q",
      "Hecel",
      "1061119547",
-     "HEK + EL"
+     "HEK + EL/DEL²/DEL¹"
     ],
     "sindarin": [
      "s",
@@ -12053,7 +12039,7 @@
      "q",
      "Hecelmar",
      "4160434121",
-     "HEK + EL + MBAR"
+     "HEK + EL/DEL²/DEL¹ + MBAR"
     ],
     "sindarin": [
      "s",
@@ -12773,7 +12759,7 @@
      "s",
      "Laegel",
      "4039322215",
-     "LAY + EL"
+     "LAY + EL/DEL²/DEL¹"
     ]
    },
    {
@@ -13011,7 +12997,7 @@
      "s",
      "Glinnel",
      "3454641215",
-     "LIN² + EL"
+     "LIN² + EL/DEL²/DEL¹"
     ]
    },
    {
@@ -13025,7 +13011,7 @@
      "s",
      "Lindel",
      "1347956775",
-     "LIN² + EL"
+     "LIN² + EL/DEL²/DEL¹"
     ]
    },
    {
@@ -13501,7 +13487,7 @@
      "s",
      "Miniel",
      "125781799",
-     "EL"
+     "EL/DEL²/DEL¹"
     ]
    },
    {
@@ -14370,20 +14356,6 @@
      "Pelegild",
      "3370455781",
      "PELEK"
-    ]
-   },
-   {
-    "quenya": [
-     "q",
-     "Pereldar",
-     "92269493",
-     "PER + EL"
-    ],
-    "sindarin": [
-     "s",
-     "Peredhel",
-     "3281079503",
-     "PER + DEL²/DEL¹"
     ]
    },
    {

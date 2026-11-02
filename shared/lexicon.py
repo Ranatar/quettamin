@@ -547,14 +547,22 @@ def _add_alt(group: list, r: dict, same=lambda a, b: a.get('id') == b.get('id'))
 
 def _merge_groups(found: list) -> list:
     """Several sources of the same rank: the one with most parts; one of the same shape adds
-    its roots as alternatives part by part (_add_alt)."""
+    its roots as alternatives part by part (_add_alt). One of another shape with a single part
+    that has roots, when this one too has a single such part, adds its roots to that part:
+    Q. Elda < ✶elenā = √EL + -ā, and < ✶edelā < √DEL², < ✶edelō < √DEL¹ (neo-roots: _merge_all)."""
     found = sorted(found, key=lambda g: -len(g))
     out = [list(x) for x in found[0]]
+    real_out = [k for k, x in enumerate(out) if _real(x)]
     for g in found[1:]:
         if len(g) == len(out):
             for k, x in enumerate(g):
                 for r in x:
                     _add_alt(out[k], r)
+            continue
+        real_g = [x for x in g if _real(x)]
+        if len(real_out) == 1 and len(real_g) == 1:
+            for r in _real(real_g[0]):
+                _add_alt(out[real_out[0]], r)
     return out
 
 
@@ -689,22 +697,29 @@ def _root_groups(W: Words, pid: str, memo: dict, depth: int = ROOT_DEPTH) -> lis
                     out = _merge_groups(found)
                     break
         if not out and not _is_root(w):
-            # the lowest rank: derivations of references Tolkien struck out (_struck_from), via
-            # 'struck', the step 't' (a derivation only a struck reference gives)
-            found = []
-            for x in _struck_from(W, w):
-                if x == pid or x not in W.by_id:
-                    continue
-                if _is_root(W.by_id[x]):
-                    g = [[dict(_root_rec(W, x), path=[['t', x]])]]
-                else:
-                    g = _step(_root_groups(W, x, memo, depth - 1), 't', x)
-                if any(_real(p) for p in g):
-                    found.append(_via(g, 'struck'))
-            if found:
-                out = _merge_groups(found)
+            # the lowest rank: derivations of references Tolkien struck out (_struck_groups)
+            out = _struck_groups(W, pid, memo, depth)
     memo[key] = out
     return out
+
+
+def _struck_groups(W: Words, pid: str, memo: dict, depth: int = ROOT_DEPTH) -> list:
+    """The roots of a word by the derivations of its references Tolkien struck out (_struck_from):
+    via 'struck', the step 't' (a derivation only a struck reference gives)."""
+    w = W.by_id.get(pid)
+    if w is None or _is_root(w):
+        return []
+    found = []
+    for x in _struck_from(W, w):
+        if x == pid or x not in W.by_id:
+            continue
+        if _is_root(W.by_id[x]):
+            g = [[dict(_root_rec(W, x), path=[['t', x]])]]
+        else:
+            g = _step(_root_groups(W, x, memo, depth - 1), 't', x)
+        if any(_real(p) for p in g):
+            found.append(_via(g, 'struck'))
+    return _merge_groups(found) if found else []
 
 
 def _struck_from(W: Words, w) -> list:
@@ -792,6 +807,17 @@ def _resolve_roots(entries: list, W: Words) -> None:
             e['roots'] = out
             if gaps:
                 e['root_gaps'] = gaps
+            # roots only references Tolkien struck out give, beside those found another way (ᴹQ.
+            # Elda: ᴹ√ELED, and by Ety/ELED, struck out, ᴹ√LED): shown, not used (neo-roots: also)
+            if not any(r.get('via') == 'struck' for r in out) and e['id'] in W.by_id:
+                have = {r['id'] for r in out}
+                also = []
+                for g in _struck_groups(W, e['id'], memo):
+                    for r in _real(g):
+                        if r['id'] not in have and all(r['id'] != a['id'] for a in also):
+                            also.append({x: v for x, v in r.items() if x not in ('named', 'gap', 'part', 'element')})
+                if also:
+                    e['also'] = also
 
 
 def primitive_or_form(e: dict) -> str:

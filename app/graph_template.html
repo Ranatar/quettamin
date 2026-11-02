@@ -753,15 +753,44 @@ function ranks(nodes, edges, groupOf) {
     const g = groupOf.get(i);
     rank.set(g, Math.max(rank.get(g) || 0, stageOf(i)));
   }
-  for (let it = 0; it < nodes.length && it < 40; it++) {
-    let changed = false;
-    for (const e of edges) {
-      const ga = groupOf.get(e.a), gb = groupOf.get(e.b);
-      if (ga === gb) continue;
-      const r = rank.get(ga) + 1;
-      if (r > rank.get(gb) && r < 40) { rank.set(gb, r); changed = true; }
+  // the links that order the columns: of origin only ('instead' -- a deprecated word and what Eldamo
+  // suggests in its place -- says nothing of what comes first), between different groups, and with
+  // the cycles cut (S. lhaw ~ N. lhewig; through 'instead' many more): a link back to a group still
+  // on the way of a depth-first walk is left out. Before, a cycle pushed its nodes 40 columns away
+  const out = new Map();
+  for (const e of edges) {
+    if (e.rel === 'instead') continue;
+    const ga = groupOf.get(e.a), gb = groupOf.get(e.b);
+    if (ga === gb) continue;
+    if (!out.has(ga)) out.set(ga, new Set());
+    out.get(ga).add(gb);
+  }
+  const state = new Map(), order = [];          // 1 on the way, 2 done; order: finished last first
+  const keep = new Map();
+  for (const start of rank.keys()) {
+    if (state.get(start)) continue;
+    const stack = [[start, [...(out.get(start) || [])], 0]];
+    state.set(start, 1);
+    while (stack.length) {
+      const top = stack[stack.length - 1];
+      const [g, next] = top;
+      if (top[2] < next.length) {
+        const h = next[top[2]++];
+        if (state.get(h) === 1) continue;       // back to the way: a cycle, cut here
+        if (!keep.has(g)) keep.set(g, []);
+        keep.get(g).push(h);
+        if (!state.get(h)) { state.set(h, 1); stack.push([h, [...(out.get(h) || [])], 0]); }
+      } else {
+        state.set(g, 2);
+        order.push(g);
+        stack.pop();
+      }
     }
-    if (!changed) break;
+  }
+  // in topological order (the reverse of finishing): each group right of all its sources
+  for (let k = order.length - 1; k >= 0; k--) {
+    const g = order[k];
+    for (const h of keep.get(g) || []) if (rank.get(g) + 1 > rank.get(h)) rank.set(h, rank.get(g) + 1);
   }
   return rank;
 }
