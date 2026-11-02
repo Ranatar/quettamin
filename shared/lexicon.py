@@ -299,14 +299,32 @@ def _inflected(W: Words, source: str | None) -> bool:
     return hit is not None and bool(hit[1].findall('inflect'))
 
 
+def _names_itself(ref, w) -> bool:
+    """A reference of the word that names the word itself among its elements analyses another
+    form of it: ᴹ✶apparkā = ᴹ√A + parkā on the page of ᴹ✶parkā, the intensive form, whose other
+    elements are that form's affixes, not the word's (neo-roots: names_itself)."""
+    pid = w.get('page-id')
+    for el in ref.findall('element'):
+        src = el.get('source')
+        if src and any(r.get('source') == src for r in w.findall('ref')):
+            return True
+        if not src and el.get('v') == w.get('v') and el.get('l') in (None, w.get('l')):
+            return True
+    return False
+
+
 def _ref_elements(w) -> list:
-    """Elements Eldamo records only inside a <ref> (the word page has none of
-    its own): from the ref with the word's own form, else the first ref with elements."""
-    refs = [r for r in w.findall('ref') if _live_in(r, w) and r.findall('element')]
+    """Elements Eldamo records only inside a <ref> (the word page has none of its own): from the
+    refs with the word's own form, else from all; of those, the one with the most elements (the
+    fullest analysis: G. Tol Erethrin = tol + erethrin in LT1A, tol alone in GL). A ref that names
+    the word itself among its elements is left out (_names_itself)."""
+    refs = [r for r in w.findall('ref') if _live_in(r, w) and r.findall('element') and not _names_itself(r, w)]
     if not refs:
         return []
     own = [r for r in refs if _loose(r.get('v')) == _loose(w.get('v'))]
-    return [e for e in (own or refs)[0].findall('element') if _live_in(e, w)]
+    pool = own or refs
+    most = max(len(r.findall('element')) for r in pool)
+    return [e for e in next(r for r in pool if len(r.findall('element')) == most).findall('element') if _live_in(e, w)]
 
 
 def build_lexicon(branch: str, derivations: list) -> list:
@@ -454,8 +472,9 @@ def _derived_from(W: Words, w, elements: bool = True) -> list:
                     if roots:
                         out.append(roots[0])
                         break
-        # roots named as elements inside the references (Q. parma: PAR¹ beside its √PAR²)
-        for el in ref.findall('element'):
+        # roots named as elements inside the references (Q. parma: PAR¹ beside its √PAR²), but
+        # not by a ref analysing another form of the word (ᴹ✶apparkā = ᴹ√A + parkā: _names_itself)
+        for el in ref.findall('element') if not _names_itself(ref, w) else ():
             hit = W.ref(el.get('source')) if _live_in(el, w) else None
             if hit and _is_root(W.by_id[hit[0]]):
                 out.append(hit[0])

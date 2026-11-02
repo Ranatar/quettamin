@@ -24341,9 +24341,9 @@
    "first": 4
   },
   "affixes": {
-   "cases": 220,
-   "main": 103,
-   "any": 132,
+   "cases": 221,
+   "main": 104,
+   "any": 133,
    "results": [
     {
      "word": "3716531873",
@@ -25714,6 +25714,15 @@
      "ok_any": true
     },
     {
+     "word": "3227474549",
+     "form": "minui",
+     "kind": "suffix",
+     "target": "minui",
+     "main": "minui",
+     "ok_main": true,
+     "ok_any": true
+    },
+    {
      "word": "1654675747",
      "form": "mithren",
      "kind": "suffix",
@@ -26327,9 +26336,9 @@
     }
    ],
    "suffix": {
-    "cases": 167,
-    "main": 83,
-    "any": 93
+    "cases": 168,
+    "main": 84,
+    "any": 94
    },
    "prefix": {
     "cases": 53,

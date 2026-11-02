@@ -150,7 +150,7 @@
 
 ## Частичные когнаты
 
-Связей `<cognate>` Eldamo между ветвями, где у обоих слов известны собственные корни, — 3271; из них 391 связывают слова, совпадающие лишь частью состава (другое число частей или часть с другим корнем; варианты и расширения корня — один корень). При реконструкции такая связь идёт после законов («⇋ частичный когнат») и не служит когнатом составляющей. Список — и в `reports/audit.json`.
+Связей `<cognate>` Eldamo между ветвями, где у обоих слов известны собственные корни, — 3273; из них 386 связывают слова, совпадающие лишь частью состава (другое число частей или часть с другим корнем; варианты и расширения корня — один корень). При реконструкции такая связь идёт после законов («⇋ частичный когнат») и не служит когнатом составляющей. Список — и в `reports/audit.json`.
 
 | Quenya / Qenya | корни | Sindarin / Noldorin | корни |
 |---|---|---|---|
@@ -219,19 +219,20 @@
 | q. [Endórë](https://eldamo.org/content/words/word-82428757.html) | ENED + NDOR/NŌ/ONO/DOR | s. [Ennorath](https://eldamo.org/content/words/word-322794511.html) | ENED + NDOR/DOR + SAT/ATATA |
 | mq. [entas(se)](https://eldamo.org/content/words/word-599793627.html) | EN + TA | s. [ennas](https://eldamo.org/content/words/word-433074759.html) | EN |
 | eq. [ere(n)](https://eldamo.org/content/words/word-645838561.html) | EÐE¹ | g. [ger](https://eldamo.org/content/words/word-1160596121.html) | YERE(NE) |
+| eq. [Eriollo](https://eldamo.org/content/words/word-1307875385.html) | EÐE¹ + OLO¹ | g. [Angol](https://eldamo.org/content/words/word-32442747.html) | OLO¹ |
 | mq. [Erlaire](https://eldamo.org/content/words/word-1763934265.html) | ER + LAY | n. [Ebloer](https://eldamo.org/content/words/word-2467242993.html) | LAY |
 | nq. [etelelya-](https://eldamo.org/content/words/word-2104085107.html) | ET + LED | ns. [edledhia-](https://eldamo.org/content/words/word-1230357767.html) | ET |
 | q. [Eärenya](https://eldamo.org/content/words/word-3684301635.html) | AY(AR)/GAY(AR) | s. [Oraeron](https://eldamo.org/content/words/word-1920796469.html) | UR + AY(AR)/GAY(AR) |
+| eq. [Fairinor](https://eldamo.org/content/words/word-4079369469.html) | FAYA + NŌ | g. [Dor Faidwen](https://eldamo.org/content/words/word-784711121.html) | FAYA |
 | q. [Falmari](https://eldamo.org/content/words/word-1741739599.html) | PHAL | s. [Falathrim](https://eldamo.org/content/words/word-3766094569.html) | PHAL + RIM |
-| eq. [Falqalaure](https://eldamo.org/content/words/word-1547870747.html) | FḶKḶ + LOURI | g. [Glorfalc](https://eldamo.org/content/words/word-229546411.html) | LOURI |
-| eq. [Faskala-númen](https://eldamo.org/content/words/word-2277218847.html) | FASA + NUHU | g. [Fôs’Almir](https://eldamo.org/content/words/word-1101408029.html) | FASA |
+| eq. [Faskala-númen](https://eldamo.org/content/words/word-2277218847.html) | FASA + NUHU | g. [Fôs’Almir](https://eldamo.org/content/words/word-1101408029.html) | FASA + KALA¹ |
 | eq. [Fatanyu](https://eldamo.org/content/words/word-3469303167.html) | FAGA + TANA | g. [Inthanfog](https://eldamo.org/content/words/word-1025243023.html) | IÐI + TANA + FAGA |
 | eq. [Favilna](https://eldamo.org/content/words/word-3275870891.html) | FAGA + VILI | g. [Gwilfa](https://eldamo.org/content/words/word-1334041635.html) | GWILI¹ + FAGA |
 | q. [findelë](https://eldamo.org/content/words/word-2098180505.html) | SPIN(ID) + LEÑ | s. [finnel](https://eldamo.org/content/words/word-3954224561.html) | SPIN(ID)/DEL³/DEL² |
 | q. [findilë](https://eldamo.org/content/words/word-1897959611.html) | SPIN(ID) + LEÑ | s. [finnel](https://eldamo.org/content/words/word-3954224561.html) | SPIN(ID)/DEL³/DEL² |
 | mq. [Finwe](https://eldamo.org/content/words/word-162072507.html) | PHIN/WEG | on. [Phinwe](https://eldamo.org/content/words/word-2340576295.html) | PHIN + WEG |
 | eq. [Firilanda](https://eldamo.org/content/words/word-1902693721.html) | FIÐI + LAÐA | g. [Faiglindra](https://eldamo.org/content/words/word-2043468335.html) | FIÐI |
-| eq. [Firin Nautaron](https://eldamo.org/content/words/word-706126489.html) | FIRIŊI + NAWA | g. [Nauglafring](https://eldamo.org/content/words/word-3063461747.html) | NAWA |
+| eq. [Firin Nautaron](https://eldamo.org/content/words/word-706126489.html) | FIRIŊI + NAWA | g. [Nauglafring](https://eldamo.org/content/words/word-3063461747.html) | NAWA + FIRIŊI |
 | q. [Follondië](https://eldamo.org/content/words/word-181917289.html) | PHOR + MEN + LON¹ | s. [Forlonnas](https://eldamo.org/content/words/word-1663864747.html) | PHOR + LON¹ |
 | mq. [formaite](https://eldamo.org/content/words/word-1591423211.html) | PHOR + MAƷ | n. [forgam](https://eldamo.org/content/words/word-2973536205.html) | PHOR + KAB¹ |
 | q. [formen](https://eldamo.org/content/words/word-1223050479.html) | PHOR + MEN | s. [for-](https://eldamo.org/content/words/word-470347903.html) | PHOR |
@@ -265,8 +266,7 @@
 | eq. [Ilqingi](https://eldamo.org/content/words/word-1017709795.html) | ILU + QINGI | g. [Thlim Quing Ilon](https://eldamo.org/content/words/word-3083357639.html) | QINGI + ILU |
 | eq. [Ilsalunte](https://eldamo.org/content/words/word-114999551.html) | GILI + LUTU | g. [Gilthalont](https://eldamo.org/content/words/word-309647451.html) | GILI |
 | eq. [ilwe](https://eldamo.org/content/words/word-2602100613.html) | ILU | g. [ilwint](https://eldamo.org/content/words/word-4050223721.html) | ILU + DYĒ¹ |
-| eq. [ilweran(ta)](https://eldamo.org/content/words/word-2088169047.html) | ILU | g. [ilbrant](https://eldamo.org/content/words/word-1974422035.html) | ILU + RAÞA |
-| eq. [Ilwerantelimba](https://eldamo.org/content/words/word-3569300061.html) | ILU + TELE | g. [Cris Ilbranteloth](https://eldamo.org/content/words/word-4029390255.html) | KIRISI + ILU + RAÞA + TELE |
+| eq. [Ilwerantelimba](https://eldamo.org/content/words/word-3569300061.html) | ILU + RAÞA + TELE | g. [Cris Ilbranteloth](https://eldamo.org/content/words/word-4029390255.html) | KIRISI + ILU + RAÞA + TELE |
 | eq. [Ilúvatar](https://eldamo.org/content/words/word-1025766261.html) | ILU + ATA² | g. [Ilathon](https://eldamo.org/content/words/word-3895315785.html) | ILU |
 | eq. [Indorildo](https://eldamo.org/content/words/word-3154842763.html) | IÐI | g. [Gon Indor](https://eldamo.org/content/words/word-1649916365.html) | YO(NO) + IÐI |
 | eq. [Indorion](https://eldamo.org/content/words/word-1742284209.html) | IÐI + YO(NO) | g. [Gon Indor](https://eldamo.org/content/words/word-1649916365.html) | YO(NO) + IÐI |
@@ -292,10 +292,13 @@
 | eq. [korda](https://eldamo.org/content/words/word-4097569447.html) | KOÐO | g. [gorthin](https://eldamo.org/content/words/word-901782463.html) | KOÐO + IÐI |
 | eq. [Korosintl](https://eldamo.org/content/words/word-3902412591.html) | KORO + SṆTYṆ | g. [Glincrost](https://eldamo.org/content/words/word-682676019.html) | GILI |
 | eq. [Korosintl](https://eldamo.org/content/words/word-3902412591.html) | KORO + SṆTYṆ | g. [Silgrost](https://eldamo.org/content/words/word-2499424803.html) | SILI |
-| eq. [Kortirion](https://eldamo.org/content/words/word-2015993001.html) | KOÐO/KORO | g. [Mindon Gwar](https://eldamo.org/content/words/word-404487345.html) | MINI² + KORO |
+| eq. [Kortirion](https://eldamo.org/content/words/word-2015993001.html) | KOÐO/KORO + TIÐI | g. [Corthirion](https://eldamo.org/content/words/word-2416854301.html) | KORO |
+| eq. [Kortirion](https://eldamo.org/content/words/word-2015993001.html) | KOÐO/KORO + TIÐI | g. [Mindon Gwar](https://eldamo.org/content/words/word-404487345.html) | MINI² + KORO |
 | mq. [Kuiviénen](https://eldamo.org/content/words/word-1992454893.html) | KUY + NEN | n. [Nen Echui](https://eldamo.org/content/words/word-2492358511.html) | NEN + KUY |
 | eq. [Kulullin](https://eldamo.org/content/words/word-265060195.html) | KULU | g. [Glingol](https://eldamo.org/content/words/word-535254837.html) | LIÐI |
 | q. [Laicolassë](https://eldamo.org/content/words/word-606009255.html) | LAY + WO + LAS¹ | s. [Laegolas](https://eldamo.org/content/words/word-2829562391.html) | LAY + LAS¹ |
+| eq. [Laiqalasse](https://eldamo.org/content/words/word-436487119.html) | LAẎA + LASA | g. [Laigolas](https://eldamo.org/content/words/word-2691871497.html) | LAẎA |
+| eq. [Laiqalasse](https://eldamo.org/content/words/word-436487119.html) | LAẎA + LASA | g. [Legolas](https://eldamo.org/content/words/word-3421757621.html) | LAẎA |
 | mq. [Laiqendi](https://eldamo.org/content/words/word-3504382853.html) | LAYAK + KWEN(ED) | n. [Lhoebelidh](https://eldamo.org/content/words/word-2327265133.html) | LAYAK + ELED |
 | q. [Laiquendi](https://eldamo.org/content/words/word-2278613393.html) | LAY + KWENED/KWEN | s. [Laegel](https://eldamo.org/content/words/word-4039322215.html) | LAY + EL/DEL²/DEL¹ |
 | nq. [lambengolmë](https://eldamo.org/content/words/word-3717970713.html) | LAB + ÑGOL¹ | ns. [tengolu](https://eldamo.org/content/words/word-2269932581.html) | TEÑ + ÑGOL¹ |
@@ -330,7 +333,7 @@
 | q. [Macalaurë](https://eldamo.org/content/words/word-3920818985.html) | MAK + (G)LAWAR | s. [Maglor](https://eldamo.org/content/words/word-231356007.html) | (G)LAWAR |
 | mq. [Malarauko](https://eldamo.org/content/words/word-2698648895.html) | RUK¹ | n. [Balrog](https://eldamo.org/content/words/word-1815072641.html) | (Ñ)GWAL + RUK¹ |
 | eq. [Malkamekte](https://eldamo.org/content/words/word-4132618141.html) | MBALA + MEKE | g. [Balcmeg](https://eldamo.org/content/words/word-1244455891.html) | MBALA |
-| mq. [mallo](https://eldamo.org/content/words/word-3026611147.html) | MA | ns. [oman](https://eldamo.org/content/words/word-1842304361.html) | WĀ/AWA + MA |
+| mq. [mallo](https://eldamo.org/content/words/word-3026611147.html) | MA + LŌ | ns. [oman](https://eldamo.org/content/words/word-1842304361.html) | WĀ/AWA + MA |
 | nq. [maltalos](https://eldamo.org/content/words/word-1989135729.html) | MALAT + LOT(H) | ns. [malthos](https://eldamo.org/content/words/word-1440238687.html) | MALAT |
 | nq. [manan](https://eldamo.org/content/words/word-461879787.html) | MA | ns. [amman](https://eldamo.org/content/words/word-1290286793.html) | NA/ANA + MA |
 | q. [manen](https://eldamo.org/content/words/word-1385064761.html) | MA | ns. [naman](https://eldamo.org/content/words/word-2533857839.html) | NA/ANA + MA |
@@ -339,6 +342,7 @@
 | eq. [mapa-](https://eldamo.org/content/words/word-2750052825.html) | MAPA | g. [nab-](https://eldamo.org/content/words/word-1775993711.html) | NAPA |
 | eq. [mapalin](https://eldamo.org/content/words/word-3598304457.html) | MAHA + PALA | g. [mavlantos](https://eldamo.org/content/words/word-1727798533.html) | PALA |
 | q. [maquet-](https://eldamo.org/content/words/word-646169841.html) | KWET | ns. [mabed-](https://eldamo.org/content/words/word-3651362727.html) | MA + KWET |
+| eq. [Mar Vanwa Tyaliéva](https://eldamo.org/content/words/word-2171210405.html) | MBARA + VAHA + TYALA | g. [Bara Dhair Haithin](https://eldamo.org/content/words/word-941693993.html) | MBARA + TYALA + HAYA |
 | eq. [marikta](https://eldamo.org/content/words/word-1646845611.html) | RIKI | g. [mabrin(d)](https://eldamo.org/content/words/word-1468697225.html) | MAPA + RIKI |
 | mq. [masse¹](https://eldamo.org/content/words/word-4164950807.html) | MA | ns. [mivan](https://eldamo.org/content/words/word-2082970245.html) | MI/IMI + MA |
 | q. [massánië](https://eldamo.org/content/words/word-3839826717.html) | MBAS + NA/ANA/AMA | s. [besain](https://eldamo.org/content/words/word-2731883551.html) | MBAS |
@@ -354,9 +358,6 @@
 | mq. [Moriqendi](https://eldamo.org/content/words/word-3291050415.html) | MOR + KWEN(ED) | n. [Dureledh](https://eldamo.org/content/words/word-866972063.html) | DOƷ + ELED |
 | mq. [Moriqendi](https://eldamo.org/content/words/word-3291050415.html) | MOR + KWEN(ED) | n. [Durion](https://eldamo.org/content/words/word-1021747159.html) | DOƷ |
 | eq. [Moritarnon](https://eldamo.org/content/words/word-4203456839.html) | MORO + TARA¹ | g. [Tarn Fui](https://eldamo.org/content/words/word-3886953873.html) | TARA¹ + ǶUẎU |
-| eq. [Mormakil](https://eldamo.org/content/words/word-2459740785.html) | MORO + MAKA¹ | g. [Mormagli](https://eldamo.org/content/words/word-3198085201.html) | MORO |
-| eq. [Mornie](https://eldamo.org/content/words/word-13397699.html) | MORO + NYEHE | g. [Mornir](https://eldamo.org/content/words/word-219623649.html) | MORO |
-| eq. [Morwinyon](https://eldamo.org/content/words/word-4124697491.html) | MORO + GWINI | g. [Morwinthi](https://eldamo.org/content/words/word-3886766727.html) | MORO/GWINI |
 | q. [mélamar](https://eldamo.org/content/words/word-3756694359.html) | MEL + MBAR | s. [milbar](https://eldamo.org/content/words/word-3004190963.html) | MBAR |
 | eq. [naika¹](https://eldamo.org/content/words/word-1438629639.html) | ŊAHYA | g. [gaig](https://eldamo.org/content/words/word-2690070435.html) | YAYA |
 | nq. [namoia-](https://eldamo.org/content/words/word-2477293621.html) | NA/ANA + MŌ | ns. [ammuia-](https://eldamo.org/content/words/word-2492227927.html) | MŌ |
@@ -394,7 +395,7 @@
 | eq. [Olóre Malle](https://eldamo.org/content/words/word-2974590301.html) | LORO + MALA¹ | g. [Malmaurien](https://eldamo.org/content/words/word-2241453669.html) | MURU |
 | eq. [Olóre Malle](https://eldamo.org/content/words/word-2974590301.html) | LORO + MALA¹ | g. [Maurelant](https://eldamo.org/content/words/word-2161455337.html) | MURU |
 | eq. [Ondolie](https://eldamo.org/content/words/word-3150036741.html) | ƷONO + LĪ | g. [Gondothlim](https://eldamo.org/content/words/word-375124927.html) | ƷONO + HOSO |
-| eq. [Ondolinda](https://eldamo.org/content/words/word-277835423.html) | ƷONO + LIÐI | g. [Gondolin](https://eldamo.org/content/words/word-733614277.html) | ƷONO |
+| eq. [Ondolinda](https://eldamo.org/content/words/word-277835423.html) | ƷONO + LIÐI | g. [Gondolin](https://eldamo.org/content/words/word-733614277.html) | ƷONO + N(D)ALA |
 | q. [Ondoluncanan(do)](https://eldamo.org/content/words/word-4165414001.html) | GONOD + LUK + NAD | s. [Nan Gondresgion](https://eldamo.org/content/words/word-3707057995.html) | NAD + GONOD + YON²/YAN¹ |
 | nq. [ondosercë](https://eldamo.org/content/words/word-92698913.html) | GONOD + SEREK | s. [seregon](https://eldamo.org/content/words/word-3527752535.html) | SEREK + GONOD |
 | eq. [Ondosta](https://eldamo.org/content/words/word-2641039603.html) | ƷONO + OSO² | g. [Gondobar](https://eldamo.org/content/words/word-3134010949.html) | ƷONO + MBARA |
@@ -432,6 +433,7 @@
 | q. [ruinë](https://eldamo.org/content/words/word-3064831821.html) | RUY | s. [ruin](https://eldamo.org/content/words/word-2313781075.html) | RUN¹ |
 | eq. [rímen](https://eldamo.org/content/words/word-833668827.html) | RIMI | g. [rib](https://eldamo.org/content/words/word-4114461233.html) | RIPI |
 | q. [rómen](https://eldamo.org/content/words/word-3503146575.html) | (S)RŌ + MEN | s. [amrûn](https://eldamo.org/content/words/word-3136154397.html) | AM² + (S)RŌ |
+| mq. [rómen](https://eldamo.org/content/words/word-4210607063.html) | RŌ/ORO + MEN | n. [rhufen](https://eldamo.org/content/words/word-2580556555.html) | RŌ/ORO |
 | q. [rómen](https://eldamo.org/content/words/word-3503146575.html) | (S)RŌ + MEN | s. [rhûn](https://eldamo.org/content/words/word-2972186711.html) | (S)RŌ |
 | mq. [róna](https://eldamo.org/content/words/word-2205804359.html) | RŌ/ORO | n. [amrûn](https://eldamo.org/content/words/word-1393854111.html) | AM² + RŌ/ORO |
 | q. [Rúatan](https://eldamo.org/content/words/word-4235987617.html) | ATATA | s. [Drúadan](https://eldamo.org/content/words/word-854377075.html) | DROB + ATATA |
@@ -447,18 +449,14 @@
 | q. [Sinda](https://eldamo.org/content/words/word-3270080025.html) | THIN | s. [Thindrim](https://eldamo.org/content/words/word-3948057659.html) | THIN + RIM |
 | eq. [Solosimpe](https://eldamo.org/content/words/word-3928364761.html) | ÞOLO + SIPI | g. [Flosibrim](https://eldamo.org/content/words/word-3075901647.html) | ÞOLO |
 | eq. [Solosimpe](https://eldamo.org/content/words/word-3928364761.html) | ÞOLO + SIPI | g. [Simfi](https://eldamo.org/content/words/word-3914351851.html) | SIPI |
-| eq. [Solosimpe](https://eldamo.org/content/words/word-3928364761.html) | ÞOLO + SIPI | g. [Thlossibrim](https://eldamo.org/content/words/word-2123009873.html) | SIPI |
 | eq. [Sornekiris](https://eldamo.org/content/words/word-1125234039.html) | ÞORO + KIRISI | g. [Cristhorn](https://eldamo.org/content/words/word-953997053.html) | KIRISI + ÞORO |
 | eq. [Sorontur](https://eldamo.org/content/words/word-1653115741.html) | ÞORO + TURU | g. [Thorndor](https://eldamo.org/content/words/word-3069726757.html) | ÞORO |
 | nq. [sérinqua](https://eldamo.org/content/words/word-3915151291.html) | SED + KWA | ns. [sídheb](https://eldamo.org/content/words/word-808729623.html) | SED |
 | eq. [Súlimo](https://eldamo.org/content/words/word-2257734769.html) | SUHYU | g. [Gwanweg](https://eldamo.org/content/words/word-1949008215.html) | GWĀ |
 | q. [Súlimë](https://eldamo.org/content/words/word-3339901781.html) | THŪ | s. [Gwaeron](https://eldamo.org/content/words/word-368969139.html) | WAY/WĀ |
 | eq. [súyon](https://eldamo.org/content/words/word-1827787555.html) | SUẈU + YO(NO) | g. [fwion](https://eldamo.org/content/words/word-1368673629.html) | SUẈU |
-| eq. [Taimavar](https://eldamo.org/content/words/word-2165104123.html) | DAHA + MAWA | g. [Daimord](https://eldamo.org/content/words/word-76152031.html) | MAWA |
-| eq. [Taimordo](https://eldamo.org/content/words/word-1542632893.html) | DAHA + MAWA | g. [Daimord](https://eldamo.org/content/words/word-76152031.html) | MAWA |
-| eq. [Talka Marda](https://eldamo.org/content/words/word-2890307653.html) | MBARA | g. [Martaglos](https://eldamo.org/content/words/word-806240559.html) | MARA² |
+| eq. [Talka Marda](https://eldamo.org/content/words/word-2890307653.html) | TAKA + MBARA | g. [Martaglos](https://eldamo.org/content/words/word-806240559.html) | MARA² |
 | mq. [Taltyelemna](https://eldamo.org/content/words/word-1407580121.html) | TAL¹ + KYELEP | n. [Celebrindal](https://eldamo.org/content/words/word-447305977.html) | KYELEP + TAL¹ |
-| eq. [Taniqetil](https://eldamo.org/content/words/word-1398777461.html) | DAHA + NIQI | g. [Danigwethil](https://eldamo.org/content/words/word-1348110193.html) | DAHA |
 | mq. [Taniqetil](https://eldamo.org/content/words/word-115053639.html) | TĀ/TAƷ + NIK(W) + TIL | n. [Nimdildor](https://eldamo.org/content/words/word-2517116965.html) | NIK(W) + TIL + TUR |
 | q. [Tannacolli](https://eldamo.org/content/words/word-1037115073.html) | TAN² + KOL | s. [Tengyl](https://eldamo.org/content/words/word-4189293005.html) | TAN² |
 | q. [Taras Lúna](https://eldamo.org/content/words/word-4187840705.html) | TĀ/TAƷ/TAR + DU | s. [Barad-dûr](https://eldamo.org/content/words/word-3236058797.html) | M(B)ARAT/BARAT + NDU |
@@ -480,7 +478,7 @@
 | q. [tintila-](https://eldamo.org/content/words/word-2840834399.html) | TIN + THIL | ns. [tinthiltha-](https://eldamo.org/content/words/word-3160524315.html) | TIN + TIL |
 | mq. [Tintánie](https://eldamo.org/content/words/word-192946697.html) | TIN + TAN¹ | n. [Gilthoniel](https://eldamo.org/content/words/word-3438237549.html) | GIL + TAN¹ + SEL(D) |
 | eq. [Tinwetári](https://eldamo.org/content/words/word-2185884035.html) | TINI + DAHA | g. [Tinthurwin](https://eldamo.org/content/words/word-2023925535.html) | TINI + TURU |
-| eq. [Tiri(o)stirion](https://eldamo.org/content/words/word-708028937.html) | TIRI + TIÐI | g. [Gwarestrin](https://eldamo.org/content/words/word-235955515.html) | WARA + EKE |
+| eq. [Tiri(o)stirion](https://eldamo.org/content/words/word-708028937.html) | TIRI + TIÐI | g. [Gwarestrin](https://eldamo.org/content/words/word-235955515.html) | WARA + EKE + TIRI |
 | eq. [tirion](https://eldamo.org/content/words/word-2622831779.html) | TIÐI | g. [tirin](https://eldamo.org/content/words/word-1965705027.html) | TIRI |
 | eq. [Tirios Otsoyáma](https://eldamo.org/content/words/word-2846565013.html) | TIÐI + OTO + YAMA | g. [Ostrin An Ost](https://eldamo.org/content/words/word-871749661.html) | OSO² |
 | mq. [Tiristemindon](https://eldamo.org/content/words/word-2120494839.html) | TIR + MIN | n. [Minas Tirith](https://eldamo.org/content/words/word-481582893.html) | MIN + TIR |
@@ -499,11 +497,12 @@
 | eq. [Uin](https://eldamo.org/content/words/word-1369149549.html) | IWI | g. [Uin](https://eldamo.org/content/words/word-2755788105.html) | GWIŊI |
 | q. [ulca](https://eldamo.org/content/words/word-768038407.html) | Ū + KAL | s. [ogol](https://eldamo.org/content/words/word-418534437.html) | OKO |
 | mq. [Ulmo](https://eldamo.org/content/words/word-850118005.html) | ULU | n. [Uiar](https://eldamo.org/content/words/word-3413924877.html) | WAY |
-| eq. [Ulmonan](https://eldamo.org/content/words/word-2264830629.html) | ULU¹ | g. [Ingulma(n)](https://eldamo.org/content/words/word-1921814589.html) | IÐI |
+| eq. [Ulmonan](https://eldamo.org/content/words/word-2264830629.html) | ULU¹ | g. [Ingulma(n)](https://eldamo.org/content/words/word-1921814589.html) | IÐI + DYULU/ULU¹ |
 | q. [undómë](https://eldamo.org/content/words/word-1825769337.html) | NŪ/UNU + DOM | s. [aduial](https://eldamo.org/content/words/word-4029927507.html) | AT + YU + GAL¹ |
 | q. [Ungoliantë](https://eldamo.org/content/words/word-1498581795.html) | UÑG + SLIG | s. [Ungoliant](https://eldamo.org/content/words/word-1772080551.html) | UÑG |
 | eq. [Ungweliante](https://eldamo.org/content/words/word-2863856727.html) | GUŊU | g. [Gungliont](https://eldamo.org/content/words/word-3243008015.html) | LIYA |
 | eq. [Ungweliante](https://eldamo.org/content/words/word-2863856727.html) | GUŊU | g. [Ungoliont](https://eldamo.org/content/words/word-4247225419.html) | LĪ |
+| eq. [Uole Kúvion](https://eldamo.org/content/words/word-3381216369.html) | KUVU | g. [Ûl Cuvonweg](https://eldamo.org/content/words/word-1585728717.html) | OLO³ + KUVU |
 | q. [ur(u)-](https://eldamo.org/content/words/word-1589987053.html) | GUR | s. [gor](https://eldamo.org/content/words/word-2957890527.html) | ÑGOR |
 | eq. [Urdolwen](https://eldamo.org/content/words/word-3832687647.html) | GWṚÐṚ | g. [Gurtholfin](https://eldamo.org/content/words/word-926482673.html) | GWṚÐṚ + ALA² |
 | eq. [Urwen(di)](https://eldamo.org/content/words/word-3163552589.html) | URU + GWENE¹ | g. [Urwedhin](https://eldamo.org/content/words/word-3132377893.html) | URU |
@@ -515,11 +514,9 @@
 | eq. [Vala](https://eldamo.org/content/words/word-3104279967.html) | WALA | g. [Ban¹](https://eldamo.org/content/words/word-1158175361.html) | VANA |
 | mq. [Valakirka](https://eldamo.org/content/words/word-1383345177.html) | BAL + KIRIK | n. [Cerch iMbelain](https://eldamo.org/content/words/word-3350307483.html) | KIRIK + I¹ + BAL |
 | q. [Valanya](https://eldamo.org/content/words/word-84450489.html) | BAL | s. [Orbelain](https://eldamo.org/content/words/word-3884665251.html) | UR + BAL |
-| mq. [Valinor](https://eldamo.org/content/words/word-2643047643.html) | BAL + NDOR/NŌ/ONO | on. [Balandor](https://eldamo.org/content/words/word-2982359283.html) | BAL |
-| mq. [Valinor](https://eldamo.org/content/words/word-2643047643.html) | BAL + NDOR/NŌ/ONO | n. [Balannor](https://eldamo.org/content/words/word-2577340481.html) | BAL |
 | eq. [Valinor](https://eldamo.org/content/words/word-2425770369.html) | WALA + NŌ | g. [Gwalien](https://eldamo.org/content/words/word-3079100023.html) | WALA |
 | q. [Valinórë](https://eldamo.org/content/words/word-1314183409.html) | BAL + NDOR/NŌ/ONO/DOR | s. [Dor-Rodyn](https://eldamo.org/content/words/word-1761423637.html) | NDOR/DOR + ARAT/RĀ/ARA/RAT² |
-| eq. [Varastirion](https://eldamo.org/content/words/word-533915689.html) | VṚÐṚ + TIÐI | g. [Gwarestrin](https://eldamo.org/content/words/word-235955515.html) | WARA + EKE |
+| eq. [Varastirion](https://eldamo.org/content/words/word-533915689.html) | VṚÐṚ + TIÐI | g. [Gwarestrin](https://eldamo.org/content/words/word-235955515.html) | WARA + EKE + TIRI |
 | eq. [Varavilindo](https://eldamo.org/content/words/word-2461259387.html) | WARA + VILI + LIÐI | g. [Gwarbilin](https://eldamo.org/content/words/word-1818160743.html) | WARA + DUYU + INI |
 | mq. [Varda](https://eldamo.org/content/words/word-993031359.html) | BARAD | on. [Barathi(l)](https://eldamo.org/content/words/word-2863783273.html) | BARATH |
 | mq. [Varda](https://eldamo.org/content/words/word-993031359.html) | BARAD | n. [Berethil](https://eldamo.org/content/words/word-2363615467.html) | BARATH |
@@ -540,8 +537,6 @@
 | q. [Yavannildi](https://eldamo.org/content/words/word-3467128665.html) | YAB + NA/ANA/HAN/AMA + N(D)IL | s. [Ivonwin](https://eldamo.org/content/words/word-2973818817.html) | YAB + WEN(ED) |
 | q. [Yavannië](https://eldamo.org/content/words/word-655244079.html) | YAB + NA/ANA/HAN/AMA | s. [Ivanneth](https://eldamo.org/content/words/word-1013902241.html) | YAB |
 | mq. [yelme¹](https://eldamo.org/content/words/word-3425665737.html) | DYEL | n. [deloth](https://eldamo.org/content/words/word-3052169735.html) | DYEL + GOS |
-| mq. [Yénie Valinóren](https://eldamo.org/content/words/word-344305909.html) | YEN¹ + BAL + NDOR/NŌ/ONO | n. [Inias Valannor](https://eldamo.org/content/words/word-2015000957.html) | YEN¹ + BAL |
-| eq. [Ílivarda](https://eldamo.org/content/words/word-2319788225.html) | GILI | g. [Gailbridh(n)ir](https://eldamo.org/content/words/word-262388217.html) | GILI + VṚÐṚ |
 | eq. [Úrion](https://eldamo.org/content/words/word-333505487.html) | ƷUÐU | g. [Auros](https://eldamo.org/content/words/word-2877358213.html) | URU |
 | q. [úsahtië](https://eldamo.org/content/words/word-897821827.html) | UG/Ū + SAK/THAG | s. [úthaes](https://eldamo.org/content/words/word-1889777045.html) | THAG |
 | mq. [úvanimo](https://eldamo.org/content/words/word-1322838637.html) | GŪ/UMU + BAN | n. [úan](https://eldamo.org/content/words/word-724907889.html) | BAN |

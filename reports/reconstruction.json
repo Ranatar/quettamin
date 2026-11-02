@@ -163,29 +163,29 @@
  },
  "compounds q -> s": {
   "cases": 30,
-  "plain_first": 8,
-  "plain_any": 9,
+  "plain_first": 9,
+  "plain_any": 10,
   "elements_first": 7,
-  "elements_any": 9,
-  "built": 22,
-  "pairs": 238
+  "elements_any": 10,
+  "built": 23,
+  "pairs": 239
  },
  "compounds s -> q": {
   "cases": 30,
-  "plain_first": 3,
-  "plain_any": 5,
+  "plain_first": 4,
+  "plain_any": 6,
   "elements_first": 3,
-  "elements_any": 6,
+  "elements_any": 7,
   "built": 24,
-  "pairs": 208
+  "pairs": 209
  },
  "root seeds q": {
   "cases": 30,
   "plain_first": 7,
-  "plain_any": 15,
-  "seed_first": 7,
-  "seed_any": 15,
-  "words": 868
+  "plain_any": 14,
+  "seed_first": 8,
+  "seed_any": 14,
+  "words": 871
  },
  "root seeds mq": {
   "cases": 30,
@@ -221,11 +221,11 @@
  },
  "joint primitive mq": {
   "cases": 30,
-  "alone_first": 7,
-  "alone_any": 21,
-  "joint_first": 7,
-  "joint_any": 20,
-  "words": 470
+  "alone_first": 10,
+  "alone_any": 24,
+  "joint_first": 10,
+  "joint_any": 22,
+  "words": 471
  },
  "joint primitive s": {
   "cases": 30,
@@ -240,17 +240,17 @@
   "alone_first": 3,
   "alone_any": 9,
   "joint_first": 7,
-  "joint_any": 19,
+  "joint_any": 20,
   "words": 583
  },
  "root_candidates": {
   "q": {
-   "words": 747,
-   "first": 453,
-   "top3": 602,
-   "any": 631,
-   "rootless": 101,
-   "guessed": 93
+   "words": 746,
+   "first": 452,
+   "top3": 601,
+   "any": 630,
+   "rootless": 98,
+   "guessed": 90
   },
   "mq": {
    "words": 713,
@@ -261,7 +261,7 @@
    "guessed": 32
   },
   "eq": {
-   "words": 1375,
+   "words": 1374,
    "first": 514,
    "top3": 682,
    "any": 719,

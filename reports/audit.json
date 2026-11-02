@@ -59,11 +59,11 @@
    },
    "lexicon": {
     "entries": 18421,
-    "roots": 13837,
+    "roots": 13842,
     "derivations": 2892,
     "stages": 2772,
     "parents": 2216,
-    "elements": 6643,
+    "elements": 6640,
     "stems": 1072,
     "compounds_with_derivations": 223,
     "neo": 3527,
@@ -5057,10 +5057,10 @@
    },
    "lexicon": {
     "entries": 14706,
-    "roots": 10562,
+    "roots": 10567,
     "derivations": 2083,
     "stages": 1939,
-    "elements": 4652,
+    "elements": 4649,
     "parents": 2350,
     "compounds_with_derivations": 236,
     "stems": 23,
@@ -5068,7 +5068,7 @@
     "homonym_forms": 368
    },
    "junction_cases": 415,
-   "affix_cases": 220,
+   "affix_cases": 221,
    "grade_legend": {
     "A": "засвидетельствована в одной деривации",
     "B": "шаги засвидетельствованы, порядок подтверждён",
@@ -10744,7 +10744,7 @@
   ]
  },
  "partial_cognates": {
-  "rooted_pairs": 3271,
+  "rooted_pairs": 3273,
   "pairs": [
    {
     "quenya": [
@@ -11658,6 +11658,20 @@
    },
    {
     "quenya": [
+     "eq",
+     "Eriollo",
+     "1307875385",
+     "EÐE¹ + OLO¹"
+    ],
+    "sindarin": [
+     "g",
+     "Angol",
+     "32442747",
+     "OLO¹"
+    ]
+   },
+   {
+    "quenya": [
      "mq",
      "Erlaire",
      "1763934265",
@@ -11700,6 +11714,20 @@
    },
    {
     "quenya": [
+     "eq",
+     "Fairinor",
+     "4079369469",
+     "FAYA + NŌ"
+    ],
+    "sindarin": [
+     "g",
+     "Dor Faidwen",
+     "784711121",
+     "FAYA"
+    ]
+   },
+   {
+    "quenya": [
      "q",
      "Falmari",
      "1741739599",
@@ -11715,20 +11743,6 @@
    {
     "quenya": [
      "eq",
-     "Falqalaure",
-     "1547870747",
-     "FḶKḶ + LOURI"
-    ],
-    "sindarin": [
-     "g",
-     "Glorfalc",
-     "229546411",
-     "LOURI"
-    ]
-   },
-   {
-    "quenya": [
-     "eq",
      "Faskala-númen",
      "2277218847",
      "FASA + NUHU"
@@ -11737,7 +11751,7 @@
      "g",
      "Fôs’Almir",
      "1101408029",
-     "FASA"
+     "FASA + KALA¹"
     ]
    },
    {
@@ -11835,7 +11849,7 @@
      "g",
      "Nauglafring",
      "3063461747",
-     "NAWA"
+     "NAWA + FIRIŊI"
     ]
    },
    {
@@ -12303,23 +12317,9 @@
    {
     "quenya": [
      "eq",
-     "ilweran(ta)",
-     "2088169047",
-     "ILU"
-    ],
-    "sindarin": [
-     "g",
-     "ilbrant",
-     "1974422035",
-     "ILU + RAÞA"
-    ]
-   },
-   {
-    "quenya": [
-     "eq",
      "Ilwerantelimba",
      "3569300061",
-     "ILU + TELE"
+     "ILU + RAÞA + TELE"
     ],
     "sindarin": [
      "g",
@@ -12683,7 +12683,21 @@
      "eq",
      "Kortirion",
      "2015993001",
-     "KOÐO/KORO"
+     "KOÐO/KORO + TIÐI"
+    ],
+    "sindarin": [
+     "g",
+     "Corthirion",
+     "2416854301",
+     "KORO"
+    ]
+   },
+   {
+    "quenya": [
+     "eq",
+     "Kortirion",
+     "2015993001",
+     "KOÐO/KORO + TIÐI"
     ],
     "sindarin": [
      "g",
@@ -12732,6 +12746,34 @@
      "Laegolas",
      "2829562391",
      "LAY + LAS¹"
+    ]
+   },
+   {
+    "quenya": [
+     "eq",
+     "Laiqalasse",
+     "436487119",
+     "LAẎA + LASA"
+    ],
+    "sindarin": [
+     "g",
+     "Laigolas",
+     "2691871497",
+     "LAẎA"
+    ]
+   },
+   {
+    "quenya": [
+     "eq",
+     "Laiqalasse",
+     "436487119",
+     "LAẎA + LASA"
+    ],
+    "sindarin": [
+     "g",
+     "Legolas",
+     "3421757621",
+     "LAẎA"
     ]
    },
    {
@@ -13215,7 +13257,7 @@
      "mq",
      "mallo",
      "3026611147",
-     "MA"
+     "MA + LŌ"
     ],
     "sindarin": [
      "ns",
@@ -13334,6 +13376,20 @@
      "mabed-",
      "3651362727",
      "MA + KWET"
+    ]
+   },
+   {
+    "quenya": [
+     "eq",
+     "Mar Vanwa Tyaliéva",
+     "2171210405",
+     "MBARA + VAHA + TYALA"
+    ],
+    "sindarin": [
+     "g",
+     "Bara Dhair Haithin",
+     "941693993",
+     "MBARA + TYALA + HAYA"
     ]
    },
    {
@@ -13544,48 +13600,6 @@
      "Tarn Fui",
      "3886953873",
      "TARA¹ + ǶUẎU"
-    ]
-   },
-   {
-    "quenya": [
-     "eq",
-     "Mormakil",
-     "2459740785",
-     "MORO + MAKA¹"
-    ],
-    "sindarin": [
-     "g",
-     "Mormagli",
-     "3198085201",
-     "MORO"
-    ]
-   },
-   {
-    "quenya": [
-     "eq",
-     "Mornie",
-     "13397699",
-     "MORO + NYEHE"
-    ],
-    "sindarin": [
-     "g",
-     "Mornir",
-     "219623649",
-     "MORO"
-    ]
-   },
-   {
-    "quenya": [
-     "eq",
-     "Morwinyon",
-     "4124697491",
-     "MORO + GWINI"
-    ],
-    "sindarin": [
-     "g",
-     "Morwinthi",
-     "3886766727",
-     "MORO/GWINI"
     ]
    },
    {
@@ -14117,7 +14131,7 @@
      "g",
      "Gondolin",
      "733614277",
-     "ƷONO"
+     "ƷONO + N(D)ALA"
     ]
    },
    {
@@ -14640,6 +14654,20 @@
    },
    {
     "quenya": [
+     "mq",
+     "rómen",
+     "4210607063",
+     "RŌ/ORO + MEN"
+    ],
+    "sindarin": [
+     "n",
+     "rhufen",
+     "2580556555",
+     "RŌ/ORO"
+    ]
+   },
+   {
+    "quenya": [
      "q",
      "rómen",
      "3503146575",
@@ -14851,20 +14879,6 @@
    {
     "quenya": [
      "eq",
-     "Solosimpe",
-     "3928364761",
-     "ÞOLO + SIPI"
-    ],
-    "sindarin": [
-     "g",
-     "Thlossibrim",
-     "2123009873",
-     "SIPI"
-    ]
-   },
-   {
-    "quenya": [
-     "eq",
      "Sornekiris",
      "1125234039",
      "ÞORO + KIRISI"
@@ -14949,37 +14963,9 @@
    {
     "quenya": [
      "eq",
-     "Taimavar",
-     "2165104123",
-     "DAHA + MAWA"
-    ],
-    "sindarin": [
-     "g",
-     "Daimord",
-     "76152031",
-     "MAWA"
-    ]
-   },
-   {
-    "quenya": [
-     "eq",
-     "Taimordo",
-     "1542632893",
-     "DAHA + MAWA"
-    ],
-    "sindarin": [
-     "g",
-     "Daimord",
-     "76152031",
-     "MAWA"
-    ]
-   },
-   {
-    "quenya": [
-     "eq",
      "Talka Marda",
      "2890307653",
-     "MBARA"
+     "TAKA + MBARA"
     ],
     "sindarin": [
      "g",
@@ -15000,20 +14986,6 @@
      "Celebrindal",
      "447305977",
      "KYELEP + TAL¹"
-    ]
-   },
-   {
-    "quenya": [
-     "eq",
-     "Taniqetil",
-     "1398777461",
-     "DAHA + NIQI"
-    ],
-    "sindarin": [
-     "g",
-     "Danigwethil",
-     "1348110193",
-     "DAHA"
     ]
    },
    {
@@ -15321,7 +15293,7 @@
      "g",
      "Gwarestrin",
      "235955515",
-     "WARA + EKE"
+     "WARA + EKE + TIRI"
     ]
    },
    {
@@ -15587,7 +15559,7 @@
      "g",
      "Ingulma(n)",
      "1921814589",
-     "IÐI"
+     "IÐI + DYULU/ULU¹"
     ]
    },
    {
@@ -15644,6 +15616,20 @@
      "Ungoliont",
      "4247225419",
      "LĪ"
+    ]
+   },
+   {
+    "quenya": [
+     "eq",
+     "Uole Kúvion",
+     "3381216369",
+     "KUVU"
+    ],
+    "sindarin": [
+     "g",
+     "Ûl Cuvonweg",
+     "1585728717",
+     "OLO³ + KUVU"
     ]
    },
    {
@@ -15802,34 +15788,6 @@
    },
    {
     "quenya": [
-     "mq",
-     "Valinor",
-     "2643047643",
-     "BAL + NDOR/NŌ/ONO"
-    ],
-    "sindarin": [
-     "on",
-     "Balandor",
-     "2982359283",
-     "BAL"
-    ]
-   },
-   {
-    "quenya": [
-     "mq",
-     "Valinor",
-     "2643047643",
-     "BAL + NDOR/NŌ/ONO"
-    ],
-    "sindarin": [
-     "n",
-     "Balannor",
-     "2577340481",
-     "BAL"
-    ]
-   },
-   {
-    "quenya": [
      "eq",
      "Valinor",
      "2425770369",
@@ -15867,7 +15825,7 @@
      "g",
      "Gwarestrin",
      "235955515",
-     "WARA + EKE"
+     "WARA + EKE + TIRI"
     ]
    },
    {
@@ -16148,34 +16106,6 @@
      "deloth",
      "3052169735",
      "DYEL + GOS"
-    ]
-   },
-   {
-    "quenya": [
-     "mq",
-     "Yénie Valinóren",
-     "344305909",
-     "YEN¹ + BAL + NDOR/NŌ/ONO"
-    ],
-    "sindarin": [
-     "n",
-     "Inias Valannor",
-     "2015000957",
-     "YEN¹ + BAL"
-    ]
-   },
-   {
-    "quenya": [
-     "eq",
-     "Ílivarda",
-     "2319788225",
-     "GILI"
-    ],
-    "sindarin": [
-     "g",
-     "Gailbridh(n)ir",
-     "262388217",
-     "GILI + VṚÐṚ"
     ]
    },
    {

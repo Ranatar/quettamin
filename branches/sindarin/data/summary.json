@@ -69,10 +69,10 @@
  },
  "lexicon": {
   "entries": 14706,
-  "roots": 10562,
+  "roots": 10567,
   "derivations": 2083,
   "stages": 1939,
-  "elements": 4652,
+  "elements": 4649,
   "parents": 2350,
   "compounds_with_derivations": 236,
   "stems": 23,
@@ -80,7 +80,7 @@
   "homonym_forms": 368
  },
  "junction_cases": 415,
- "affix_cases": 220,
+ "affix_cases": 221,
  "grade_legend": {
   "A": "засвидетельствована в одной деривации",
   "B": "шаги засвидетельствованы, порядок подтверждён",

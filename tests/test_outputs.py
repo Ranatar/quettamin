@@ -196,3 +196,12 @@ class GraphPage(unittest.TestCase):
         mq = next(x for x in data['quenya']['lexicon'] if x['lang'] == 'mq' and x['form'] == 'Elda')
         self.assertEqual([r['form'] for r in mq['roots']], ['ELED'])
         self.assertIn('LED', [r['form'] for r in mq.get('also', [])])
+
+    def test_ref_analysing_another_form(self):
+        # ᴹ✶parkā: the ref ᴹ✶apparkā = ᴹ√A + parkā analyses its intensive form; ᴹ√A is not its root.
+        # G. Tol Erethrin: the elements of the fullest analysis (tol + erethrin, not tol alone)
+        data = branches()
+        parka = next(x for x in data['quenya']['lexicon'] if x['lang'] == 'mp' and x['form'] == 'parkā')
+        self.assertNotIn('A', [r['form'] for r in parka.get('roots', [])])
+        tol = next(x for x in data['sindarin']['lexicon'] if x['lang'] == 'g' and x['form'] == 'Tol Erethrin')
+        self.assertGreaterEqual(len(tol.get('elements') or []), 2)

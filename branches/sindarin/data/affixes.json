@@ -5313,6 +5313,41 @@
    "skey": null
   },
   {
+   "word": "3227474549",
+   "form": "minui",
+   "kind": "suffix",
+   "affix": "2511870571",
+   "affix_form": "-ui",
+   "base": "2871412533",
+   "base_form": "min¹",
+   "allomorph": "ui",
+   "ctx": "C",
+   "a": "min",
+   "b": "ui",
+   "c": "minui",
+   "junction": [
+    0,
+    0,
+    ""
+   ],
+   "ending": [
+    0,
+    ""
+   ],
+   "short": false,
+   "lengthened": false,
+   "lkey": "mono",
+   "jkey": [
+    "n",
+    "u"
+   ],
+   "ekey": [
+    "u",
+    "i"
+   ],
+   "skey": null
+  },
+  {
    "word": "1654675747",
    "form": "mithren",
    "kind": "suffix",
