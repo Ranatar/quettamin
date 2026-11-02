@@ -95,6 +95,10 @@
   "ru": "корень исходного слова",
   "en": "root of the source word"
  },
+ "card.root.struck": {
+  "ru": "корень по ссылке, которую Толкин зачеркнул",
+  "en": "root by a reference Tolkien struck out"
+ },
  "card.stem": {
   "ru": "основа",
   "en": "stem"
@@ -1302,6 +1306,10 @@
   "ru": "Корень слова, от которого произведено это (статья Eldamo)",
   "en": "A root of the word this one derives from (Eldamo page)"
  },
+ "root.via.struck": {
+  "ru": "Корень только по ссылке, которую Толкин зачеркнул (Eldamo приводит и такие деривации; статья Eldamo)",
+  "en": "A root only by a reference Tolkien struck out (Eldamo lists such derivations too; Eldamo page)"
+ },
  "root.warn.deleted": {
   "ru": "вычеркнут",
   "en": "deleted"
@@ -1865,6 +1873,10 @@
  "tree.rel.s": {
   "ru": "см.",
   "en": "see"
+ },
+ "tree.rel.t": {
+  "ru": "из (по зачёркнутой ссылке)",
+  "en": "from (by a struck reference)"
  },
  "tree.rel.x": {
   "ru": "заменённое им слово",

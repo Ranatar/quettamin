@@ -65,11 +65,11 @@ class InterfaceCatalog(unittest.TestCase):
                'route.': ['attested', 'same', 'forward', 'backDirect', 'backPrimitive', 'backRoot', 'cognateLink', 'viaPrimitive',
                           'nearSame', 'nearClose', 'link', 'unchanged', 'reetymology', 'then', 'byElements', 'partialLink', 'irregularLaw', 'composed', 'composedUnconfirmed',
                           'primitiveEldamo', 'primitiveCognate', 'agreedCognate', 'byCognate', 'sharedPrimitive', 'sameForm'],
-               'card.root.': ['element', 'cognate', 'source', 'combine', 'see', 'deprecated'],
-               'root.via.': ['element', 'cognate', 'source', 'combine', 'see', 'deprecated', 'instead', 'borrowed'],
+               'card.root.': ['element', 'cognate', 'source', 'combine', 'see', 'deprecated', 'struck'],
+               'root.via.': ['element', 'cognate', 'source', 'combine', 'see', 'deprecated', 'instead', 'borrowed', 'struck'],
                'root.warn.': [w + t for w in ('deprecated', 'deleted', 'rejected', 'doubtful', 'unglossed', 'early') for t in ('', '.title')],
                'rootCard.lang.': ['p', 'mp', 'ep', 'np'],
-               'tree.rel.': ['e', 'd', 'c', 's', 'x', 'k'],
+               'tree.rel.': ['e', 'd', 'c', 's', 'x', 'k', 't'],
                'ipa.': ['labial', 'dental', 'palatal', 'velar', 'labiovelar', 'glottal', 'stop', 'fricative', 'nasal',
                         'lateral', 'trill', 'approximant', 'high', 'mid', 'low', 'front', 'central', 'back']}
     FILES = ('runtime.js', 'word_ui.js', 'wordform_ui.js', 'reconstruct_ui.js', 'roots_ui.js', 'intro.js', 'corpus_template.html')
@@ -175,3 +175,14 @@ class GraphPage(unittest.TestCase):
         calima = next(i for i, n in zip(g['ids'], g['nodes']) if n['f'] == 'calima' and n['l'] == 'q')
         for part in ('2707296195', '2305656567'):        # cal-, -ima
             self.assertIn((at[part], at[calima]), into)
+
+    def test_struck_references(self):
+        # ᴱQ. er¹ derives from ᴱ√ERE only by a reference Tolkien struck out: its roots come by it (the
+        # lowest rank, neo-roots' rule 9) and the graph draws that link as struck
+        from shared.graph_page import build
+        data = branches()
+        e = next(x for x in data['quenya']['lexicon'] if x['lang'] == 'eq' and x['form'] == 'er¹')
+        self.assertEqual([(r['form'], r.get('via')) for r in e['roots']], [('ERE', 'struck')])
+        g = build(data)
+        at = {x: k for k, x in enumerate(g['ids'])}
+        self.assertTrue(any(ed[1] == at[e['id']] and len(ed) > 3 and ed[3].get('st') for ed in g['edges']))

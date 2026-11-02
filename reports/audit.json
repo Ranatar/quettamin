@@ -59,7 +59,7 @@
    },
    "lexicon": {
     "entries": 18421,
-    "roots": 13820,
+    "roots": 13837,
     "derivations": 2892,
     "stages": 2772,
     "parents": 2216,
@@ -5057,7 +5057,7 @@
    },
    "lexicon": {
     "entries": 14706,
-    "roots": 10553,
+    "roots": 10562,
     "derivations": 2083,
     "stages": 1939,
     "elements": 4652,
@@ -10744,7 +10744,7 @@
   ]
  },
  "partial_cognates": {
-  "rooted_pairs": 3273,
+  "rooted_pairs": 3271,
   "pairs": [
    {
     "quenya": [
@@ -11598,20 +11598,6 @@
      "Orgilion",
      "2411056289",
      "UR + (Ñ)GIL"
-    ]
-   },
-   {
-    "quenya": [
-     "eq",
-     "Elmavoite",
-     "4001535895",
-     "MAHA"
-    ],
-    "sindarin": [
-     "g",
-     "Ermabwed",
-     "2491978325",
-     "MAPA"
     ]
    },
    {

@@ -150,7 +150,7 @@
 
 ## Частичные когнаты
 
-Связей `<cognate>` Eldamo между ветвями, где у обоих слов известны собственные корни, — 3273; из них 394 связывают слова, совпадающие лишь частью состава (другое число частей или часть с другим корнем; варианты и расширения корня — один корень). При реконструкции такая связь идёт после законов («⇋ частичный когнат») и не служит когнатом составляющей. Список — и в `reports/audit.json`.
+Связей `<cognate>` Eldamo между ветвями, где у обоих слов известны собственные корни, — 3271; из них 393 связывают слова, совпадающие лишь частью состава (другое число частей или часть с другим корнем; варианты и расширения корня — один корень). При реконструкции такая связь идёт после законов («⇋ частичный когнат») и не служит когнатом составляющей. Список — и в `reports/audit.json`.
 
 | Quenya / Qenya | корни | Sindarin / Noldorin | корни |
 |---|---|---|---|
@@ -215,7 +215,6 @@
 | mq. [Elentári](https://eldamo.org/content/words/word-1620801097.html) | EL | n. [Elbereth](https://eldamo.org/content/words/word-2462581423.html) | EL + BARATH |
 | q. [Elentári](https://eldamo.org/content/words/word-1674375635.html) | EL + TĀ/TAƷ | s. [Elbereth](https://eldamo.org/content/words/word-862238445.html) | EL + BER/BARATH |
 | q. [Elenya](https://eldamo.org/content/words/word-2372957001.html) | EL | s. [Orgilion](https://eldamo.org/content/words/word-2411056289.html) | UR + (Ñ)GIL |
-| eq. [Elmavoite](https://eldamo.org/content/words/word-4001535895.html) | MAHA | g. [Ermabwed](https://eldamo.org/content/words/word-2491978325.html) | MAPA |
 | q. [emmë²](https://eldamo.org/content/words/word-3989317599.html) | AM¹ | s. [emig](https://eldamo.org/content/words/word-2157771091.html) | AM¹ + NIK |
 | mq. [Ender](https://eldamo.org/content/words/word-1010607107.html) | E + (N)DER | n. [Enner](https://eldamo.org/content/words/word-4004491335.html) | (N)DER |
 | q. [Endórë](https://eldamo.org/content/words/word-82428757.html) | ENED + NDOR/NŌ/ONO/DOR | s. [Ennorath](https://eldamo.org/content/words/word-322794511.html) | ENED + NDOR/DOR + SAT/ATATA |

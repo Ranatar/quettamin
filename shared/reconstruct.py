@@ -867,7 +867,7 @@ def _root_parts(e: dict) -> list:
     from .roots import root_variants, _cons
     parts = {}
     for r in e.get('roots', ()):
-        if r.get('via') in ('cognate', 'deprecated', 'combine'):
+        if r.get('via') in ('cognate', 'deprecated', 'combine', 'struck'):
             # roots of another word, or of this one in another conception, where Tolkien's
             # etymology may differ (S. -iel¹ ᴹ√SEL(D) ~ Q. -iel ᴹ√YEL¹ are linked as cognates)
             continue

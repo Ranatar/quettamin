@@ -582,7 +582,8 @@ def _root_groups(W: Words, pid: str, memo: dict, depth: int = ROOT_DEPTH) -> lis
     included (_gap). Records carry via: '' (named by the word's own derivation or as its
     element), 'element' (a root of an element), 'source' (a root of a word of another
     language it derives from: S. Adan < Q. Atan), 'combine' (of the same word of another
-    conception merged into it), 'see', 'deprecated' (of a word it replaced).
+    conception merged into it), 'see', 'deprecated' (of a word it replaced), 'struck' (by a reference
+    Tolkien struck out: the lowest rank).
 
     1. Two or more elements with roots: the roots by element (Q. palantír = √PAL + √TIR;
        S. randir = √RAN + √N(D)ER, though its derivation names RAN alone). A root the
@@ -687,7 +688,40 @@ def _root_groups(W: Words, pid: str, memo: dict, depth: int = ROOT_DEPTH) -> lis
                 if found:
                     out = _merge_groups(found)
                     break
+        if not out and not _is_root(w):
+            # the lowest rank: derivations of references Tolkien struck out (_struck_from), via
+            # 'struck', the step 't' (a derivation only a struck reference gives)
+            found = []
+            for x in _struck_from(W, w):
+                if x == pid or x not in W.by_id:
+                    continue
+                if _is_root(W.by_id[x]):
+                    g = [[dict(_root_rec(W, x), path=[['t', x]])]]
+                else:
+                    g = _step(_root_groups(W, x, memo, depth - 1), 't', x)
+                if any(_real(p) for p in g):
+                    found.append(_via(g, 'struck'))
+            if found:
+                out = _merge_groups(found)
     memo[key] = out
+    return out
+
+
+def _struck_from(W: Words, w) -> list:
+    """Ids of the words a word derives from only by its references that Tolkien struck out (mark
+    '-'): Eldamo's page lists their derivations too (word-page.xq takes every reference). ᴹQ. Elda
+    < ᴹ√LED (Ety/ELED). neo-roots, rule 9 (neo_roots.py: struck_from). A rejected word's own
+    references count as live (_live_in), so this is for a live word only."""
+    out = []
+    if not _live(w):
+        return out
+    for ref in w.findall('ref'):
+        if _live(ref) or W.ref(ref.get('source')) is None:
+            continue
+        for d in ref.findall('deriv'):
+            hit = W.ref(d.get('source'))
+            if hit and hit[0] not in out:
+                out.append(hit[0])
     return out
 
 
@@ -750,7 +784,7 @@ def _resolve_roots(entries: list, W: Words) -> None:
                                path=[['k', cid]] + r.get('path', []),
                                **({'more': [[['k', cid]] + p for p in r['more']]} if r.get('more') else {}))
                           for r in _own_roots(W, cid, memo)
-                          if r.get('via') not in ('cognate', 'deprecated') and consonants_match(e['form'], r['form'], e['lang'])]
+                          if r.get('via') not in ('cognate', 'deprecated', 'struck') and consonants_match(e['form'], r['form'], e['lang'])]
         out = []
         for r in roots:
             _add_alt(out, r, lambda a, b: a['id'] == b['id'] and a.get('part') == b.get('part'))

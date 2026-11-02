@@ -23,11 +23,12 @@ APP = ROOT / 'app'
 RELS = ['deriv', 'element', 'combine', 'see', 'deprecated', 'cognate', 'merged', 'filed', 'rootderiv', 'instead']
 KINDS = ['word', 'form', 'protoform', 'root']
 WARN = ['deprecated', 'deleted', 'rejected', 'doubtful', 'unglossed', 'early']
-STEPS = {'e': 'element', 'd': 'deriv', 'c': 'combine', 's': 'see', 'x': 'deprecated', 'k': 'cognate'}
+STEPS = {'e': 'element', 'd': 'deriv', 'c': 'combine', 's': 'see', 'x': 'deprecated', 'k': 'cognate',
+         't': 'deriv'}      # t: a derivation only a reference Tolkien struck out gives (drawn 'st')
 PRIMITIVE = ('p', 'mp', 'ep', 'np')
 GROUP = {'quenya': 'nq', 'sindarin': 'ns'}
 VIA_RULE = {'': 'deriv', 'element': 'element', 'source': 'intermediate', 'combine': 'combine', 'see': 'see',
-            'deprecated': 'deprecated', 'cognate': 'cognate'}
+            'deprecated': 'deprecated', 'cognate': 'cognate', 'struck': 'struck'}
 
 
 def _rule(e: dict) -> str | None:
@@ -83,7 +84,7 @@ def build(branches: dict) -> dict:
             r = _rule(e)
             if r:
                 n['r'] = r
-            if any(x.get('via') in ('deprecated', 'cognate') for x in e.get('roots') or []):
+            if any(x.get('via') in ('deprecated', 'cognate', 'struck') for x in e.get('roots') or []):
                 n['u'] = 1
             if e.get('alt_lang'):
                 n['al'] = e['alt_lang']
@@ -120,11 +121,14 @@ def build(branches: dict) -> dict:
 
     shortcut = {}
 
-    def edge(a, b, rel, written=None, sc=False):
+    struck = {}
+
+    def edge(a, b, rel, written=None, sc=False, st=False):
         if a not in nodes or b not in nodes or a == b:
             return
         key = (a, b, rel)
         shortcut[key] = shortcut.get(key, True) and sc
+        struck[key] = struck.get(key, True) and st
         rec = edges.setdefault(key, {})
         for w in written or ():
             rec.setdefault('w', [])
@@ -148,8 +152,8 @@ def build(branches: dict) -> dict:
                 for k, (step, nid) in enumerate(path):
                     in_tree.add(nid)
                     rel = STEPS.get(step, 'deriv')
-                    edge(nid, parent, rel, written(parent, nid) if rel == 'deriv' else None,
-                         sc=sc and k == len(path) - 1)
+                    edge(nid, parent, rel, written(parent, nid) if rel == 'deriv' and step != 't' else None,
+                         sc=sc and k == len(path) - 1, st=step == 't')
                     parent = nid
     # the word's elements also when its roots come another way or it has none (neo-roots'
     # element_parts): ᴹQ. mir < ᴹ√MĪ/IMI with -r², Q. calima < √KAL with cal- and -ima, NQ. aialca =
@@ -182,6 +186,8 @@ def build(branches: dict) -> dict:
     for key, rec in edges.items():
         if shortcut.get(key):
             rec['sc'] = 1
+        if struck.get(key):
+            rec['st'] = 1
     # nodes that do not go back to a root along the links of origin; `ds`, how many words come
     # from such a node (make_graph.py)
     origin = {'deriv', 'element', 'combine', 'see', 'deprecated', 'cognate'}
