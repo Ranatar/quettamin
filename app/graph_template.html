@@ -205,6 +205,33 @@ a.ext { color: var(--accent); font-size: 12.5px; }
 g.edge-sel .edge:not(.esel) { opacity: .12; }
 g.edge-sel .node:not(.esel) { opacity: .28; }
 .export { position: relative; }
+/* the path between two words */
+.pathbox { margin: 10px 0 4px; border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px 8px; background: var(--panel); }
+.pathbox > summary { cursor: pointer; font-weight: 600; font-size: 13px; padding: 2px 0; }
+.pathbox[open] > summary { margin-bottom: 8px; }
+.path-ends { display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto auto; gap: 6px; align-items: center; }
+.path-ends .path-end:first-child { grid-column: 1; grid-row: 1; }
+.path-ends #path-swap { grid-column: 2; grid-row: 1 / span 2; }
+.path-ends .path-end:last-child { grid-column: 1; grid-row: 2; }
+.path-end { position: relative; display: flex; flex-direction: column; }
+.path-end input { width: 100%; box-sizing: border-box; }
+.path-end .results { position: absolute; top: 100%; left: 0; right: 0; z-index: 4; max-height: 40vh; }
+.pathbox .par-mode { display: flex; flex-direction: column; gap: 3px; margin-top: 8px; font-size: 12.5px; }
+.path-tools { display: flex; gap: 6px; margin-top: 8px; }
+.path-one { margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--line); }
+.path-one.alt { opacity: .85; }
+.path-one.on { opacity: 1; }
+.path-head { font-weight: 600; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+.path-sum { font-size: 12.5px; margin: 2px 0 4px; }
+.path-lead { font-size: 12.5px; margin-bottom: 4px; }
+.path-lead button { all: unset; cursor: pointer; }
+.path-lead button:hover .fm { text-decoration: underline; }
+.path-steps .arr { color: var(--muted); font-family: var(--f-ui); }
+.tag.cross { border-color: var(--warn); color: var(--warn); }
+g.path-sel .edge:not(.onpath) { opacity: .1; }
+g.path-sel .node:not(.onpath) { opacity: .3; }
+.edge.onpath { stroke-width: 3px !important; opacity: 1 !important; }
+.edge.onpath.cross { stroke-dasharray: 9 4 !important; }
 .export-menu {
   position: absolute; right: 0; top: calc(100% + 4px); z-index: 6; display: flex; flex-direction: column; gap: 2px;
   min-width: 190px; padding: 4px; background: var(--panel); border: 1px solid var(--line); border-radius: 6px;
@@ -256,8 +283,9 @@ g.edge-sel .node:not(.esel) { opacity: .28; }
   .search { order: 2; }
   .stage { order: 3; height: 70svh; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); overflow: hidden; }
   .card { order: 4; }
+  .pathbox { order: 5; }
   .ov-hint { display: none; }
-  .legend { order: 5; }
+  .legend { order: 6; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
@@ -289,6 +317,37 @@ g.edge-sel .node:not(.esel) { opacity: .28; }
       <div class="results" id="results" hidden></div>
     </div>
 
+    <details class="pathbox" id="path-box">
+      <summary data-i18n="path.title">Путь между словами</summary>
+      <div class="path-ends">
+        <div class="path-end"><input type="search" id="path-a" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:path.from;aria-label:path.from" placeholder="от слова или корня"><div class="results" id="path-a-res" hidden></div></div>
+        <button class="btn" id="path-swap" type="button" data-i18n-attr="title:path.swap;aria-label:path.swap" title="поменять местами">⇅</button>
+        <div class="path-end"><input type="search" id="path-b" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:path.to;aria-label:path.to" placeholder="до слова или корня"><div class="results" id="path-b-res" hidden></div></div>
+      </div>
+      <label class="par-mode"><span data-i18n="path.mode">Что искать</span>
+        <select id="path-mode">
+          <option value="kin" data-i18n="path.mode.kin">родство: ближайший общий источник</option>
+          <option value="origin" data-i18n="path.mode.origin">происхождение: одно из другого</option>
+          <option value="any" data-i18n="path.mode.any">любая связь</option>
+        </select>
+      </label>
+      <label class="par-mode"><span data-i18n="path.policy">Переходы между концепциями и ветвями</span>
+        <select id="path-policy">
+          <option value="fewest" data-i18n="path.policy.fewest">как можно меньше (сначала концепции, потом ветви)</option>
+          <option value="none" data-i18n="path.policy.none">запрещены: внутри одной концепции и ветви</option>
+          <option value="conceptions-not" data-i18n="path.policy.conceptionsNot">только между ветвями</option>
+          <option value="branches-not" data-i18n="path.policy.branchesNot">только между концепциями</option>
+          <option value="any" data-i18n="path.policy.any">не учитывать: кратчайший путь</option>
+        </select>
+      </label>
+      <label class="sc-toggle"><input type="checkbox" id="path-loose"> <span data-i18n="path.loose">и через нестрогие связи (см., когнат, вместо него, зачёркнутые ссылки)</span></label>
+      <div class="path-tools">
+        <button class="btn primary" id="path-find" type="button" data-i18n="path.find">Найти</button>
+        <button class="btn" id="path-clear" type="button" data-i18n="path.clear">Сбросить</button>
+      </div>
+      <div id="path-out" aria-live="polite"></div>
+    </details>
+
     <section class="card" id="card" aria-live="polite"></section>
 
     <section class="legend">
@@ -303,6 +362,12 @@ g.edge-sel .node:not(.esel) { opacity: .28; }
       </div>
       <div class="sec switches">
         <h3 data-i18n="legend.show">Показывать</h3>
+        <label class="par-mode"><span data-i18n="vocab.label">Словарь</span>
+          <select id="vocab">
+            <option value="neo" data-i18n="vocab.neo">нео-эльдарин: неологизмы, замены и ⚠ (как Eldamo с ?neo)</option>
+            <option value="tolkien" data-i18n="vocab.tolkien">только Толкин (как Eldamo без ?neo)</option>
+          </select>
+        </label>
         <label><input type="checkbox" id="show-dep"> <span data-i18n="filter.deprecated">заменённые слова (Eldamo не советует их для нео-эльдарина)</span></label>
         <label><input type="checkbox" id="show-nam"> <span data-i18n="filter.names">имена (места, лица, народы)</span></label>
         <label><input type="checkbox" id="show-oth"> <span data-i18n="filter.other">прочие слова с ⚠️ вне перечней (ранние, отвергнутые, вычеркнутые, без значения)</span></label>
@@ -431,6 +496,7 @@ const speech = s => String(s).split(/\s+/).map(x => has('speech.' + x) ? t('spee
 
 const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 const relName = k => G.rels[k];
+const RELS_INSTEAD = G.rels.indexOf('instead');
 
 // ---------------------------------------------------------------- the graph
 const inE = Array.from({ length: N }, () => []);
@@ -514,15 +580,28 @@ let parMode = 'bands';
 let colOrder = (() => { try { const v = localStorage.getItem('neo-roots-order'); return ['source', 'branch', 'alpha'].includes(v) ? v : 'source'; } catch (e) { return 'source'; } })();
 const langOn = {};              // a language switched off in the legend: false
 const isShortcut = e => !!(e[3] && e[3].sc);
-const edgeOn = k => relOn[relName(G.edges[k][2])] && (showShortcuts || !isShortcut(G.edges[k]));
+const edgeOn = k => relOn[relName(G.edges[k][2])] && (showShortcuts || !isShortcut(G.edges[k]))
+  && !(tolkien() && G.edges[k][2] === RELS_INSTEAD);
 // links of origin, and the links of one word across conceptions (a word and the forms merged into
 // it, a root and the roots merged into or filed under it)
 const ORIGIN = new Set(['deriv', 'element', 'combine', 'see', 'deprecated', 'cognate']);
 const PARALLEL = new Set(['combine', 'merged', 'filed']);
+// the vocabulary: 'neo' -- Neo-Eldarin, as Eldamo's pages with ?neo (neologisms, deprecations and
+// replacements, ⚠); 'tolkien' -- Tolkien's words only, as Eldamo's pages without it: no ᴺQ., ᴺS., ᴺ✶,
+// ᴺ√, and the words Eldamo deprecates for Neo-Eldarin are ordinary words of their languages
+let vocab = (() => { try { return localStorage.getItem('neo-roots-vocab') === 'tolkien' ? 'tolkien' : 'neo'; } catch (e) { return 'neo'; } })();
+const tolkien = () => vocab === 'tolkien';
+// whether a word of its kind is shown (the switches of the legend and the vocabulary)
+function kindShown(n) {
+  if (tolkien() && NEO.has(n.l)) return false;
+  if (n.x === 'd') return tolkien() || showDeprecated;
+  if (n.x === 'o') return tolkien() || showOther || !!n.iv;
+  if (n.x === 'n') return showNames || !!n.iv;
+  return true;
+}
 const passes = i => {
   const n = G.nodes[i];
-  return langOn[n.l] !== false && (showDeprecated || n.x !== 'd') && (showOther || n.x !== 'o' || !!n.iv)
-    && (showNames || n.x !== 'n' || !!n.iv);
+  return langOn[n.l] !== false && kindShown(n);
 };
 
 // ---------------------------------------------------------------- state
@@ -1277,7 +1356,7 @@ function showNote() {
   else if (lastCounts) $('note').textContent = t('note.onScreen', { nodes: lastCounts[0], edges: lastCounts[1] });
 }
 function render(refit) {
-  const shownSet = new Set([...visible].filter(i => i === focusNode || passes(i)));
+  const shownSet = new Set([...visible].filter(i => i === focusNode || pathKeep.has(i) || passes(i)));
   shownNodes = shownSet;
   const nodes = [...shownSet];
   const edges = shownLinks(shownSet);
@@ -1353,8 +1432,8 @@ function render(refit) {
     return g;
   });
   ns.classed('sel', d => d.i === selected)
-    .classed('dep', d => G.nodes[d.i].x === 'd')
-    .classed('oth', d => G.nodes[d.i].x === 'o')
+    .classed('dep', d => !tolkien() && G.nodes[d.i].x === 'd')
+    .classed('oth', d => !tolkien() && G.nodes[d.i].x === 'o')
     .classed('nam', d => G.nodes[d.i].x === 'n')
     .classed('pinned', d => d.fx != null);
   ns.select('.shape').attr('d', d => shapePath(d.i))
@@ -1434,6 +1513,7 @@ function render(refit) {
   lastCounts = [data.length, links.length];
   showNote();
   markEdge();
+  markPath();
 }
 
 // Eldamo's ⚠️ on a word (vocabulary and deprecation pages): deprecated, deleted, rejected,
@@ -1442,6 +1522,7 @@ function render(refit) {
 const isDeprecated = i => G.nodes[i].x === 'd' || (G.nodes[i].wn || []).includes(G.warn.indexOf('deprecated'));
 function warnMark(i) {
   const n = G.nodes[i];
+  if (tolkien()) return false;             // the ⚠ is Neo-Eldarin advice
   return n.k !== 'root' && (n.x === 'o' || (n.wn || []).some(w => G.warn[w] !== 'early'));
 }
 function wordWarnings(i, skipDeprecated) {
@@ -1539,12 +1620,12 @@ function select(i) {
     : n.k === 'protoform' ? 'kind.protoform' : n.k === 'form' ? 'kind.form'
     : (n.l === 'p' || n.l === 'mp' || n.l === 'np') ? 'kind.primitiveWord' : 'kind.word');
   const tags = [];
-  if (isDeprecated(i)) tags.push(n.ins && n.ins.length
+  if (isDeprecated(i) && !tolkien()) tags.push(n.ins && n.ins.length
     ? `<span class="tag warn" title="${esc(t('tag.deprecatedWord.title'))}">⚠ ${esc(t('tag.deprecatedWord'))}</span>`
     : `<span class="tag warn" title="${esc(t('tag.deprecatedNone.title'))}">⚠ ${esc(t('tag.deprecatedNone'))}</span>`);
-  if (n.k !== 'root') for (const w of wordWarnings(i, true)) tags.push(`<span class="tag warn">⚠ ${esc(w)}</span>`);
+  if (n.k !== 'root' && !tolkien()) for (const w of wordWarnings(i, true)) tags.push(`<span class="tag warn">⚠ ${esc(w)}</span>`);
   if (n.x === 'm') tags.push(`<span class="tag" title="${esc(t('tag.mergedForm.title'))}">${esc(t('tag.mergedForm'))}</span>`);
-  if (n.x === 'o') tags.push(`<span class="tag warn" title="${esc(t('tag.outside.title'))}">⚠ ${esc(t('tag.outside'))}</span>`);
+  if (n.x === 'o' && !tolkien()) tags.push(`<span class="tag warn" title="${esc(t('tag.outside.title'))}">⚠ ${esc(t('tag.outside'))}</span>`);
   if (n.x === 'n') tags.push(`<span class="tag" title="${esc(t('tag.name.title'))}">${esc(t('tag.name'))}</span>`);
   if (n.grp && !n.x) tags.push(`<span class="tag">${esc(t('group.' + n.grp))}</span>`);
   if (n.s) tags.push(`<span class="tag">${esc(speech(n.s))}</span>`);
@@ -1562,7 +1643,7 @@ function select(i) {
       <div class="meta">${esc(kind)} · ${esc(lang)}${n.sp && n.sp !== n.f ? ` · ${esc(t('card.dbForm', { f: n.f }))}` : ''}</div>
     </div>
     <div class="tags">${tags.join('')}</div>`;
-  if (n.ins && n.ins.length) {
+  if (n.ins && n.ins.length && !tolkien()) {
     html += `<div class="sec"><h3>${esc(t('card.instead'))}</h3><ul class="links">${n.ins.map(x => indexOf.has(x) ? `<li>${nodeButton(indexOf.get(x))}</li>` : '').join('')}</ul></div>`;
   }
   if (visible.has(i) && i !== focusNode && !passes(i)) {
@@ -1575,6 +1656,8 @@ function select(i) {
       ${visible.has(i) && mode === 'graph' && hiddenOut(i) ? `<button class="btn" type="button" data-act="expand-out" title="${esc(t('act.expandOut.title'))}">${esc(t('act.expandOut', { n: hiddenOut(i) }))}</button>` : ''}
       ${visible.has(i) && mode === 'graph' && hasFoldable(i) ? `<button class="btn" type="button" data-act="fold">${esc(t('act.collapseDer'))}</button>` : ''}
       ${i !== focusNode && visible.has(i) ? `<button class="btn" type="button" data-act="remove">${esc(t('act.remove'))}</button>` : ''}
+      <button class="btn" type="button" data-act="path-a" title="${esc(t('act.pathFrom.title'))}">${esc(t('act.pathFrom'))}</button>
+      <button class="btn" type="button" data-act="path-b" title="${esc(t('act.pathTo.title'))}">${esc(t('act.pathTo'))}</button>
       ${/^\d+$/.test(id) ? `<a class="ext" href="${SITE}${esc(id)}.html" target="_blank" rel="noopener">${esc(t('card.eldamo'))}</a>` : ''}
     </div>`;
 
@@ -1588,7 +1671,7 @@ function select(i) {
       return `<li>${relTag(rel)} ${nodeButton(e[0])}${x.nm ? ` <span class="tag warn">${esc(t('tag.nm'))}</span>` : ''}${x.sc ? ` <span class="tag" title="${esc(t('tag.direct.title'))}">${esc(t('tag.direct'))}</span>` : ''}${x.st ? ` <span class="tag warn" title="${esc(t('edge.st'))}">${esc(t('tag.struck'))}</span>` : ''}${written}</li>`;
     }).join('')}</ul></div>`;
   }
-  if (replaces.length) {
+  if (replaces.length && !tolkien()) {
     html += `<div class="sec"><h3>${esc(t('card.replaces', { n: replaces.length }))}</h3><ul class="links">${replaces.slice(0, 60).map(e =>
       `<li>${nodeButton(e[0])}</li>`).join('')}</ul></div>`;
   }
@@ -1620,6 +1703,7 @@ $('card').addEventListener('click', ev => {
     select(selected);
   }
   else if (a.dataset.act === 'remove') removeNode(selected);
+  else if (a.dataset.act === 'path-a' || a.dataset.act === 'path-b') setPathEnd(a.dataset.act.slice(-1), selected);
   else if (a.dataset.act === 'fold') { collapseDerivatives(selected); select(selected); }
 });
 
@@ -1632,19 +1716,18 @@ function searchKeys() {
   if (!keys) keys = G.nodes.map(n => [fold(n.f), fold(n.sp), (n.g || '').toLowerCase()]);
   return keys;
 }
-function search() {
-  const raw = $('q').value.trim();
-  const box = $('results');
-  if (!raw) { box.hidden = true; return; }
-  const q = fold(raw), ql = raw.toLowerCase(), scope = $('scope').value;
+// the nodes a query finds, best first: the form or the spelling (exact, then its beginning), the
+// gloss (whole, then a word of it), the form inside, the gloss inside; scope: '', 'nq'/'ns'/'np', 'root'
+function findWords(raw, limit, scope = '') {
+  raw = String(raw || '').trim();
+  if (!raw) return [];
+  const q = fold(raw), ql = raw.toLowerCase();
   const K = searchKeys();
   const hits = [];
   for (let i = 0; i < N; i++) {
     const n = G.nodes[i];
     if (scope === 'root' ? n.k !== 'root' : scope ? n.grp !== scope : !(n.grp || n.k === 'root')) continue;
-    if (n.x === 'd' && !showDeprecated) continue;          // deprecated words with their switch on
-    if (n.x === 'o' && !showOther && !n.iv) continue;
-    if (n.x === 'n' && !showNames && !n.iv) continue;
+    if (!kindShown(n)) continue;          // the switches of the legend and the vocabulary
     const [f, sp, g] = K[i];
     let s = -1;
     if (q && (f === q || sp === q)) s = 0;
@@ -1656,10 +1739,16 @@ function search() {
     if (s >= 0) hits.push([s, n.k === 'root' ? 1 : n.x ? 2 : 0, f.length, i]);
   }
   hits.sort((a, b) => a[0] - b[0] || a[1] - b[1] || a[2] - b[2]);
-  box.innerHTML = hits.slice(0, 40).map(([, , , i]) => {
+  return hits.slice(0, limit).map(h => h[3]);
+}
+function search() {
+  const raw = $('q').value.trim();
+  const box = $('results');
+  if (!raw) { box.hidden = true; return; }
+  box.innerHTML = findWords(raw, 40, $('scope').value).map(i => {
     const n = G.nodes[i];
-    const tag = n.x === 'd' ? ` <span class="tag warn">⚠ ${esc(t('tag.deprecatedWord'))}</span>` : n.x === 'm' ? ` <span class="tag">${esc(t('tag.mergedForm'))}</span>`
-      : n.x === 'o' ? ` <span class="tag warn">⚠ ${esc(t('tag.outside'))}</span>` : n.x === 'n' ? ` <span class="tag">${esc(t('tag.name'))}</span>` : '';
+    const tag = n.x === 'd' && !tolkien() ? ` <span class="tag warn">⚠ ${esc(t('tag.deprecatedWord'))}</span>` : n.x === 'm' ? ` <span class="tag">${esc(t('tag.mergedForm'))}</span>`
+      : n.x === 'o' && !tolkien() ? ` <span class="tag warn">⚠ ${esc(t('tag.outside'))}</span>` : n.x === 'n' ? ` <span class="tag">${esc(t('tag.name'))}</span>` : '';
     return `<button type="button" data-hit="${i}">${markerHtml(i)}${n.k === 'root' ? '' : ' '}<span class="${n.k === 'root' ? 'fm root-fm' : 'fm'}">${esc(shown(i))}</span>`
       + `${n.g ? ` <span class="gl">“${esc(n.g)}”</span>` : ''}${tag}</button>`;
   }).join('') || `<div class="none">${esc(t('search.none'))}</div>`;
@@ -1694,11 +1783,9 @@ function ovValue(i) {
 const PRIM = new Set(['p', 'mp', 'ep', 'np']);
 function ovCategory(i) {
   const n = G.nodes[i];
+  if (!kindShown(n)) return null;          // the switches of the legend and the vocabulary (ᴺ√ in Tolkien's)
   if (n.k === 'root') return ('rec' in n) && !n.nl ? 'roots' : null;
   if (!n.nr || n.x === 'm') return null;                 // a merged form stands with its word
-  if (n.x === 'd' && !showDeprecated) return null;
-  if (n.x === 'o' && !showOther && !n.iv) return null;
-  if (n.x === 'n' && !showNames && !n.iv) return null;
   return PRIM.has(n.l) ? 'proto' : 'words';
 }
 function ovFill(i) {
@@ -1902,6 +1989,287 @@ $('mode-graph').addEventListener('click', () => setMode('graph'));
 $('mode-roots').addEventListener('click', () => setMode('roots'));
 for (const id of ['ov-roots', 'ov-proto', 'ov-words', 'ov-rec', 'ov-free']) $(id).addEventListener('change', () => { buildOverview(); ovFit(!reduced); });
 
+// ---------------------------------------------------------------- paths between two words
+// Three questions: 'origin' -- does B come from A (along the links of origin, either way round);
+// 'kin' -- the nearest common source of A and B (two chains up to it); 'any' -- the shortest chain
+// over any links. A step that crosses conceptions (a merged form, a merged or filed root, a
+// replacement, a derivation from another period) or branches (a cognate, a borrowing, "see" between
+// Quenya and Sindarin; not the way through a primitive form, which both branches share) is counted,
+// and the policy says what to do with such steps: as few as possible (first conceptions, then
+// branches, then length), none, only of one kind, or no matter.
+const REL_W = { deriv: 1, element: 1, rootderiv: 1, combine: 0.5, merged: 0.5, filed: 0.5, see: 2, cognate: 2, deprecated: 2, instead: 3 };
+const LOOSE = new Set(['see', 'cognate', 'instead']);
+const concOf = i => Math.min(2, eraOf(G.nodes[i].l));             // neo goes with the late conception
+const branchKey = i => { const b = branchOf(G.nodes[i].l); return b === 'primitive' ? null : b; };
+function crossOf(k) {
+  const [a, b] = G.edges[k];
+  const ba = branchKey(a), bb = branchKey(b);
+  return { conc: concOf(a) !== concOf(b), branch: !!(ba && bb && ba !== bb) };
+}
+const pathOpt = { mode: 'kin', policy: 'fewest', loose: true };
+let pathA = -1, pathB = -1;
+let pathShown = null;               // the path on the graph: {nodes: Set, edges: Set, cross: Set}
+const pathKeep = new Set();         // its nodes, shown whatever the filters say
+// can the search use the edge k, and at what cost (Infinity: no)
+function stepCost(k, ends, penalty) {
+  if (!edgeOn(k)) return Infinity;
+  const e = G.edges[k], rel = relName(e[2]), x = e[3] || {};
+  if (x.nm) return Infinity;                                       // consonants that do not match
+  if (!pathOpt.loose && (LOOSE.has(rel) || x.st)) return Infinity;
+  for (const v of [e[0], e[1]]) if (!ends.has(v) && !passes(v)) return Infinity;
+  let w = (REL_W[rel] || 1) + (x.st ? 2 : 0) + (penalty.get(k) || 0);
+  const c = crossOf(k), p = pathOpt.policy;
+  if (p === 'any') return w;
+  if (c.conc && (p === 'none' || p === 'conceptions-not')) return Infinity;
+  if (c.branch && (p === 'none' || p === 'branches-not')) return Infinity;
+  return w + (c.conc ? 1e6 : 0) + (c.branch ? 1e3 : 0);
+}
+// the moves from a node: [edge, next node, along the edge?] by the kind of search
+function* moves(v, dir) {
+  // dir: 'down' along the links of origin, 'up' against them, 'both' any link either way; links
+  // between the forms of one word (merged, filed, combine) go either way in every search
+  for (const k of outE[v]) {
+    const rel = relName(G.edges[k][2]);
+    if (dir === 'both' || PARALLEL.has(rel) || (dir === 'down' && rel !== 'instead')) yield [k, G.edges[k][1], true];
+  }
+  for (const k of inE[v]) {
+    const rel = relName(G.edges[k][2]);
+    if (dir === 'both' || PARALLEL.has(rel) || (dir === 'up' && rel !== 'instead')) yield [k, G.edges[k][0], false];
+  }
+}
+// Dijkstra over the whole graph (a binary heap; some 28 thousand nodes: milliseconds)
+function dijkstra(from, dir, ends, penalty) {
+  const dist = new Float64Array(N).fill(Infinity), prevE = new Int32Array(N).fill(-1), prevV = new Int32Array(N).fill(-1);
+  const along = new Uint8Array(N);
+  const heap = [[0, from]];
+  dist[from] = 0;
+  const push = it => { heap.push(it); let c = heap.length - 1; while (c) { const p = (c - 1) >> 1; if (heap[p][0] <= heap[c][0]) break; [heap[p], heap[c]] = [heap[c], heap[p]]; c = p; } };
+  const pop = () => {
+    const top = heap[0], last = heap.pop();
+    if (heap.length) { heap[0] = last; let c = 0; for (;;) { const l = 2 * c + 1, r = l + 1; let m = c; if (l < heap.length && heap[l][0] < heap[m][0]) m = l; if (r < heap.length && heap[r][0] < heap[m][0]) m = r; if (m === c) break; [heap[m], heap[c]] = [heap[c], heap[m]]; c = m; } }
+    return top;
+  };
+  while (heap.length) {
+    const [d, v] = pop();
+    if (d > dist[v]) continue;
+    for (const [k, u, fwd] of moves(v, dir)) {
+      const w = stepCost(k, ends, penalty);
+      if (w === Infinity) continue;
+      if (d + w < dist[u]) { dist[u] = d + w; prevE[u] = k; prevV[u] = v; along[u] = fwd ? 1 : 0; push([d + w, u]); }
+    }
+  }
+  return { dist, prevE, prevV, along };
+}
+// the steps from the start of a search to v: [{k, from, to}] in the order walked
+function chain(run, v) {
+  const out = [];
+  while (run.prevE[v] >= 0) { out.push({ k: run.prevE[v], from: run.prevV[v], to: v }); v = run.prevV[v]; }
+  return out.reverse();
+}
+function describePath(steps, a, b, extra = {}) {
+  const nodes = [a, ...steps.map(s => s.to)];
+  let conc = 0, branch = 0, weight = 0;
+  for (const s of steps) {
+    const c = crossOf(s.k);
+    conc += c.conc; branch += c.branch;
+    weight += REL_W[relName(G.edges[s.k][2])] || 1;
+  }
+  return Object.assign({ steps, nodes, conc, branch, weight, a, b }, extra);
+}
+// one search by the current options; penalty: extra cost of some edges (for other paths)
+function searchPath(a, b, penalty = new Map()) {
+  const ends = new Set([a, b]);
+  if (pathOpt.mode === 'any') {
+    const run = dijkstra(a, 'both', ends, penalty);
+    return run.dist[b] < Infinity ? describePath(chain(run, b), a, b, { cost: run.dist[b] }) : null;
+  }
+  if (pathOpt.mode === 'origin') {
+    const down = dijkstra(a, 'down', ends, penalty);
+    if (down.dist[b] < Infinity) return describePath(chain(down, b), a, b, { cost: down.dist[b], dir: 'down' });
+    const up = dijkstra(b, 'down', ends, penalty);          // A comes from B
+    if (up.dist[a] < Infinity) return describePath(chain(up, a).reverse().map(s => ({ k: s.k, from: s.to, to: s.from })), a, b, { cost: up.dist[a], dir: 'up' });
+    return null;
+  }
+  // kin: up from both; the common source with the least cost of the two chains
+  const ra = dijkstra(a, 'up', ends, penalty), rb = dijkstra(b, 'up', ends, penalty);
+  let best = -1, cost = Infinity;
+  for (let v = 0; v < N; v++) {
+    const c = ra.dist[v] + rb.dist[v];
+    if (c < cost) { cost = c; best = v; }
+  }
+  if (best < 0) return null;
+  // A up to the source (the walk from A, as found), then the source down to B
+  const upA = chain(ra, best), upB = chain(rb, best);
+  const steps = [...upA, ...upB.reverse().map(s => ({ k: s.k, from: s.to, to: s.from }))];
+  return describePath(steps, a, b, { cost, source: best });
+}
+const pathKey = p => p.steps.map(s => s.k).join(',');
+// the best path and up to two others: the edges of the found ones cost more on each next search; and,
+// when crossings were avoided, the shortest path with crossings if it is clearly shorter
+function findPaths(a, b) {
+  const found = [], penalty = new Map();
+  for (let round = 0; round < 3; round++) {
+    const p = searchPath(a, b, penalty);
+    if (!p) break;
+    if (!found.some(q => pathKey(q) === pathKey(p))) found.push(p);
+    for (const s of p.steps) penalty.set(s.k, (penalty.get(s.k) || 0) + 3);
+  }
+  if (found.length && pathOpt.policy !== 'any') {
+    const keep = pathOpt.policy;
+    pathOpt.policy = 'any';
+    const short = searchPath(a, b);
+    pathOpt.policy = keep;
+    if (short && short.weight <= found[0].weight - 2 && (short.conc || short.branch) && !found.some(q => pathKey(q) === pathKey(short))) {
+      short.shorter = true;
+      found.push(short);
+    }
+  }
+  return found;
+}
+const CONC_NAME = c => t('conc.' + c);
+function pathSummary(p) {
+  const concs = [...new Set(p.nodes.map(concOf))];
+  const branches = [...new Set(p.nodes.map(branchKey).filter(Boolean))];
+  const parts = [];
+  if (!p.conc) parts.push(t('path.inConc', { c: CONC_NAME(concs[0]) }));
+  else parts.push(t('path.crossConc', { list: p.nodes.map(concOf).filter((c, k, xs) => !k || c !== xs[k - 1]).map(CONC_NAME).join(' → '), n: p.conc }));
+  if (!p.branch) { if (branches.length === 1) parts.push(t('path.inBranch', { b: t('branch.' + branches[0]) })); else if (branches.length > 1) parts.push(t('path.viaPrimitive')); }
+  else parts.push(t('path.crossBranch', { list: p.nodes.map(branchKey).filter(Boolean).filter((b, k, xs) => !k || b !== xs[k - 1]).map(b => t('branch.' + b)).join(' → '), n: p.branch }));
+  return parts.join(' · ');
+}
+function pathHtml(p, index) {
+  const head = p.shorter ? t('path.shorter') : index ? t('path.other', { n: index }) : '';
+  let lead = '';
+  if (pathOpt.mode === 'origin') lead = t(p.dir === 'up' ? 'path.fromB' : 'path.fromA');
+  if (pathOpt.mode === 'kin' && p.source !== undefined) lead = t('path.source') + ' ' + nodeButton(p.source);
+  const steps = p.steps.map(s => {
+    const e = G.edges[s.k], rel = relName(e[2]), x = e[3] || {}, c = crossOf(s.k);
+    const fwd = e[0] === s.from;                 // along the link: from the source to the derivative
+    const marks = (c.conc ? ` <span class="tag cross" title="${esc(t('path.mConc.title'))}">↕ ${esc(t('path.mConc'))}</span>` : '')
+      + (c.branch ? ` <span class="tag cross" title="${esc(t('path.mBranch.title'))}">↔ ${esc(t('path.mBranch'))}</span>` : '')
+      + (x.st ? ` <span class="tag warn">${esc(t('tag.struck'))}</span>` : '');
+    const written = (x.w || []).map(([src, ch]) => `<span class="written">${esc(t('card.written', { src, chain: ch.join(' > ') }))}</span>`).join('');
+    return `<li><span class="arr">${fwd ? '→' : '←'}</span> ${relTag(rel)} ${nodeButton(s.to)}${marks}${written}</li>`;
+  }).join('');
+  return `<div class="path-one${index ? ' alt' : ''}" data-path="${index}">
+      ${head ? `<div class="path-head">${esc(head)}</div>` : ''}
+      <div class="path-sum">${esc(pathSummary(p))} · ${esc(t('path.steps', { n: p.steps.length }))}</div>
+      ${lead ? `<div class="path-lead">${lead.startsWith('<') ? lead : lead}</div>` : ''}
+      <ul class="links path-steps"><li>${nodeButton(p.a)}</li>${steps}</ul>
+      ${index ? `<button class="btn" type="button" data-act="path-show" data-idx="${index}">${esc(t('path.showThis'))}</button>` : ''}
+    </div>`;
+}
+let pathFound = [];
+function runPath() {
+  if (pathA < 0 || pathB < 0) { $('path-out').innerHTML = `<p class="more">${esc(t('path.pick'))}</p>`; return; }
+  if (pathA === pathB) { $('path-out').innerHTML = `<p class="more">${esc(t('path.same'))}</p>`; return; }
+  pathFound = findPaths(pathA, pathB);
+  if (!pathFound.length) {
+    // the two ends in different conceptions cannot meet without crossing them
+    const apart = concOf(pathA) !== concOf(pathB) && ['none', 'conceptions-not'].includes(pathOpt.policy);
+    $('path-out').innerHTML = `<p class="more">${esc(apart ? t('path.none.apart', { a: CONC_NAME(concOf(pathA)), b: CONC_NAME(concOf(pathB)) })
+      : t('path.none.' + (pathOpt.policy === 'any' ? 'any' : 'policy')))}</p>`;
+    showPathOnGraph(null);
+    return;
+  }
+  $('path-out').innerHTML = pathFound.map(pathHtml).join('');
+  showPathOnGraph(pathFound[0]);
+  try { history.replaceState(null, '', `#path-${G.ids[pathA]}-${G.ids[pathB]}-${pathOpt.mode}-${pathOpt.policy}`); } catch (e) { /* the frame may refuse */ }
+}
+// the path on the graph: its nodes added (kept whatever the filters), the rest faded
+function showPathOnGraph(p) {
+  for (const [x, by] of [...owners]) {
+    if (!by.has('path')) continue;
+    by.delete('path');
+    if (!by.size && x !== focusNode) drop(x);
+  }
+  pathKeep.clear();
+  pathShown = null;
+  if (p) {
+    if (mode !== 'graph') setMode('graph');
+    // a path far from what is on screen opens on its own: the start becomes the focus
+    if (!visible.has(p.a) && !visible.has(p.b)) focus(p.a);
+    for (const v of p.nodes) { pathKeep.add(v); if (!visible.has(v)) visible.add(v); own(v, 'path'); }
+    pathShown = { nodes: new Set(p.nodes), edges: new Set(p.steps.map(s => s.k)), cross: new Set(p.steps.filter(s => { const c = crossOf(s.k); return c.conc || c.branch; }).map(s => s.k)) };
+  }
+  render(!!p);
+}
+function markPath() {
+  root.classed('path-sel', !!pathShown);
+  gEdges.selectAll('path').classed('onpath', d => !!pathShown && pathShown.edges.has(d.k))
+    .classed('cross', d => !!pathShown && pathShown.cross.has(d.k));
+  gNodes.selectAll('g.node').classed('onpath', d => !!pathShown && pathShown.nodes.has(d.i));
+}
+function clearPath() {
+  pathFound = [];
+  $('path-out').innerHTML = '';
+  showPathOnGraph(null);
+}
+// the two ends: typed and picked from a list, or set from a node's card
+function pickField(side) {
+  const input = $('path-' + side), box = $('path-' + side + '-res');
+  input.addEventListener('input', () => {
+    if (side === 'a') pathA = -1; else pathB = -1;
+    const hits = findWords(input.value, 12);
+    box.innerHTML = hits.map(i => `<button type="button" data-hit="${i}">${markerHtml(i)}${G.nodes[i].k === 'root' ? '' : ' '}<span class="${G.nodes[i].k === 'root' ? 'fm root-fm' : 'fm'}">${esc(shown(i))}</span>${G.nodes[i].g ? ` <span class="gl">“${esc(G.nodes[i].g)}”</span>` : ''}</button>`).join('')
+      || (input.value.trim() ? `<div class="none">${esc(t('search.none'))}</div>` : '');
+    box.hidden = !box.innerHTML;
+  });
+  box.addEventListener('click', ev => {
+    const b = ev.target.closest('[data-hit]');
+    if (!b) return;
+    setPathEnd(side, +b.dataset.hit);
+    box.hidden = true;
+  });
+  input.addEventListener('keydown', ev => {
+    if (ev.key === 'Enter') { const b = box.querySelector('[data-hit]'); if (b) { setPathEnd(side, +b.dataset.hit); box.hidden = true; } }
+    if (ev.key === 'Escape') box.hidden = true;
+  });
+}
+function setPathEnd(side, i) {
+  if (side === 'a') pathA = i; else pathB = i;
+  $('path-' + side).value = `${marker(i)}${G.nodes[i].k === 'root' ? '' : ' '}${shown(i)}`;
+  $('path-box').open = true;
+  if (pathA >= 0 && pathB >= 0) runPath();
+}
+pickField('a');
+pickField('b');
+for (const [id, key] of [['path-mode', 'mode'], ['path-policy', 'policy']]) {
+  $(id).value = pathOpt[key];
+  $(id).addEventListener('change', ev => { pathOpt[key] = ev.target.value; if (pathA >= 0 && pathB >= 0) runPath(); });
+}
+$('path-loose').checked = pathOpt.loose;
+$('path-loose').addEventListener('change', ev => { pathOpt.loose = ev.target.checked; if (pathA >= 0 && pathB >= 0) runPath(); });
+$('path-find').addEventListener('click', runPath);
+$('path-swap').addEventListener('click', () => {
+  const a = pathA, b = pathB;
+  pathA = -1; pathB = -1;
+  if (b >= 0) setPathEnd('a', b); else $('path-a').value = '';
+  if (a >= 0) setPathEnd('b', a); else $('path-b').value = '';
+});
+$('path-clear').addEventListener('click', () => { pathA = pathB = -1; $('path-a').value = ''; $('path-b').value = ''; clearPath(); });
+$('path-out').addEventListener('click', ev => {
+  const n = ev.target.closest('[data-node]');
+  if (n) { const i = +n.dataset.node; if (visible.has(i)) select(i); else focus(i); return; }
+  const s = ev.target.closest('[data-act="path-show"]');
+  if (s) {
+    const p = pathFound[+s.dataset.idx];
+    if (p) showPathOnGraph(p);
+    for (const el of $('path-out').querySelectorAll('.path-one')) el.classList.toggle('on', el.dataset.path === s.dataset.idx);
+  }
+});
+// an address #path-<A>-<B>[-<mode>-<policy>]
+function pathFromHash(hash) {
+  const m = /^#path-(\w+)-(\w+)(?:-(origin|kin|any))?(?:-([\w-]+))?$/.exec(hash);
+  if (!m || !indexOf.has(m[1]) || !indexOf.has(m[2])) return false;
+  if (m[3]) { pathOpt.mode = m[3]; $('path-mode').value = m[3]; }
+  if (m[4] && ['fewest', 'none', 'conceptions-not', 'branches-not', 'any'].includes(m[4])) { pathOpt.policy = m[4]; $('path-policy').value = m[4]; }
+  pathA = -1; pathB = -1;
+  setPathEnd('a', indexOf.get(m[1]));
+  setPathEnd('b', indexOf.get(m[2]));
+  return true;
+}
+
 // ---------------------------------------------------------------- export
 // The graph on screen as SVG (the computed styles written into every element, so the file stands
 // alone), as PNG (that SVG drawn at twice the size) or as JSON; the whole origins map as PNG. Files
@@ -2082,6 +2450,18 @@ function switchKind(on) {
   } else refilter();
 }
 $('show-dep').addEventListener('change', ev => { showDeprecated = ev.target.checked; switchKind(showDeprecated); });
+function applyVocab() {
+  $('vocab').value = vocab;
+  // in Tolkien's vocabulary deprecated and other ⚠ words are ordinary words: their switches do not apply
+  for (const id of ['show-dep', 'show-oth']) $(id).disabled = tolkien();
+}
+$('vocab').addEventListener('change', ev => {
+  vocab = ev.target.value === 'tolkien' ? 'tolkien' : 'neo';
+  try { localStorage.setItem('neo-roots-vocab', vocab); } catch (e) { /* storage unavailable */ }
+  applyVocab();
+  switchKind(true);          // either way some words appear: neologisms, or the deprecated as ordinary words
+});
+applyVocab();
 $('show-oth').addEventListener('change', ev => { showOther = ev.target.checked; switchKind(showOther); });
 $('show-nam').addEventListener('change', ev => { showNames = ev.target.checked; switchKind(showNames); });
 $('col-order').value = colOrder;
@@ -2180,6 +2560,7 @@ function fromHash() {
 }
 window.addEventListener('hashchange', () => {
   if (location.hash === '#all-roots') { setMode('roots'); return; }
+  if (location.hash.startsWith('#path-')) { pathFromHash(location.hash); return; }
   const i = fromHash(); if (i >= 0 && i !== focusNode) focus(i);
   else if (i < 0) {
     const h = location.hash;
@@ -2195,8 +2576,12 @@ function unknownNode(hash = location.hash) {
 const wantRoots = location.hash === '#all-roots';
 const startHash = location.hash;          // focus() rewrites the address
 const start = fromHash();
-focus(start >= 0 ? start : indexOf.get('3583944535'));     // Q. Elda
+const startPath = startHash.startsWith('#path-');
+const pathStart = startPath ? /^#path-(\w+)-/.exec(startHash) : null;
+focus(start >= 0 ? start : pathStart && indexOf.has(pathStart[1]) ? indexOf.get(pathStart[1])
+  : indexOf.get('3583944535'));     // Q. Elda
 if (wantRoots) setMode('roots');
-if (start < 0) unknownNode(startHash);
+if (startPath) pathFromHash(startHash);
+else if (start < 0) unknownNode(startHash);
 })();
 </script>

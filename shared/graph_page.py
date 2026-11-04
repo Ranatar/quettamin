@@ -262,6 +262,8 @@ ADAPT = [
     ('        <label><input type="checkbox" id="show-oth"> <span data-i18n="filter.other">',
      '        <label hidden><input type="checkbox" id="show-oth"> <span data-i18n="filter.other">'),
     ("    [t('legend.n.other'), d3.symbol(d3.symbolCircle, 120)(), css('--n-form'), css('--n-form'), '2 2', 0.55],\n", ''),
+    ("localStorage.getItem('neo-roots-vocab')", "localStorage.getItem('quettamin-graph-vocab')"),
+    ("localStorage.setItem('neo-roots-vocab', vocab)", "localStorage.setItem('quettamin-graph-vocab', vocab)"),
     ("localStorage.setItem('neo-roots-order', colOrder)", "localStorage.setItem('quettamin-graph-order', colOrder)"),
     # exported files named after Quettamin
     ("return 'neo-roots-' + (f || 'graph');", "return 'quettamin-' + (f || 'graph');"),

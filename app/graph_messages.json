@@ -922,5 +922,197 @@
  "speech.collective-name": {
   "ru": "собирательное имя",
   "en": "collective name"
+ },
+ "vocab.label": {
+  "ru": "Словарь",
+  "en": "Vocabulary"
+ },
+ "vocab.neo": {
+  "ru": "нео-эльдарин: неологизмы, замены и ⚠ (как Eldamo с ?neo)",
+  "en": "Neo-Eldarin: neologisms, replacements and ⚠ (as Eldamo with ?neo)"
+ },
+ "vocab.tolkien": {
+  "ru": "только Толкин (как Eldamo без ?neo)",
+  "en": "Tolkien only (as Eldamo without ?neo)"
+ },
+ "path.title": {
+  "ru": "Путь между словами",
+  "en": "Path between words"
+ },
+ "path.from": {
+  "ru": "от слова или корня",
+  "en": "from a word or root"
+ },
+ "path.to": {
+  "ru": "до слова или корня",
+  "en": "to a word or root"
+ },
+ "path.swap": {
+  "ru": "поменять местами",
+  "en": "swap"
+ },
+ "path.mode": {
+  "ru": "Что искать",
+  "en": "What to look for"
+ },
+ "path.mode.kin": {
+  "ru": "родство: ближайший общий источник",
+  "en": "kinship: the nearest common source"
+ },
+ "path.mode.origin": {
+  "ru": "происхождение: одно из другого",
+  "en": "origin: one from the other"
+ },
+ "path.mode.any": {
+  "ru": "любая связь",
+  "en": "any connection"
+ },
+ "path.policy": {
+  "ru": "Переходы между концепциями и ветвями",
+  "en": "Crossing conceptions and branches"
+ },
+ "path.policy.fewest": {
+  "ru": "как можно меньше (сначала концепции, потом ветви)",
+  "en": "as few as possible (conceptions first, then branches)"
+ },
+ "path.policy.none": {
+  "ru": "запрещены: внутри одной концепции и ветви",
+  "en": "none: within one conception and branch"
+ },
+ "path.policy.conceptionsNot": {
+  "ru": "только между ветвями",
+  "en": "between branches only"
+ },
+ "path.policy.branchesNot": {
+  "ru": "только между концепциями",
+  "en": "between conceptions only"
+ },
+ "path.policy.any": {
+  "ru": "не учитывать: кратчайший путь",
+  "en": "ignore them: the shortest path"
+ },
+ "path.loose": {
+  "ru": "и через нестрогие связи (см., когнат, вместо него, зачёркнутые ссылки)",
+  "en": "also through loose links (see, cognate, instead, struck references)"
+ },
+ "path.find": {
+  "ru": "Найти",
+  "en": "Find"
+ },
+ "path.clear": {
+  "ru": "Сбросить",
+  "en": "Clear"
+ },
+ "path.pick": {
+  "ru": "Выберите оба конца: в полях выше или кнопками «путь отсюда» / «путь сюда» в карточке.",
+  "en": "Pick both ends: in the fields above or with “path from here” / “path to here” in a card."
+ },
+ "path.same": {
+  "ru": "Начало и конец совпадают.",
+  "en": "The two ends are the same."
+ },
+ "path.none.policy": {
+  "ru": "Пути нет при этих условиях. Попробуйте разрешить переходы или нестрогие связи, или другой вид поиска.",
+  "en": "No path under these conditions. Try allowing crossings or loose links, or another kind of search."
+ },
+ "path.none.any": {
+  "ru": "Пути нет: эти узлы не связаны на графе (с учётом языков и видов слов, выбранных в легенде).",
+  "en": "No path: these nodes are not connected on the graph (given the languages and kinds of words chosen in the legend)."
+ },
+ "path.inConc": {
+  "ru": "в пределах концепции: {c}",
+  "en": "within one conception: {c}"
+ },
+ "path.crossConc": {
+  "ru": "пересекает концепции: {list} (переходов: {n})",
+  "en": "crosses conceptions: {list} ({n} crossing(s))"
+ },
+ "path.inBranch": {
+  "ru": "{b}",
+  "en": "{b}"
+ },
+ "path.viaPrimitive": {
+  "ru": "ветви сходятся через праэльфийский",
+  "en": "the branches meet through Primitive Elvish"
+ },
+ "path.crossBranch": {
+  "ru": "пересекает ветви: {list} (переходов: {n})",
+  "en": "crosses branches: {list} ({n} crossing(s))"
+ },
+ "path.steps": {
+  "ru": "шагов: {n}",
+  "en": "{n} step(s)"
+ },
+ "path.shorter": {
+  "ru": "короче, но с переходами",
+  "en": "shorter, with crossings"
+ },
+ "path.other": {
+  "ru": "другой путь {n}",
+  "en": "another path {n}"
+ },
+ "path.showThis": {
+  "ru": "показать этот путь",
+  "en": "show this path"
+ },
+ "path.fromA": {
+  "ru": "второе выводится из первого",
+  "en": "the second comes from the first"
+ },
+ "path.fromB": {
+  "ru": "первое выводится из второго",
+  "en": "the first comes from the second"
+ },
+ "path.source": {
+  "ru": "общий источник:",
+  "en": "common source:"
+ },
+ "path.mConc": {
+  "ru": "смена концепции",
+  "en": "conception changes"
+ },
+ "path.mConc.title": {
+  "ru": "шаг соединяет разные концепции: слитая форма, корень другой эпохи, замена или деривация из другого периода",
+  "en": "the step joins different conceptions: a merged form, a root of another period, a replacement or a derivation across periods"
+ },
+ "path.mBranch": {
+  "ru": "смена ветви",
+  "en": "branch changes"
+ },
+ "path.mBranch.title": {
+  "ru": "боковой шаг между ветвями: когнат, заимствование, «см.» (путь через праформу ветвь не меняет)",
+  "en": "a sideways step between branches: a cognate, a borrowing, “see” (the way through a primitive form does not change the branch)"
+ },
+ "act.pathFrom": {
+  "ru": "путь отсюда",
+  "en": "path from here"
+ },
+ "act.pathFrom.title": {
+  "ru": "сделать этот узел началом пути",
+  "en": "make this node the start of a path"
+ },
+ "act.pathTo": {
+  "ru": "путь сюда",
+  "en": "path to here"
+ },
+ "act.pathTo.title": {
+  "ru": "сделать этот узел концом пути",
+  "en": "make this node the end of a path"
+ },
+ "conc.0": {
+  "ru": "ранняя",
+  "en": "early"
+ },
+ "conc.1": {
+  "ru": "средняя («Этимологии»)",
+  "en": "middle (Etymologies)"
+ },
+ "conc.2": {
+  "ru": "поздняя и нео",
+  "en": "late and neo"
+ },
+ "path.none.apart": {
+  "ru": "Концы пути в разных концепциях ({a} и {b}), а переходы между концепциями запрещены.",
+  "en": "The ends are in different conceptions ({a} and {b}), and crossing conceptions is not allowed."
  }
 }
