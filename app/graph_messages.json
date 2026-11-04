@@ -140,12 +140,12 @@
   "en": "a replaced word (deprecated)"
  },
  "rel.cognate": {
-  "ru": "когнат",
-  "en": "cognate"
+  "ru": "корень через когнат",
+  "en": "root via a cognate"
  },
  "rel.cognate.long": {
-  "ru": "когнат в другом языке",
-  "en": "a cognate in another language"
+  "ru": "корень слова найден через его когнат в другом языке",
+  "en": "the word's root is found through its cognate in another language"
  },
  "rel.merged": {
   "ru": "корень слит",
@@ -1114,5 +1114,17 @@
  "path.none.apart": {
   "ru": "Концы пути в разных концепциях ({a} и {b}), а переходы между концепциями запрещены.",
   "en": "The ends are in different conceptions ({a} and {b}), and crossing conceptions is not allowed."
+ },
+ "rel.cognates": {
+  "ru": "когнат",
+  "en": "cognate"
+ },
+ "rel.cognates.long": {
+  "ru": "когнат в другом языке (раздел Cognates на странице Eldamo): сопоставление, не происхождение",
+  "en": "a cognate in another language (the Cognates section of Eldamo's page): comparison, not origin"
+ },
+ "card.cognates": {
+  "ru": "Когнаты ({n})",
+  "en": "Cognates ({n})"
  }
 }

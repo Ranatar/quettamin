@@ -20,7 +20,9 @@ from .source import ROOT, meta
 
 APP = ROOT / 'app'
 # 'instead': a deprecated word -> what Eldamo suggests instead (not a link of origin)
-RELS = ['deriv', 'element', 'combine', 'see', 'deprecated', 'cognate', 'merged', 'filed', 'rootderiv', 'instead']
+# 'cognates': the cognates Eldamo gives a word (comparison, not origin; one link per pair, no arrow)
+RELS = ['deriv', 'element', 'combine', 'see', 'deprecated', 'cognate', 'merged', 'filed', 'rootderiv', 'instead',
+        'cognates']
 KINDS = ['word', 'form', 'protoform', 'root']
 WARN = ['deprecated', 'deleted', 'rejected', 'doubtful', 'unglossed', 'early']
 STEPS = {'e': 'element', 'd': 'deriv', 'c': 'combine', 's': 'see', 'x': 'deprecated', 'k': 'cognate',
@@ -176,6 +178,20 @@ def build(branches: dict) -> dict:
     for i in in_tree:
         if i in nodes and nodes[i].get('x') == 'n':
             nodes[i]['iv'] = 1      # a name on another's way to a root: shown without its switch
+    # cognates (the Cognates section of Eldamo's page): one link per pair, from the smaller page id,
+    # not where a cognate already gives a root; a word of a language of neither branch (T. pet-) is
+    # drawn too, known only as someone's cognate (cg)
+    for wid, e in entries.items():
+        for x in (e.get('links') or {}).get('cognate', ()):
+            xi = x.get('id')
+            if not xi or xi == wid:
+                continue
+            if xi not in nodes:
+                nodes[xi] = {'f': x.get('form') or '?', 'l': x.get('lang') or '', 'k': 'word', 'cg': 1}
+            if (xi, wid, 'cognate') in edges or (wid, xi, 'cognate') in edges:
+                continue
+            a, b = sorted((wid, xi), key=lambda v: (len(v), v))
+            edge(a, b, 'cognates')
     for rid, r in roots.items():
         for x in r.get('merged', ()):
             edge(x, rid, 'merged')

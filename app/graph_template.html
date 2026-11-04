@@ -27,6 +27,7 @@
   --e-see: #8893a2;
   --e-deprecated: #b98320;
   --e-cognate: #a8458a;
+  --e-cognates: #8a5fb0;
   --e-merged: #a8780a;
   --e-filed: #a8780a;
   --e-rootderiv: #a8780a;
@@ -45,7 +46,7 @@
     --bg: #11161d; --panel: #171e27; --ink: #e3e8ef; --muted: #96a2b2; --line: #2a3441; --accent: #8db8e4; --focus: #f1f4f8;
     --n-root: #e2b34a; --n-root-soft: #e2b34a66; --n-nq: #49b6cc; --n-ns: #6dc07a; --n-np: #a593ea; --n-form: #7f8b9b;
     --e-deriv: #7ba7dc; --e-element: #e88371; --e-combine: #aabd5c; --e-see: #7f8b9b; --e-deprecated: #e2ad4c;
-    --e-cognate: #dc7fc0; --e-merged: #e2b34a; --e-filed: #e2b34a; --e-rootderiv: #e2b34a; --e-instead: #b9a17c; --l-elvish: #e39a5f;
+    --e-cognate: #dc7fc0; --e-cognates: #b796e0; --e-merged: #e2b34a; --e-filed: #e2b34a; --e-rootderiv: #e2b34a; --e-instead: #b9a17c; --l-elvish: #e39a5f;
     --warn: #ea9157; --ok: #6dc07a;
     color-scheme: dark;
   }
@@ -54,7 +55,7 @@
   --bg: #11161d; --panel: #171e27; --ink: #e3e8ef; --muted: #96a2b2; --line: #2a3441; --accent: #8db8e4; --focus: #f1f4f8;
   --n-root: #e2b34a; --n-root-soft: #e2b34a66; --n-nq: #49b6cc; --n-ns: #6dc07a; --n-np: #a593ea; --n-form: #7f8b9b;
   --e-deriv: #7ba7dc; --e-element: #e88371; --e-combine: #aabd5c; --e-see: #7f8b9b; --e-deprecated: #e2ad4c;
-  --e-cognate: #dc7fc0; --e-merged: #e2b34a; --e-filed: #e2b34a; --e-rootderiv: #e2b34a; --e-instead: #b9a17c; --l-elvish: #e39a5f;
+  --e-cognate: #dc7fc0; --e-cognates: #b796e0; --e-merged: #e2b34a; --e-filed: #e2b34a; --e-rootderiv: #e2b34a; --e-instead: #b9a17c; --l-elvish: #e39a5f;
   --warn: #ea9157; --ok: #6dc07a;
   color-scheme: dark;
 }
@@ -616,14 +617,16 @@ const pos = new Map();          // node -> {x, y, vx, vy, fx, fy}; a dragged nod
 
 // links not shown yet, by side: to the sources (what the node comes from: its earlier forms, its
 // elements, the forms merged into it, its cognates, the root it is filed under) and to the derivatives
+const RELS_COGNATES = G.rels.indexOf('cognates');
+const isCognates = k => G.edges[k][2] === RELS_COGNATES;
 function hiddenIn(i) {
   let h = 0;
-  for (const k of inE[i]) if (edgeOn(k) && !visible.has(G.edges[k][0]) && passes(G.edges[k][0])) h++;
+  for (const k of inE[i]) if (!isCognates(k) && edgeOn(k) && !visible.has(G.edges[k][0]) && passes(G.edges[k][0])) h++;
   return h;
 }
 function hiddenOut(i) {
   let h = 0;
-  for (const k of outE[i]) if (edgeOn(k) && !visible.has(G.edges[k][1]) && passes(G.edges[k][1])) h++;
+  for (const k of outE[i]) if (!isCognates(k) && edgeOn(k) && !visible.has(G.edges[k][1]) && passes(G.edges[k][1])) h++;
   return h;
 }
 
@@ -632,7 +635,7 @@ function upstream(i, cap) {
   for (let q = 0; q < out.length && out.length < cap; q++) {
     if (q > 0 && isRoot(out[q])) continue;      // a root's own merges and filing open on expand
     for (const k of inE[out[q]]) {
-      if (!edgeOn(k) || relName(G.edges[k][2]) === 'instead') continue;   // a replacement is not an origin
+      if (!edgeOn(k) || relName(G.edges[k][2]) === 'instead' || isCognates(k)) continue;   // a replacement, a cognate: not origins
       const a = G.edges[k][0];
       if (!seen.has(a)) { seen.add(a); out.push(a); }
     }
@@ -646,7 +649,7 @@ function downstream(i, depth, cap) {
     const next = [];
     for (const x of layer) {
       for (const k of outE[x]) {
-        if (!edgeOn(k)) continue;
+        if (!edgeOn(k) || isCognates(k)) continue;
         const b = G.edges[k][1];
         if (seen.has(b) || !passes(b)) continue;
         if (out.length >= cap) return out;
@@ -667,6 +670,14 @@ function focus(i, keep) {
   for (const x of upstream(i, 300)) { visible.add(x); own(x, 'core'); }
   const down = isRoot(i) ? downstream(i, 2, 160) : downstream(i, 1, 40);
   for (const x of down) { visible.add(x); own(x, 'core'); }
+  // and its cognates (the Cognates section of its page), of whatever kind (S. Edhelharn ~ Q. Elessar,
+  // both names); the languages switched off in the legend still apply
+  cognateKeep.clear();
+  for (const k of [...inE[i], ...outE[i]]) {
+    if (!isCognates(k) || !edgeOn(k)) continue;
+    const x = G.edges[k][0] === i ? G.edges[k][1] : G.edges[k][0];
+    visible.add(x); own(x, 'core'); cognateKeep.add(x);
+  }
   select(i);
   try { history.replaceState(null, '', '#n-' + G.ids[i]); } catch (e) { /* the frame may refuse */ }
   render(true);
@@ -674,10 +685,10 @@ function focus(i, keep) {
 // dir: 'all', 'in' (the sources only) or 'out' (the derivatives only)
 function expand(i, dir = 'all') {
   const around = [];
-  if (dir !== 'out') for (const k of inE[i]) if (edgeOn(k)) around.push(G.edges[k][0]);
+  if (dir !== 'out') for (const k of inE[i]) if (edgeOn(k) && (dir === 'all' || !isCognates(k))) around.push(G.edges[k][0]);
   let added = 0;
   for (const k of dir === 'in' ? [] : outE[i]) {
-    if (!edgeOn(k)) continue;
+    if (!edgeOn(k) || (dir !== 'all' && isCognates(k))) continue;
     if (added >= 80) break;
     const b = G.edges[k][1];
     if (!visible.has(b) && passes(b)) added++;
@@ -744,7 +755,7 @@ const zoom = d3.zoom().scaleExtent([0.08, 40]).on('zoom', ev => {
 });
 svg.call(zoom).on('dblclick.zoom', null);
 
-const DASH = { deriv: null, element: null, combine: '2 3', see: '1 3', deprecated: '6 4', cognate: '6 3 1 3', merged: '1 3', filed: '4 3', rootderiv: null, instead: '3 3' };
+const DASH = { deriv: null, element: null, combine: '2 3', see: '1 3', deprecated: '6 4', cognate: '6 3 1 3', cognates: '5 2 1 2', merged: '1 3', filed: '4 3', rootderiv: null, instead: '3 3' };
 function makeMarkers() {
   defs.selectAll('*').remove();
   for (const r of G.rels) {
@@ -838,7 +849,7 @@ function ranks(nodes, edges, groupOf) {
   // on the way of a depth-first walk is left out. Before, a cycle pushed its nodes 40 columns away
   const out = new Map();
   for (const e of edges) {
-    if (e.rel === 'instead') continue;
+    if (e.rel === 'instead' || e.rel === 'cognates') continue;
     const ga = groupOf.get(e.a), gb = groupOf.get(e.b);
     if (ga === gb) continue;
     if (!out.has(ga)) out.set(ga, new Set());
@@ -943,6 +954,9 @@ function linkPath(d) {
   // box, level across the stretch. At its own ends (the column of the source or of the target) the link
   // eases in the gap around the end's height instead of turning sharply just before the node. Between
   // the points the curve is monotone, so it never swings beyond them
+  // while the nodes move (laying out, dragging) the plain curve is enough: the route is found when they
+  // stop. Finding it on every frame was most of the cost of a layout
+  if (!settled) { const mx = (sx + tx) / 2; return `M${sx},${s.y}C${mx},${s.y} ${mx},${tg.y} ${tx},${tg.y}`; }
   const runs = runsBetween(s, tg, sx, tx, dir);
   const plan = new Map();               // run -> {mode: 'point' | 'ease' | 'flat', y}
   let curve = plainCurve(sx, s.y, tx, tg.y);
@@ -1125,15 +1139,25 @@ function monotoneCurve(knots) {
   }
   return { d, pts };
 }
+// The sampled curves run one way in x (a link never turns back), so a point is found by halving:
+// the index of the last sample at or before x along the curve's direction
+function seg(pts, x) {
+  const up = pts[pts.length - 1][0] >= pts[0][0];
+  let lo = 0, hi = pts.length - 1;
+  while (hi - lo > 1) {
+    const mid = (lo + hi) >> 1;
+    if ((pts[mid][0] <= x) === up) lo = mid; else hi = mid;
+  }
+  return lo;
+}
 // the height of a sampled curve at x
 function yAt(pts, x) {
-  for (let k = 0; k + 1 < pts.length; k++) {
-    const [x0, y0] = pts[k], [x1, y1] = pts[k + 1];
-    if ((x - x0) * (x - x1) <= 0) return x1 === x0 ? y0 : y0 + (y1 - y0) * (x - x0) / (x1 - x0);
-  }
-  // beyond the curve: the height of its nearer end
   const first = pts[0], last = pts[pts.length - 1];
-  return Math.abs(x - first[0]) < Math.abs(x - last[0]) ? first[1] : last[1];
+  const a = Math.min(first[0], last[0]), b = Math.max(first[0], last[0]);
+  // beyond the curve: the height of its nearer end
+  if (x < a || x > b) return Math.abs(x - first[0]) < Math.abs(x - last[0]) ? first[1] : last[1];
+  const k = seg(pts, x), [x0, y0] = pts[k], [x1, y1] = pts[Math.min(k + 1, pts.length - 1)];
+  return x1 === x0 ? y0 : y0 + (y1 - y0) * (x - x0) / (x1 - x0);
 }
 // does the sampled curve pass through a box of the stretch
 function crosses(pts, run) {
@@ -1141,10 +1165,13 @@ function crosses(pts, run) {
   for (const b of run.boxes) {
     const l = Math.max(b.l, xa), r = Math.min(b.r, xb);    // only where the curve is
     if (r <= l) continue;
-    let lo = Infinity, hi = -Infinity;
-    const take = y => { if (y < lo) lo = y; if (y > hi) hi = y; };
-    take(yAt(pts, l)); take(yAt(pts, r));
-    for (const [x, y] of pts) if (x > l && x < r) take(y);
+    let lo = Math.min(yAt(pts, l), yAt(pts, r)), hi = Math.max(yAt(pts, l), yAt(pts, r));
+    let k0 = seg(pts, l), k1 = seg(pts, r);
+    if (k0 > k1) [k0, k1] = [k1, k0];
+    for (let k = k0; k <= k1 + 1 && k < pts.length; k++) {
+      const [x, y] = pts[k];
+      if (x > l && x < r) { if (y < lo) lo = y; if (y > hi) hi = y; }
+    }
     if (lo < b.b && hi > b.t) return true;
   }
   return false;
@@ -1356,7 +1383,8 @@ function showNote() {
   else if (lastCounts) $('note').textContent = t('note.onScreen', { nodes: lastCounts[0], edges: lastCounts[1] });
 }
 function render(refit) {
-  const shownSet = new Set([...visible].filter(i => i === focusNode || pathKeep.has(i) || passes(i)));
+  const shownSet = new Set([...visible].filter(i => i === focusNode || pathKeep.has(i) || passes(i)
+    || (cognateKeep.has(i) && langOn[G.nodes[i].l] !== false)));
   shownNodes = shownSet;
   const nodes = [...shownSet];
   const edges = shownLinks(shownSet);
@@ -1393,7 +1421,7 @@ function render(refit) {
     .classed('sc', d => !!(d.x && d.x.sc))
     .classed('st', d => !!(d.x && d.x.st))
     .classed('via', d => !!d.via)
-    .attr('marker-end', d => `url(#arrow-${d.rel})`);
+    .attr('marker-end', d => (d.rel === 'cognates' ? null : `url(#arrow-${d.rel})`));   // cognates: no direction
   const hits = gHits.selectAll('path').data(links, d => d.k).join(
     enter => enter.append('path').attr('class', 'edge-hit').call(p => p.append('title')));
   hits.on('click', (ev, d) => { ev.stopPropagation(); selectEdge(d); });
@@ -1477,6 +1505,7 @@ function render(refit) {
     .force('boxes', boxCollide())
     .force('bands', bandClamp())
     .velocityDecay(0.45)
+    .alphaMin(0.01)          // the places are computed: the nodes are there long before the default end
     .on('tick', draw);
   fitPending = refit;
   settled = false;
@@ -1661,7 +1690,7 @@ function select(i) {
       ${/^\d+$/.test(id) ? `<a class="ext" href="${SITE}${esc(id)}.html" target="_blank" rel="noopener">${esc(t('card.eldamo'))}</a>` : ''}
     </div>`;
 
-  const from = inE[i].map(k => G.edges[k]).filter(e => relName(e[2]) !== 'instead');
+  const from = inE[i].map(k => G.edges[k]).filter(e => relName(e[2]) !== 'instead' && relName(e[2]) !== 'cognates');
   const replaces = inE[i].map(k => G.edges[k]).filter(e => relName(e[2]) === 'instead');
   if (from.length) {
     html += `<div class="sec"><h3>${esc(t('card.from'))}</h3><ul class="links">${from.map(e => {
@@ -1675,7 +1704,11 @@ function select(i) {
     html += `<div class="sec"><h3>${esc(t('card.replaces', { n: replaces.length }))}</h3><ul class="links">${replaces.slice(0, 60).map(e =>
       `<li>${nodeButton(e[0])}</li>`).join('')}</ul></div>`;
   }
-  const to = outE[i].map(k => G.edges[k]).filter(e => relName(e[2]) !== 'instead');
+  const cogs = [...inE[i].filter(isCognates).map(k => G.edges[k][0]), ...outE[i].filter(isCognates).map(k => G.edges[k][1])];
+  if (cogs.length) {
+    html += `<div class="sec"><h3>${esc(t('card.cognates', { n: cogs.length }))}</h3><ul class="links">${cogs.map(x => `<li>${nodeButton(x)}</li>`).join('')}</ul></div>`;
+  }
+  const to = outE[i].map(k => G.edges[k]).filter(e => relName(e[2]) !== 'instead' && relName(e[2]) !== 'cognates');
   if (to.length) {
     const LIM = 60;
     html += `<div class="sec"><h3>${esc(t('card.gives', { n: to.length }))}</h3><ul class="links">${to.slice(0, LIM).map(e =>
@@ -1783,6 +1816,7 @@ function ovValue(i) {
 const PRIM = new Set(['p', 'mp', 'ep', 'np']);
 function ovCategory(i) {
   const n = G.nodes[i];
+  if (n.cg) return null;          // known only as someone's cognate: not a start of any chain here
   if (!kindShown(n)) return null;          // the switches of the legend and the vocabulary (ᴺ√ in Tolkien's)
   if (n.k === 'root') return ('rec' in n) && !n.nl ? 'roots' : null;
   if (!n.nr || n.x === 'm') return null;                 // a merged form stands with its word
@@ -1997,8 +2031,8 @@ for (const id of ['ov-roots', 'ov-proto', 'ov-words', 'ov-rec', 'ov-free']) $(id
 // Quenya and Sindarin; not the way through a primitive form, which both branches share) is counted,
 // and the policy says what to do with such steps: as few as possible (first conceptions, then
 // branches, then length), none, only of one kind, or no matter.
-const REL_W = { deriv: 1, element: 1, rootderiv: 1, combine: 0.5, merged: 0.5, filed: 0.5, see: 2, cognate: 2, deprecated: 2, instead: 3 };
-const LOOSE = new Set(['see', 'cognate', 'instead']);
+const REL_W = { deriv: 1, element: 1, rootderiv: 1, combine: 0.5, merged: 0.5, filed: 0.5, see: 2, cognate: 2, deprecated: 2, instead: 3, cognates: 2 };
+const LOOSE = new Set(['see', 'cognate', 'instead', 'cognates']);
 const concOf = i => Math.min(2, eraOf(G.nodes[i].l));             // neo goes with the late conception
 const branchKey = i => { const b = branchOf(G.nodes[i].l); return b === 'primitive' ? null : b; };
 function crossOf(k) {
@@ -2010,6 +2044,7 @@ const pathOpt = { mode: 'kin', policy: 'fewest', loose: true };
 let pathA = -1, pathB = -1;
 let pathShown = null;               // the path on the graph: {nodes: Set, edges: Set, cross: Set}
 const pathKeep = new Set();         // its nodes, shown whatever the filters say
+const cognateKeep = new Set();      // the focus's cognates, shown whatever kind of word they are
 // can the search use the edge k, and at what cost (Infinity: no)
 function stepCost(k, ends, penalty) {
   if (!edgeOn(k)) return Infinity;
@@ -2030,11 +2065,11 @@ function* moves(v, dir) {
   // between the forms of one word (merged, filed, combine) go either way in every search
   for (const k of outE[v]) {
     const rel = relName(G.edges[k][2]);
-    if (dir === 'both' || PARALLEL.has(rel) || (dir === 'down' && rel !== 'instead')) yield [k, G.edges[k][1], true];
+    if (dir === 'both' || PARALLEL.has(rel) || (dir === 'down' && rel !== 'instead' && rel !== 'cognates')) yield [k, G.edges[k][1], true];
   }
   for (const k of inE[v]) {
     const rel = relName(G.edges[k][2]);
-    if (dir === 'both' || PARALLEL.has(rel) || (dir === 'up' && rel !== 'instead')) yield [k, G.edges[k][0], false];
+    if (dir === 'both' || PARALLEL.has(rel) || (dir === 'up' && rel !== 'instead' && rel !== 'cognates')) yield [k, G.edges[k][0], false];
   }
 }
 // Dijkstra over the whole graph (a binary heap; some 28 thousand nodes: milliseconds)
@@ -2149,7 +2184,7 @@ function pathHtml(p, index) {
       + (c.branch ? ` <span class="tag cross" title="${esc(t('path.mBranch.title'))}">↔ ${esc(t('path.mBranch'))}</span>` : '')
       + (x.st ? ` <span class="tag warn">${esc(t('tag.struck'))}</span>` : '');
     const written = (x.w || []).map(([src, ch]) => `<span class="written">${esc(t('card.written', { src, chain: ch.join(' > ') }))}</span>`).join('');
-    return `<li><span class="arr">${fwd ? '→' : '←'}</span> ${relTag(rel)} ${nodeButton(s.to)}${marks}${written}</li>`;
+    return `<li><span class="arr">${rel === 'cognates' ? '~' : fwd ? '→' : '←'}</span> ${relTag(rel)} ${nodeButton(s.to)}${marks}${written}</li>`;
   }).join('');
   return `<div class="path-one${index ? ' alt' : ''}" data-path="${index}">
       ${head ? `<div class="path-head">${esc(head)}</div>` : ''}
