@@ -26959,7 +26959,7 @@
      ],
      [
       "e",
-      "3424430815"
+      "2436340269"
      ],
      [
       "d",
@@ -27197,8 +27197,8 @@
   "elements": [
    {
     "lang": "g",
-    "form": "gant",
-    "id": "3424430815",
+    "form": "gantha",
+    "id": "2436340269",
     "from_ref": true
    }
   ],
@@ -27210,7 +27210,7 @@
     "path": [
      [
       "e",
-      "3424430815"
+      "2436340269"
      ],
      [
       "d",
@@ -72709,7 +72709,7 @@
      ],
      [
       "e",
-      "3424430815"
+      "2436340269"
      ],
      [
       "d",
@@ -84755,7 +84755,7 @@
      ],
      [
       "e",
-      "3424430815"
+      "2436340269"
      ],
      [
       "d",
@@ -134441,12 +134441,6 @@
     "form": "in(d)ra",
     "id": "1084064665",
     "from_ref": true
-   },
-   {
-    "lang": "g",
-    "form": "fang",
-    "id": "4039654285",
-    "from_ref": true
    }
   ],
   "roots": [
@@ -134468,22 +134462,7 @@
       "2123630963"
      ]
     ],
-    "part": 0,
     "via": "element"
-   }
-  ],
-  "root_gaps": [
-   {
-    "lang": "g",
-    "form": "fang",
-    "id": "4039654285",
-    "path": [
-     [
-      "e",
-      "4039654285"
-     ]
-    ],
-    "part": 1
    }
   ]
  },
@@ -203826,14 +203805,8 @@
   "elements": [
    {
     "lang": "mp",
-    "form": "Bale",
-    "id": "13427299",
-    "from_ref": true
-   },
-   {
-    "lang": "mp",
-    "form": "ndorē",
-    "id": "3307581903",
+    "form": "balā",
+    "id": "2242689257",
     "from_ref": true
    }
   ],
@@ -203845,31 +203818,13 @@
     "path": [
      [
       "e",
-      "13427299"
+      "2242689257"
      ],
      [
       "d",
       "1490024387"
      ]
     ],
-    "part": 0,
-    "via": "element"
-   },
-   {
-    "lang": "mp",
-    "form": "NDOR",
-    "id": "3559253579",
-    "path": [
-     [
-      "e",
-      "3307581903"
-     ],
-     [
-      "d",
-      "3559253579"
-     ]
-    ],
-    "part": 1,
     "via": "element"
    }
   ],
@@ -209169,14 +209124,9 @@
   "elements": [
    {
     "lang": "mp",
-    "form": "I²",
-    "id": "2825822641",
-    "from_ref": true
-   },
-   {
-    "lang": "mp",
-    "form": "NDIS",
-    "id": "2926233711",
+    "form": "ndīse",
+    "id": "3906970273",
+    "tag": "intensive",
     "from_ref": true
    }
   ],
@@ -209187,11 +209137,10 @@
     "id": "2825822641",
     "path": [
      [
-      "e",
+      "d",
       "2825822641"
      ]
-    ],
-    "part": 0
+    ]
    },
    {
     "lang": "mp",
@@ -209199,11 +209148,10 @@
     "id": "2926233711",
     "path": [
      [
-      "e",
+      "d",
       "2926233711"
      ]
-    ],
-    "part": 1
+    ]
    }
   ],
   "proto_forms": [
@@ -248970,39 +248918,13 @@
      ],
      [
       "e",
-      "13427299"
+      "2242689257"
      ],
      [
       "d",
       "1490024387"
      ]
     ],
-    "part": 0,
-    "via": "element"
-   },
-   {
-    "lang": "mp",
-    "form": "NDOR",
-    "id": "3559253579",
-    "path": [
-     [
-      "d",
-      "2982359283"
-     ],
-     [
-      "d",
-      "3486955641"
-     ],
-     [
-      "e",
-      "3307581903"
-     ],
-     [
-      "d",
-      "3559253579"
-     ]
-    ],
-    "part": 1,
     "via": "element"
    }
   ]
@@ -254931,6 +254853,10 @@
   "mark": "#",
   "url": "https://eldamo.org/content/words/word-3772213751.html",
   "alt_lang": "g",
+  "alt_source": {
+   "form": "rum",
+   "id": "431142379"
+  },
   "under": "1244424501",
   "links": {
    "combine": [
@@ -313218,7 +313144,7 @@
      ],
      [
       "e",
-      "13427299"
+      "2242689257"
      ],
      [
       "d",
@@ -313226,35 +313152,6 @@
      ]
     ],
     "part": 2,
-    "via": "element"
-   },
-   {
-    "lang": "mp",
-    "form": "NDOR",
-    "id": "3559253579",
-    "path": [
-     [
-      "e",
-      "2577340481"
-     ],
-     [
-      "d",
-      "2982359283"
-     ],
-     [
-      "d",
-      "3486955641"
-     ],
-     [
-      "e",
-      "3307581903"
-     ],
-     [
-      "d",
-      "3559253579"
-     ]
-    ],
-    "part": 3,
     "via": "element"
    }
   ],
@@ -371913,6 +371810,10 @@
   "url": "https://eldamo.org/content/words/word-3731638649.html",
   "neo": true,
   "alt_lang": "ep",
+  "alt_source": {
+   "form": "ʒalast-",
+   "id": "1217738775"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -372051,6 +371952,10 @@
   "url": "https://eldamo.org/content/words/word-1636857935.html",
   "neo": true,
   "alt_lang": "mp",
+  "alt_source": {
+   "form": "idrē",
+   "id": "2789243367"
+  },
   "parents": [
    {
     "lang": "p",
@@ -372191,7 +372096,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-2672496819.html",
   "neo": true,
-  "alt_lang": "mp"
+  "alt_lang": "mp",
+  "alt_source": {
+   "form": "skyapat-",
+   "id": "3952080725"
+  }
  },
  {
   "id": "3042531167",
@@ -373246,6 +373155,10 @@
   "url": "https://eldamo.org/content/words/word-25789117.html",
   "neo": true,
   "alt_lang": "ep",
+  "alt_source": {
+   "form": "ŋwa·mat",
+   "id": "3391372331"
+  },
   "elements": [
    {
     "lang": "p",
@@ -373328,6 +373241,10 @@
   "url": "https://eldamo.org/content/words/word-3301210037.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "-garn",
+   "id": "1211289729"
+  },
   "elements": [
    {
     "lang": "s",
@@ -373368,6 +373285,10 @@
   "url": "https://eldamo.org/content/words/word-316082457.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "-iof",
+   "id": "3870597881"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -373457,6 +373378,10 @@
   "url": "https://eldamo.org/content/words/word-1662233751.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "obra",
+   "id": "48550847"
+  },
   "elements": [
    {
     "lang": "s",
@@ -373674,6 +373599,10 @@
   "url": "https://eldamo.org/content/words/word-2231192591.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "adag-",
+   "id": "4043533401"
+  },
   "parents": [
    {
     "lang": "p",
@@ -373870,7 +373799,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-3400237513.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "atlanna-",
+   "id": "3043409787"
+  }
  },
  {
   "id": "1244303603",
@@ -373921,6 +373854,10 @@
   "url": "https://eldamo.org/content/words/word-1145185515.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "atlant",
+   "id": "3379183727"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -373950,6 +373887,10 @@
   "url": "https://eldamo.org/content/words/word-2162029645.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "aclod",
+   "id": "627060251"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -374019,6 +373960,10 @@
   "url": "https://eldamo.org/content/words/word-748013775.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "aibin",
+   "id": "1753541311"
+  },
   "elements": [
    {
     "lang": "p",
@@ -374225,6 +374170,10 @@
   "url": "https://eldamo.org/content/words/word-2174289783.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "aidha",
+   "id": "377208785"
+  },
   "elements": [
    {
     "lang": "s",
@@ -374273,7 +374222,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-1872880251.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "oegas",
+   "id": "2878487363"
+  }
  },
  {
   "id": "4005846925",
@@ -374837,6 +374790,10 @@
   "url": "https://eldamo.org/content/words/word-3650534505.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "aglann",
+   "id": "2900441799"
+  },
   "links": {
    "cognate": [
     {
@@ -374877,6 +374834,10 @@
   "url": "https://eldamo.org/content/words/word-2076807443.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "agla",
+   "id": "708260713"
+  },
   "parents": [
    {
     "lang": "p",
@@ -374930,6 +374891,10 @@
   "url": "https://eldamo.org/content/words/word-1928387213.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "agrech",
+   "id": "3502331815"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -374966,6 +374931,10 @@
   "url": "https://eldamo.org/content/words/word-2585922249.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "agrectha-",
+   "id": "3570669437"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -375006,6 +374975,10 @@
   "url": "https://eldamo.org/content/words/word-2319052821.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "agrecthion",
+   "id": "1664870709"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -375050,6 +375023,10 @@
   "url": "https://eldamo.org/content/words/word-2675580861.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "agrectharol",
+   "id": "823169391"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -375220,6 +375197,10 @@
   "url": "https://eldamo.org/content/words/word-436022029.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "aith",
+   "id": "1785232559"
+  },
   "roots": [
    {
     "lang": "ep",
@@ -375388,6 +375369,10 @@
   "url": "https://eldamo.org/content/words/word-3565705747.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "elflin",
+   "id": "928430365"
+  },
   "elements": [
    {
     "lang": "s",
@@ -375505,6 +375490,10 @@
   "url": "https://eldamo.org/content/words/word-2911889677.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "alfuilin",
+   "id": "3235629885"
+  },
   "elements": [
    {
     "lang": "s",
@@ -375656,6 +375645,10 @@
   "url": "https://eldamo.org/content/words/word-1689289049.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "uivrin",
+   "id": "916831695"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -376226,6 +376219,10 @@
   "url": "https://eldamo.org/content/words/word-1974282011.html",
   "neo": true,
   "alt_lang": "os",
+  "alt_source": {
+   "form": "amphala",
+   "id": "347271771"
+  },
   "parents": [
    {
     "lang": "os",
@@ -376395,6 +376392,10 @@
   "url": "https://eldamo.org/content/words/word-1263784737.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "am(b)os",
+   "id": "3498377705"
+  },
   "links": {
    "cognate": [
     {
@@ -376617,6 +376618,10 @@
   "url": "https://eldamo.org/content/words/word-1772250867.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "amosgarn",
+   "id": "3242623169"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -376681,6 +376686,10 @@
   "url": "https://eldamo.org/content/words/word-3145630773.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "amoth",
+   "id": "967230235"
+  },
   "parents": [
    {
     "lang": "p",
@@ -376712,6 +376721,10 @@
   "url": "https://eldamo.org/content/words/word-3744809665.html",
   "neo": true,
   "alt_lang": "s",
+  "alt_source": {
+   "form": "amrad-",
+   "id": "3788224351"
+  },
   "roots": [
    {
     "lang": "p",
@@ -376762,7 +376775,11 @@
   "mark": "",
   "url": "https://eldamo.org/content/words/word-1430814099.html",
   "neo": true,
-  "alt_lang": "en"
+  "alt_lang": "en",
+  "alt_source": {
+   "form": "amrent",
+   "id": "512696283"
+  }
  },
  {
   "id": "1779573821",
@@ -376819,7 +376836,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-3098193411.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "anrand",
+   "id": "3493977863"
+  }
  },
  {
   "id": "1096286167",
@@ -377242,6 +377263,10 @@
   "url": "https://eldamo.org/content/words/word-1342876511.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "anw",
+   "id": "2966830065"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -377345,6 +377370,10 @@
   "url": "https://eldamo.org/content/words/word-1306101727.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "anoth",
+   "id": "611219743"
+  },
   "elements": [
    {
     "lang": "n",
@@ -377397,6 +377426,10 @@
   "url": "https://eldamo.org/content/words/word-1301548675.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "anothrin",
+   "id": "101311809"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -377457,6 +377490,10 @@
   "url": "https://eldamo.org/content/words/word-3805310207.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "adhwen",
+   "id": "1237205961"
+  },
   "elements": [
    {
     "lang": "p",
@@ -377619,7 +377656,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-992688763.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "afarch",
+   "id": "3635176447"
+  }
  },
  {
   "id": "3072478211",
@@ -377815,7 +377856,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-2964760369.html",
   "neo": true,
-  "alt_lang": "s"
+  "alt_lang": "s",
+  "alt_source": {
+   "form": "arahadhw",
+   "id": "127818517"
+  }
  },
  {
   "id": "2265789335",
@@ -377827,6 +377872,10 @@
   "url": "https://eldamo.org/content/words/word-2265789335.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "asg",
+   "id": "3987798235"
+  },
   "links": {
    "cognate": [
     {
@@ -377943,6 +377992,10 @@
   "url": "https://eldamo.org/content/words/word-2536726045.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "asgatheb",
+   "id": "2697029425"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -378046,6 +378099,10 @@
   "url": "https://eldamo.org/content/words/word-3447700553.html",
   "neo": true,
   "alt_lang": "s",
+  "alt_source": {
+   "form": "ast",
+   "id": "1073854657"
+  },
   "parents": [
    {
     "lang": "p",
@@ -378678,6 +378735,10 @@
   "url": "https://eldamo.org/content/words/word-1247066559.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "bacha",
+   "id": "848031927"
+  },
   "links": {
    "cognate": [
     {
@@ -378836,6 +378897,10 @@
   "url": "https://eldamo.org/content/words/word-687617385.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "bâl",
+   "id": "3680717023"
+  },
   "parents": [
    {
     "lang": "np",
@@ -379137,6 +379202,10 @@
   "url": "https://eldamo.org/content/words/word-741781065.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "bang",
+   "id": "2093730595"
+  },
   "links": {
    "cognate": [
     {
@@ -379175,6 +379244,10 @@
   "url": "https://eldamo.org/content/words/word-3168882669.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "bagod",
+   "id": "4040895537"
+  },
   "elements": [
    {
     "lang": "n",
@@ -379211,6 +379284,10 @@
   "url": "https://eldamo.org/content/words/word-1253489419.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "bagarth",
+   "id": "119845319"
+  },
   "elements": [
    {
     "lang": "n",
@@ -379440,6 +379517,10 @@
   "url": "https://eldamo.org/content/words/word-3704530975.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "meria-",
+   "id": "2181577719"
+  },
   "links": {
    "cognate": [
     {
@@ -379480,6 +379561,10 @@
   "url": "https://eldamo.org/content/words/word-320754423.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "bardha-",
+   "id": "787167869"
+  },
   "parents": [
    {
     "lang": "p",
@@ -379748,6 +379833,10 @@
   "url": "https://eldamo.org/content/words/word-2415185761.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "bar(n)a-",
+   "id": "2088477201"
+  },
   "parents": [
    {
     "lang": "p",
@@ -379779,6 +379868,10 @@
   "url": "https://eldamo.org/content/words/word-2617016733.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "barn",
+   "id": "3312293383"
+  },
   "parents": [
    {
     "lang": "p",
@@ -379810,6 +379903,10 @@
   "url": "https://eldamo.org/content/words/word-149213931.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "bas-",
+   "id": "1298507519"
+  },
   "links": {
    "cognate": [
     {
@@ -379850,6 +379947,10 @@
   "url": "https://eldamo.org/content/words/word-2942649459.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "bog",
+   "id": "2432091507"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -380047,6 +380148,10 @@
   "url": "https://eldamo.org/content/words/word-3290551529.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "belectha-",
+   "id": "2817528541"
+  },
   "links": {
    "cognate": [
     {
@@ -380087,6 +380192,10 @@
   "url": "https://eldamo.org/content/words/word-1104633691.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "belin",
+   "id": "185562829"
+  },
   "parents": [
    {
     "lang": "np",
@@ -380118,6 +380227,10 @@
   "url": "https://eldamo.org/content/words/word-321513545.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "belon",
+   "id": "2522091973"
+  },
   "parents": [
    {
     "lang": "np",
@@ -380149,6 +380262,10 @@
   "url": "https://eldamo.org/content/words/word-3830460559.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "beltha-",
+   "id": "3117108961"
+  },
   "links": {
    "cognate": [
     {
@@ -380473,6 +380590,10 @@
   "url": "https://eldamo.org/content/words/word-962657198.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "bedhren",
+   "id": "3644571699"
+  },
   "elements": [
    {
     "lang": "np",
@@ -380536,6 +380657,10 @@
   "url": "https://eldamo.org/content/words/word-1608190917.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "bedhres",
+   "id": "3249749621"
+  },
   "elements": [
    {
     "lang": "np",
@@ -380599,6 +380724,10 @@
   "url": "https://eldamo.org/content/words/word-2220172883.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "bedhril",
+   "id": "3461715729"
+  },
   "parents": [
    {
     "lang": "np",
@@ -380630,6 +380759,10 @@
   "url": "https://eldamo.org/content/words/word-862942867.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "bedhron",
+   "id": "642314223"
+  },
   "parents": [
    {
     "lang": "np",
@@ -380986,6 +381119,10 @@
   "url": "https://eldamo.org/content/words/word-4230239909.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "blaud",
+   "id": "2142164691"
+  },
   "links": {
    "cognate": [
     {
@@ -381026,6 +381163,10 @@
   "url": "https://eldamo.org/content/words/word-1035024783.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "blodren",
+   "id": "938655481"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -381071,6 +381212,10 @@
   "url": "https://eldamo.org/content/words/word-3571755399.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "bloss",
+   "id": "1877751589"
+  },
   "parents": [
    {
     "lang": "p",
@@ -381102,6 +381247,10 @@
   "url": "https://eldamo.org/content/words/word-2512514975.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "blé",
+   "id": "4234379725"
+  },
   "links": {
    "cognate": [
     {
@@ -381142,6 +381291,10 @@
   "url": "https://eldamo.org/content/words/word-4249805501.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "bliw",
+   "id": "1666725711"
+  },
   "links": {
    "cognate": [
     {
@@ -381182,6 +381335,10 @@
   "url": "https://eldamo.org/content/words/word-1519369531.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "bui",
+   "id": "934021397"
+  },
   "links": {
    "cognate": [
     {
@@ -381224,6 +381381,10 @@
   "url": "https://eldamo.org/content/words/word-2512346669.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "bon(n)",
+   "id": "4253299527"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -381257,6 +381418,10 @@
   "url": "https://eldamo.org/content/words/word-3745600811.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "bothli",
+   "id": "2581505669"
+  },
   "parents": [
    {
     "lang": "p",
@@ -381288,6 +381453,10 @@
   "url": "https://eldamo.org/content/words/word-3963078519.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "brach",
+   "id": "3557618941"
+  },
   "parents": [
    {
     "lang": "np",
@@ -381319,6 +381488,10 @@
   "url": "https://eldamo.org/content/words/word-648735893.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "braith",
+   "id": "271702399"
+  },
   "parents": [
    {
     "lang": "np",
@@ -381350,6 +381523,10 @@
   "url": "https://eldamo.org/content/words/word-1108007617.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "brantha-",
+   "id": "448686613"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -381386,6 +381563,10 @@
   "url": "https://eldamo.org/content/words/word-3323629343.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "brant¹",
+   "id": "2055677733"
+  },
   "parents": [
    {
     "lang": "np",
@@ -381417,6 +381598,10 @@
   "url": "https://eldamo.org/content/words/word-1455659915.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "brath-",
+   "id": "2101574817"
+  },
   "parents": [
    {
     "lang": "np",
@@ -381487,6 +381672,10 @@
   "url": "https://eldamo.org/content/words/word-629827965.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "brond",
+   "id": "2828617913"
+  },
   "links": {
    "cognate": [
     {
@@ -381736,6 +381925,10 @@
   "url": "https://eldamo.org/content/words/word-320573233.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "bunn",
+   "id": "3074218503"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -381999,7 +382192,11 @@
   "mark": "",
   "url": "https://eldamo.org/content/words/word-2828064619.html",
   "neo": true,
-  "alt_lang": "s"
+  "alt_lang": "s",
+  "alt_source": {
+   "form": "bôr",
+   "id": "3270622909"
+  }
  },
  {
   "id": "1873852801",
@@ -382041,6 +382238,10 @@
   "url": "https://eldamo.org/content/words/word-2274731377.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "beor",
+   "id": "2792018777"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -382072,6 +382273,10 @@
   "url": "https://eldamo.org/content/words/word-3302274433.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "cadw",
+   "id": "311408395"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -382204,6 +382409,10 @@
   "url": "https://eldamo.org/content/words/word-856422949.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "coe",
+   "id": "2299585325"
+  },
   "links": {
    "deprecated": [
     {
@@ -382288,6 +382497,10 @@
   "url": "https://eldamo.org/content/words/word-4213808787.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "caith",
+   "id": "534382117"
+  },
   "links": {
    "cognate": [
     {
@@ -382328,6 +382541,10 @@
   "url": "https://eldamo.org/content/words/word-46236947.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "caitha-",
+   "id": "1959423653"
+  },
   "parents": [
    {
     "lang": "np",
@@ -382403,6 +382620,10 @@
   "url": "https://eldamo.org/content/words/word-2965501251.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "caithos",
+   "id": "1180955429"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -382439,6 +382660,10 @@
   "url": "https://eldamo.org/content/words/word-1337339221.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "caithonwed",
+   "id": "2680467241"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -382475,6 +382700,10 @@
   "url": "https://eldamo.org/content/words/word-2773681855.html",
   "neo": true,
   "alt_lang": "s",
+  "alt_source": {
+   "form": "cáfru",
+   "id": "1867835303"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -382528,6 +382757,10 @@
   "url": "https://eldamo.org/content/words/word-3718148297.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "calf",
+   "id": "3468639103"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -382578,7 +382811,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-3284956937.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "camland",
+   "id": "1020001677"
+  }
  },
  {
   "id": "431773065",
@@ -382716,6 +382953,10 @@
   "url": "https://eldamo.org/content/words/word-1999094025.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "cann",
+   "id": "911318719"
+  },
   "links": {
    "deprecated": [
     {
@@ -382736,6 +382977,10 @@
   "url": "https://eldamo.org/content/words/word-871787305.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "cang",
+   "id": "840484397"
+  },
   "parents": [
    {
     "lang": "np",
@@ -382767,6 +383012,10 @@
   "url": "https://eldamo.org/content/words/word-1686454697.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "canga-",
+   "id": "2109055149"
+  },
   "parents": [
    {
     "lang": "np",
@@ -383231,6 +383480,10 @@
   "url": "https://eldamo.org/content/words/word-3322631423.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "cautha-¹",
+   "id": "3528319543"
+  },
   "parents": [
    {
     "lang": "p",
@@ -383262,6 +383515,10 @@
   "url": "https://eldamo.org/content/words/word-2155959707.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "cauthiol",
+   "id": "1248657799"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -383480,6 +383737,10 @@
   "url": "https://eldamo.org/content/words/word-119662833.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "cafwen",
+   "id": "2032164269"
+  },
   "elements": [
    {
     "lang": "s",
@@ -383550,6 +383811,10 @@
   "url": "https://eldamo.org/content/words/word-4137820701.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "cevn",
+   "id": "2847404811"
+  },
   "links": {
    "deprecated": [
     {
@@ -383600,6 +383865,10 @@
   "url": "https://eldamo.org/content/words/word-2085997133.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "celeir",
+   "id": "4279853175"
+  },
   "roots": [
    {
     "lang": "ep",
@@ -383851,6 +384120,10 @@
   "url": "https://eldamo.org/content/words/word-3191639221.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "celw",
+   "id": "2247502167"
+  },
   "links": {
    "cognate": [
     {
@@ -384427,6 +384700,10 @@
   "url": "https://eldamo.org/content/words/word-3762028419.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "grothorf",
+   "id": "411965759"
+  },
   "elements": [
    {
     "lang": "mp",
@@ -384565,6 +384842,10 @@
   "url": "https://eldamo.org/content/words/word-341303401.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "cim",
+   "id": "2334142791"
+  },
   "parents": [
    {
     "lang": "p",
@@ -384923,6 +385204,10 @@
   "url": "https://eldamo.org/content/words/word-3271044717.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "cón",
+   "id": "1678003837"
+  },
   "links": {
    "cognate": [
     {
@@ -385312,6 +385597,10 @@
   "url": "https://eldamo.org/content/words/word-1397403703.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "cirtha-",
+   "id": "1881751765"
+  },
   "parents": [
    {
     "lang": "np",
@@ -385529,6 +385818,10 @@
   "url": "https://eldamo.org/content/words/word-4254170105.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "corob",
+   "id": "2319875613"
+  },
   "links": {
    "cognate": [
     {
@@ -385574,6 +385867,10 @@
   "url": "https://eldamo.org/content/words/word-1950591547.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "curth",
+   "id": "4184335579"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -385610,6 +385907,10 @@
   "url": "https://eldamo.org/content/words/word-1231318691.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "corw",
+   "id": "2322813353"
+  },
   "links": {
    "cognate": [
     {
@@ -385648,6 +385949,10 @@
   "url": "https://eldamo.org/content/words/word-2347641643.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "captha-",
+   "id": "3922351941"
+  },
   "elements": [
    {
     "lang": "mp",
@@ -385841,6 +386146,10 @@
   "url": "https://eldamo.org/content/words/word-212511351.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "caun²",
+   "id": "1738682027"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -385900,6 +386209,10 @@
   "url": "https://eldamo.org/content/words/word-513729313.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "crann-",
+   "id": "2817737469"
+  },
   "parents": [
    {
     "lang": "p",
@@ -385931,6 +386244,10 @@
   "url": "https://eldamo.org/content/words/word-1722893781.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "cranthir",
+   "id": "2504990865"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -385968,6 +386285,10 @@
   "url": "https://eldamo.org/content/words/word-1484367029.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "crech",
+   "id": "3691374457"
+  },
   "links": {
    "cognate": [
     {
@@ -386008,6 +386329,10 @@
   "url": "https://eldamo.org/content/words/word-1431964891.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "crig",
+   "id": "2244026103"
+  },
   "parents": [
    {
     "lang": "p",
@@ -386039,6 +386364,10 @@
   "url": "https://eldamo.org/content/words/word-3629154047.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "crisc",
+   "id": "3429899109"
+  },
   "parents": [
    {
     "lang": "p",
@@ -386070,6 +386399,10 @@
   "url": "https://eldamo.org/content/words/word-2506604563.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "crista-",
+   "id": "3210988961"
+  },
   "parents": [
    {
     "lang": "p",
@@ -386100,7 +386433,11 @@
   "mark": "",
   "url": "https://eldamo.org/content/words/word-4050828371.html",
   "neo": true,
-  "alt_lang": "g"
+  "alt_lang": "g",
+  "alt_source": {
+   "form": "crui",
+   "id": "1220064605"
+  }
  },
  {
   "id": "359105159",
@@ -386112,6 +386449,10 @@
   "url": "https://eldamo.org/content/words/word-359105159.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "cruim",
+   "id": "120569101"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -386130,6 +386471,10 @@
   "url": "https://eldamo.org/content/words/word-3564093703.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "cruith",
+   "id": "2001375439"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -386148,6 +386493,10 @@
   "url": "https://eldamo.org/content/words/word-4202386677.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "cwim",
+   "id": "3128388047"
+  },
   "parents": [
    {
     "lang": "p",
@@ -386255,6 +386604,10 @@
   "url": "https://eldamo.org/content/words/word-2934162559.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "cuilog",
+   "id": "688222775"
+  },
   "elements": [
    {
     "lang": "n",
@@ -386291,6 +386644,10 @@
   "url": "https://eldamo.org/content/words/word-3200680217.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "cuilvorn",
+   "id": "2100251515"
+  },
   "elements": [
    {
     "lang": "n",
@@ -386345,6 +386702,10 @@
   "url": "https://eldamo.org/content/words/word-4018979195.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "cuibri",
+   "id": "1201426015"
+  },
   "elements": [
    {
     "lang": "n",
@@ -386381,6 +386742,10 @@
   "url": "https://eldamo.org/content/words/word-784110307.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "cuith",
+   "id": "3177019977"
+  },
   "parents": [
    {
     "lang": "p",
@@ -386412,6 +386777,10 @@
   "url": "https://eldamo.org/content/words/word-1673165907.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "cuithos",
+   "id": "2330609873"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -386592,6 +386961,10 @@
   "url": "https://eldamo.org/content/words/word-3116015341.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "curus",
+   "id": "1285991067"
+  },
   "elements": [
    {
     "lang": "s",
@@ -386746,6 +387119,10 @@
   "url": "https://eldamo.org/content/words/word-827462685.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "cirban",
+   "id": "523975545"
+  },
   "links": {
    "deprecated": [
     {
@@ -386795,6 +387172,10 @@
   "url": "https://eldamo.org/content/words/word-970123127.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "cúran",
+   "id": "2016915779"
+  },
   "elements": [
    {
     "lang": "s",
@@ -386892,6 +387273,10 @@
   "url": "https://eldamo.org/content/words/word-2865195289.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "corn²",
+   "id": "2071810603"
+  },
   "links": {
    "cognate": [
     {
@@ -387278,6 +387663,10 @@
   "url": "https://eldamo.org/content/words/word-659939235.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "dae²",
+   "id": "748595341"
+  },
   "links": {
    "cognate": [
     {
@@ -387317,7 +387706,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-68225723.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "doer",
+   "id": "2424470793"
+  }
  },
  {
   "id": "3372761041",
@@ -387420,6 +387813,10 @@
   "url": "https://eldamo.org/content/words/word-1335066405.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "dagros",
+   "id": "850237243"
+  },
   "elements": [
    {
     "lang": "s",
@@ -387730,7 +388127,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-2021640795.html",
   "neo": true,
-  "alt_lang": "s"
+  "alt_lang": "s",
+  "alt_source": {
+   "form": "dadwen-",
+   "id": "587384161"
+  }
  },
  {
   "id": "3490785861",
@@ -388092,6 +388493,10 @@
   "url": "https://eldamo.org/content/words/word-1430286337.html",
   "neo": true,
   "alt_lang": "s",
+  "alt_source": {
+   "form": "delch",
+   "id": "1228832295"
+  },
   "links": {
    "cognate": [
     {
@@ -388132,6 +388537,10 @@
   "url": "https://eldamo.org/content/words/word-3349351091.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "delw",
+   "id": "451474329"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -388161,6 +388570,10 @@
   "url": "https://eldamo.org/content/words/word-3080444809.html",
   "neo": true,
   "alt_lang": "ilk",
+  "alt_source": {
+   "form": "dem",
+   "id": "4262238087"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -388292,6 +388705,10 @@
   "url": "https://eldamo.org/content/words/word-145713417.html",
   "neo": true,
   "alt_lang": "ilk",
+  "alt_source": {
+   "form": "dim",
+   "id": "3479878151"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -388330,6 +388747,10 @@
   "url": "https://eldamo.org/content/words/word-3680316733.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "dod",
+   "id": "2996044057"
+  },
   "parents": [
    {
     "lang": "np",
@@ -388361,6 +388782,10 @@
   "url": "https://eldamo.org/content/words/word-3034232989.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "dod-",
+   "id": "494598713"
+  },
   "parents": [
    {
     "lang": "np",
@@ -388445,6 +388870,10 @@
   "url": "https://eldamo.org/content/words/word-2150038407.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "dolfa",
+   "id": "3471611675"
+  },
   "links": {
    "cognate": [
     {
@@ -388485,6 +388914,10 @@
   "url": "https://eldamo.org/content/words/word-2186008683.html",
   "neo": true,
   "alt_lang": "s",
+  "alt_source": {
+   "form": "dom",
+   "id": "3942644123"
+  },
   "parents": [
    {
     "lang": "p",
@@ -388516,6 +388949,10 @@
   "url": "https://eldamo.org/content/words/word-3575078885.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "dorven",
+   "id": "4123773643"
+  },
   "elements": [
    {
     "lang": "s",
@@ -388630,6 +389067,10 @@
   "url": "https://eldamo.org/content/words/word-370223221.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "dofn",
+   "id": "2235739339"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -388659,6 +389100,10 @@
   "url": "https://eldamo.org/content/words/word-3518468511.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "drab",
+   "id": "1895692535"
+  },
   "parents": [
    {
     "lang": "np",
@@ -388690,6 +389135,10 @@
   "url": "https://eldamo.org/content/words/word-902834751.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "drab-",
+   "id": "133766359"
+  },
   "parents": [
    {
     "lang": "np",
@@ -388721,6 +389170,10 @@
   "url": "https://eldamo.org/content/words/word-2724542715.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "drabri",
+   "id": "1358947479"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -388758,6 +389211,10 @@
   "url": "https://eldamo.org/content/words/word-2579631397.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "drauth",
+   "id": "1799925481"
+  },
   "parents": [
    {
     "lang": "np",
@@ -388789,6 +389246,10 @@
   "url": "https://eldamo.org/content/words/word-1875762213.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "drautha-",
+   "id": "3833200433"
+  },
   "parents": [
    {
     "lang": "np",
@@ -388820,6 +389281,10 @@
   "url": "https://eldamo.org/content/words/word-1485414069.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "drauthos",
+   "id": "2895325003"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -388856,6 +389321,10 @@
   "url": "https://eldamo.org/content/words/word-1557506689.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "drauthiol",
+   "id": "2499017043"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -388893,6 +389362,10 @@
   "url": "https://eldamo.org/content/words/word-2058142443.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "drafn",
+   "id": "849651611"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -388922,6 +389395,10 @@
   "url": "https://eldamo.org/content/words/word-2187471891.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "drintha-",
+   "id": "3802895965"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -388953,6 +389430,10 @@
   "url": "https://eldamo.org/content/words/word-1913121649.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "drint",
+   "id": "3489496451"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -388984,6 +389465,10 @@
   "url": "https://eldamo.org/content/words/word-4076566381.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "drogla",
+   "id": "1720632233"
+  },
   "links": {
    "cognate": [
     {
@@ -389024,6 +389509,10 @@
   "url": "https://eldamo.org/content/words/word-114840423.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "drô",
+   "id": "2881022307"
+  },
   "roots": [
    {
     "lang": "ep",
@@ -389138,6 +389627,10 @@
   "url": "https://eldamo.org/content/words/word-1599382631.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "duivrad",
+   "id": "1441340351"
+  },
   "elements": [
    {
     "lang": "s",
@@ -389201,6 +389694,10 @@
   "url": "https://eldamo.org/content/words/word-3939719905.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "duivrant",
+   "id": "2604115857"
+  },
   "elements": [
    {
     "lang": "s",
@@ -389263,7 +389760,11 @@
   "mark": "",
   "url": "https://eldamo.org/content/words/word-1981483931.html",
   "neo": true,
-  "alt_lang": "g"
+  "alt_lang": "g",
+  "alt_source": {
+   "form": "dâd",
+   "id": "1555769785"
+  }
  },
  {
   "id": "1464569243",
@@ -389305,6 +389806,10 @@
   "url": "https://eldamo.org/content/words/word-3381676147.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "dî",
+   "id": "3681659819"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -390095,6 +390600,10 @@
   "url": "https://eldamo.org/content/words/word-861975891.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "edinar",
+   "id": "939608711"
+  },
   "elements": [
    {
     "lang": "s",
@@ -390189,6 +390698,10 @@
   "url": "https://eldamo.org/content/words/word-1230357767.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "egledhia-",
+   "id": "3529761121"
+  },
   "elements": [
    {
     "lang": "s",
@@ -390242,6 +390755,10 @@
   "url": "https://eldamo.org/content/words/word-2297472763.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "egledhron",
+   "id": "2226744365"
+  },
   "elements": [
    {
     "lang": "s",
@@ -390463,6 +390980,10 @@
   "url": "https://eldamo.org/content/words/word-3773065511.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "ethl(in)",
+   "id": "2559016055"
+  },
   "links": {
    "cognate": [
     {
@@ -390503,6 +391024,10 @@
   "url": "https://eldamo.org/content/words/word-4005846825.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "edhos",
+   "id": "499947915"
+  },
   "elements": [
    {
     "lang": "s",
@@ -390543,6 +391068,10 @@
   "url": "https://eldamo.org/content/words/word-304426623.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "edrein",
+   "id": "3418689703"
+  },
   "elements": [
    {
     "lang": "s",
@@ -390737,6 +391266,10 @@
   "url": "https://eldamo.org/content/words/word-2707654923.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "egli(n)",
+   "id": "2185434723"
+  },
   "parents": [
    {
     "lang": "p",
@@ -390768,6 +391301,10 @@
   "url": "https://eldamo.org/content/words/word-2707654924.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "elc",
+   "id": "3662560667"
+  },
   "parents": [
    {
     "lang": "p",
@@ -390877,6 +391414,10 @@
   "url": "https://eldamo.org/content/words/word-2683770597.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "eitheb",
+   "id": "1992808071"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -390968,6 +391509,10 @@
   "url": "https://eldamo.org/content/words/word-1984543865.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "eithla-",
+   "id": "2003524293"
+  },
   "elements": [
    {
     "lang": "s",
@@ -391054,6 +391599,10 @@
   "url": "https://eldamo.org/content/words/word-2912444493.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "aithos",
+   "id": "158783105"
+  },
   "links": {
    "cognate": [
     {
@@ -391101,6 +391650,10 @@
   "url": "https://eldamo.org/content/words/word-3978535893.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "eithron",
+   "id": "2120272895"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -391338,6 +391891,10 @@
   "url": "https://eldamo.org/content/words/word-4175365919.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "elw",
+   "id": "841443377"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -391422,6 +391979,10 @@
   "url": "https://eldamo.org/content/words/word-2373424255.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "elma-",
+   "id": "3468860417"
+  },
   "links": {
    "cognate": [
     {
@@ -391462,6 +392023,10 @@
   "url": "https://eldamo.org/content/words/word-2757462885.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "elvain(n)",
+   "id": "2873096871"
+  },
   "parents": [
    {
     "lang": "np",
@@ -391493,6 +392058,10 @@
   "url": "https://eldamo.org/content/words/word-1493999387.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "elven",
+   "id": "3694577695"
+  },
   "parents": [
    {
     "lang": "np",
@@ -391641,6 +392210,10 @@
   "url": "https://eldamo.org/content/words/word-3193194523.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "en",
+   "id": "2426263601"
+  },
   "parents": [
    {
     "lang": "p",
@@ -391672,6 +392245,10 @@
   "url": "https://eldamo.org/content/words/word-1697668169.html",
   "neo": true,
   "alt_lang": "s",
+  "alt_source": {
+   "form": "enaid",
+   "id": "2087314475"
+  },
   "links": {
    "cognate": [
     {
@@ -391712,6 +392289,10 @@
   "url": "https://eldamo.org/content/words/word-1586535779.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "enos",
+   "id": "917094011"
+  },
   "elements": [
    {
     "lang": "s",
@@ -392141,6 +392722,10 @@
   "url": "https://eldamo.org/content/words/word-717305191.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "enwiol",
+   "id": "3541724689"
+  },
   "parents": [
    {
     "lang": "np",
@@ -392227,6 +392812,10 @@
   "url": "https://eldamo.org/content/words/word-1825066597.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "ereth",
+   "id": "856217095"
+  },
   "elements": [
    {
     "lang": "s",
@@ -392710,6 +393299,10 @@
   "url": "https://eldamo.org/content/words/word-1809839325.html",
   "neo": true,
   "alt_lang": "s",
+  "alt_source": {
+   "form": "eitha-²",
+   "id": "2425112697"
+  },
   "roots": [
    {
     "lang": "p",
@@ -393034,6 +393627,10 @@
   "url": "https://eldamo.org/content/words/word-3029467531.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "foeg",
+   "id": "1135437421"
+  },
   "roots": [
    {
     "lang": "ep",
@@ -393283,6 +393880,10 @@
   "url": "https://eldamo.org/content/words/word-2321587899.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "falchon",
+   "id": "1543404085"
+  },
   "parents": [
    {
     "lang": "p",
@@ -393463,6 +394064,10 @@
   "url": "https://eldamo.org/content/words/word-64834921.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "fath",
+   "id": "3527672471"
+  },
   "links": {
    "cognate": [
     {
@@ -393542,6 +394147,10 @@
   "url": "https://eldamo.org/content/words/word-2733331419.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "fathli",
+   "id": "1887542647"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -393587,6 +394196,10 @@
   "url": "https://eldamo.org/content/words/word-2846021733.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "fathrin",
+   "id": "1469660013"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -393717,6 +394330,10 @@
   "url": "https://eldamo.org/content/words/word-1043773193.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "faus",
+   "id": "1022657103"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -393778,6 +394395,10 @@
   "url": "https://eldamo.org/content/words/word-4064824499.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "fectha-",
+   "id": "3580914335"
+  },
   "links": {
    "cognate": [
     {
@@ -393818,6 +394439,10 @@
   "url": "https://eldamo.org/content/words/word-855532947.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "fecthir",
+   "id": "406931775"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -394080,6 +394705,10 @@
   "url": "https://eldamo.org/content/words/word-1795884415.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "fesc",
+   "id": "131804793"
+  },
   "parents": [
    {
     "lang": "np",
@@ -394111,6 +394740,10 @@
   "url": "https://eldamo.org/content/words/word-3774553599.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "fesca-",
+   "id": "2628035833"
+  },
   "parents": [
    {
     "lang": "np",
@@ -394142,6 +394775,10 @@
   "url": "https://eldamo.org/content/words/word-1581480681.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "fess",
+   "id": "2248844543"
+  },
   "parents": [
    {
     "lang": "np",
@@ -394173,6 +394810,10 @@
   "url": "https://eldamo.org/content/words/word-437807343.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "fidhra",
+   "id": "1859643567"
+  },
   "parents": [
    {
     "lang": "p",
@@ -394204,6 +394845,10 @@
   "url": "https://eldamo.org/content/words/word-3529159383.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "fidhrin",
+   "id": "4262787503"
+  },
   "elements": [
    {
     "lang": "s",
@@ -394260,6 +394905,10 @@
   "url": "https://eldamo.org/content/words/word-267781449.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "fileg",
+   "id": "168424007"
+  },
   "links": {
    "cognate": [
     {
@@ -394298,6 +394947,10 @@
   "url": "https://eldamo.org/content/words/word-2763265481.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "finc",
+   "id": "4088086601"
+  },
   "links": {
    "cognate": [
     {
@@ -394338,6 +394991,10 @@
   "url": "https://eldamo.org/content/words/word-3477172143.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "fini(o)s",
+   "id": "2741166617"
+  },
   "links": {
    "cognate": [
     {
@@ -394378,6 +395035,10 @@
   "url": "https://eldamo.org/content/words/word-1720406415.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "fintha-",
+   "id": "1029774527"
+  },
   "parents": [
    {
     "lang": "p",
@@ -394858,6 +395519,10 @@
   "url": "https://eldamo.org/content/words/word-2404050981.html",
   "neo": true,
   "alt_lang": "s",
+  "alt_source": {
+   "form": "fuir",
+   "id": "780748133"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -394887,6 +395552,10 @@
   "url": "https://eldamo.org/content/words/word-1003067737.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "fufril",
+   "id": "2118736967"
+  },
   "parents": [
    {
     "lang": "np",
@@ -394918,6 +395587,10 @@
   "url": "https://eldamo.org/content/words/word-1342650671.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "fôf",
+   "id": "1021744701"
+  },
   "parents": [
    {
     "lang": "np",
@@ -394949,6 +395622,10 @@
   "url": "https://eldamo.org/content/words/word-1742306507.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gach",
+   "id": "2392586495"
+  },
   "links": {
    "cognate": [
     {
@@ -395054,6 +395731,10 @@
   "url": "https://eldamo.org/content/words/word-456456983.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "goer",
+   "id": "1329567115"
+  },
   "links": {
    "deprecated": [
     {
@@ -395079,6 +395760,10 @@
   "url": "https://eldamo.org/content/words/word-1073476095.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "oeruil",
+   "id": "4275765473"
+  },
   "elements": [
    {
     "lang": "s",
@@ -395171,6 +395856,10 @@
   "url": "https://eldamo.org/content/words/word-2943969847.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gais",
+   "id": "2128958047"
+  },
   "links": {
    "cognate": [
     {
@@ -395211,6 +395900,10 @@
   "url": "https://eldamo.org/content/words/word-716003931.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gaisin",
+   "id": "3889448405"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -395351,6 +396044,10 @@
   "url": "https://eldamo.org/content/words/word-1895106225.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gaithrin",
+   "id": "3250629933"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -395387,6 +396084,10 @@
   "url": "https://eldamo.org/content/words/word-9119295.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gaiw",
+   "id": "510264799"
+  },
   "parents": [
    {
     "lang": "np",
@@ -395481,6 +396182,10 @@
   "url": "https://eldamo.org/content/words/word-3159763251.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "calon",
+   "id": "2461241965"
+  },
   "parents": [
    {
     "lang": "p",
@@ -395613,6 +396318,10 @@
   "url": "https://eldamo.org/content/words/word-3591368295.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "alm",
+   "id": "1327042479"
+  },
   "links": {
    "cognate": [
     {
@@ -395693,6 +396402,10 @@
   "url": "https://eldamo.org/content/words/word-2250429681.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "galw",
+   "id": "138930587"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -395722,6 +396435,10 @@
   "url": "https://eldamo.org/content/words/word-1889366857.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gam(m)a-",
+   "id": "2477068359"
+  },
   "parents": [
    {
     "lang": "np",
@@ -395753,6 +396470,10 @@
   "url": "https://eldamo.org/content/words/word-2220303127.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "ganthan",
+   "id": "2353721017"
+  },
   "parents": [
    {
     "lang": "np",
@@ -395784,6 +396505,10 @@
   "url": "https://eldamo.org/content/words/word-3664916715.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gant",
+   "id": "3424430815"
+  },
   "parents": [
    {
     "lang": "np",
@@ -395815,6 +396540,10 @@
   "url": "https://eldamo.org/content/words/word-2524104215.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "garadros",
+   "id": "4047096207"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -395859,6 +396588,10 @@
   "url": "https://eldamo.org/content/words/word-3107465031.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "garadren",
+   "id": "1916006315"
+  },
   "elements": [
    {
     "lang": "s",
@@ -395934,7 +396667,11 @@
   "mark": "",
   "url": "https://eldamo.org/content/words/word-1121983137.html",
   "neo": true,
-  "alt_lang": "en"
+  "alt_lang": "en",
+  "alt_source": {
+   "form": "garob",
+   "id": "3327029195"
+  }
  },
  {
   "id": "2423374879",
@@ -395946,6 +396683,10 @@
   "url": "https://eldamo.org/content/words/word-2423374879.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "gartha-",
+   "id": "902719883"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -396016,6 +396757,10 @@
   "url": "https://eldamo.org/content/words/word-16217887.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gôg",
+   "id": "101824671"
+  },
   "links": {
    "cognate": [
     {
@@ -396199,6 +396944,10 @@
   "url": "https://eldamo.org/content/words/word-2616005565.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "ger",
+   "id": "1160596121"
+  },
   "parents": [
    {
     "lang": "np",
@@ -396230,6 +396979,10 @@
   "url": "https://eldamo.org/content/words/word-4044064233.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gil-",
+   "id": "3298118757"
+  },
   "parents": [
    {
     "lang": "p",
@@ -396320,6 +397073,10 @@
   "url": "https://eldamo.org/content/words/word-2807387561.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "glaim",
+   "id": "3989394945"
+  },
   "links": {
    "cognate": [
     {
@@ -396517,6 +397274,10 @@
   "url": "https://eldamo.org/content/words/word-1028988147.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "glantha-",
+   "id": "2351905085"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -396548,6 +397309,10 @@
   "url": "https://eldamo.org/content/words/word-1012433527.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "glanweth",
+   "id": "1893120205"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -396619,6 +397384,10 @@
   "url": "https://eldamo.org/content/words/word-4145328681.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "glanthin",
+   "id": "3370891447"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -396699,6 +397468,10 @@
   "url": "https://eldamo.org/content/words/word-2302731731.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "glast",
+   "id": "2256983649"
+  },
   "links": {
    "cognate": [
     {
@@ -396794,6 +397567,10 @@
   "url": "https://eldamo.org/content/words/word-1081846011.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "glastrin",
+   "id": "89064903"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -396863,6 +397640,10 @@
   "url": "https://eldamo.org/content/words/word-1676913019.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "glabroseb",
+   "id": "2853130243"
+  },
   "elements": [
    {
     "lang": "n",
@@ -396899,6 +397680,10 @@
   "url": "https://eldamo.org/content/words/word-2488046109.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "glabadol",
+   "id": "3989102899"
+  },
   "elements": [
    {
     "lang": "n",
@@ -396935,6 +397720,10 @@
   "url": "https://eldamo.org/content/words/word-1534187161.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "glebe(i)dion",
+   "id": "3819755129"
+  },
   "elements": [
    {
     "lang": "n",
@@ -396971,6 +397760,10 @@
   "url": "https://eldamo.org/content/words/word-441482471.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "glabros",
+   "id": "471112547"
+  },
   "elements": [
    {
     "lang": "n",
@@ -397043,6 +397836,10 @@
   "url": "https://eldamo.org/content/words/word-2470622859.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "glidheb",
+   "id": "2518291147"
+  },
   "elements": [
    {
     "lang": "n",
@@ -397146,6 +397943,10 @@
   "url": "https://eldamo.org/content/words/word-127739279.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "glist",
+   "id": "938109153"
+  },
   "parents": [
    {
     "lang": "p",
@@ -397290,6 +398091,10 @@
   "url": "https://eldamo.org/content/words/word-2964149461.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "gobab-",
+   "id": "2275925905"
+  },
   "elements": [
    {
     "lang": "s",
@@ -397517,6 +398322,10 @@
   "url": "https://eldamo.org/content/words/word-4216304219.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gochest",
+   "id": "1327371643"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -397552,7 +398361,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-3598657183.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "godrebh",
+   "id": "3009069715"
+  }
  },
  {
   "id": "119333555",
@@ -398115,7 +398928,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-3039367485.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "golw",
+   "id": "1688400847"
+  }
  },
  {
   "id": "3453960471",
@@ -398170,6 +398987,10 @@
   "url": "https://eldamo.org/content/words/word-3983536183.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gonthos",
+   "id": "3845831357"
+  },
   "elements": [
    {
     "lang": "s",
@@ -398234,6 +399055,10 @@
   "url": "https://eldamo.org/content/words/word-835699927.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gontha¹",
+   "id": "3199969655"
+  },
   "elements": [
    {
     "lang": "s",
@@ -398670,6 +399495,10 @@
   "url": "https://eldamo.org/content/words/word-3317531319.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "goredhin",
+   "id": "3512226403"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -398788,6 +399617,10 @@
   "url": "https://eldamo.org/content/words/word-1779715445.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gomaithri",
+   "id": "2765164315"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -398933,6 +399766,10 @@
   "url": "https://eldamo.org/content/words/word-3082065561.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gomod",
+   "id": "2282094619"
+  },
   "parents": [
    {
     "lang": "np",
@@ -398985,6 +399822,10 @@
   "url": "https://eldamo.org/content/words/word-4043949665.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gratha-",
+   "id": "3816730507"
+  },
   "roots": [
    {
     "lang": "ep",
@@ -399014,6 +399855,10 @@
   "url": "https://eldamo.org/content/words/word-313830707.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "grau",
+   "id": "309679581"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -399043,6 +399888,10 @@
   "url": "https://eldamo.org/content/words/word-315658199.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "grest",
+   "id": "253164193"
+  },
   "parents": [
    {
     "lang": "np",
@@ -399074,6 +399923,10 @@
   "url": "https://eldamo.org/content/words/word-2278200919.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gresta-",
+   "id": "2651219233"
+  },
   "parents": [
    {
     "lang": "np",
@@ -399105,6 +399958,10 @@
   "url": "https://eldamo.org/content/words/word-3192098559.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "grith",
+   "id": "1730676333"
+  },
   "parents": [
    {
     "lang": "np",
@@ -399136,6 +399993,10 @@
   "url": "https://eldamo.org/content/words/word-356240543.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "grith-",
+   "id": "3173565773"
+  },
   "parents": [
    {
     "lang": "np",
@@ -399667,6 +400528,10 @@
   "url": "https://eldamo.org/content/words/word-4267948949.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "bail",
+   "id": "2628962257"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -399756,6 +400621,10 @@
   "url": "https://eldamo.org/content/words/word-1523385453.html",
   "neo": true,
   "alt_lang": "s",
+  "alt_source": {
+   "form": "gwaeren",
+   "id": "1046328033"
+  },
   "elements": [
    {
     "lang": "s",
@@ -399863,6 +400732,10 @@
   "url": "https://eldamo.org/content/words/word-3116099065.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gwaidhi",
+   "id": "3694296311"
+  },
   "elements": [
    {
     "lang": "s",
@@ -399987,6 +400860,10 @@
   "url": "https://eldamo.org/content/words/word-1651861555.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gwanos",
+   "id": "4179684797"
+  },
   "elements": [
    {
     "lang": "s",
@@ -400065,6 +400942,10 @@
   "url": "https://eldamo.org/content/words/word-3570421755.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "gwanw",
+   "id": "4253503633"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -400400,6 +401281,10 @@
   "url": "https://eldamo.org/content/words/word-1901769665.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gwarin(n)",
+   "id": "110681955"
+  },
   "elements": [
    {
     "lang": "s",
@@ -400588,6 +401473,10 @@
   "url": "https://eldamo.org/content/words/word-4203257281.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gwef",
+   "id": "3857445149"
+  },
   "parents": [
    {
     "lang": "np",
@@ -400619,6 +401508,10 @@
   "url": "https://eldamo.org/content/words/word-2060170179.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gwel-",
+   "id": "3634778417"
+  },
   "parents": [
    {
     "lang": "np",
@@ -400650,6 +401543,10 @@
   "url": "https://eldamo.org/content/words/word-2758610153.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gwelc",
+   "id": "2877010993"
+  },
   "parents": [
    {
     "lang": "np",
@@ -400681,6 +401578,10 @@
   "url": "https://eldamo.org/content/words/word-3407556995.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gweleb",
+   "id": "3411495921"
+  },
   "parents": [
    {
     "lang": "np",
@@ -400712,6 +401613,10 @@
   "url": "https://eldamo.org/content/words/word-1707837429.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gwelaith",
+   "id": "825871535"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -400831,6 +401736,10 @@
   "url": "https://eldamo.org/content/words/word-2775541565.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gweltha-",
+   "id": "1368431257"
+  },
   "parents": [
    {
     "lang": "np",
@@ -400862,6 +401771,10 @@
   "url": "https://eldamo.org/content/words/word-2638888439.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "gwelw",
+   "id": "1868149525"
+  },
   "roots": [
    {
     "lang": "ep",
@@ -400927,6 +401840,10 @@
   "url": "https://eldamo.org/content/words/word-142112899.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gwem",
+   "id": "3172245583"
+  },
   "links": {
    "cognate": [
     {
@@ -400967,6 +401884,10 @@
   "url": "https://eldamo.org/content/words/word-4203701717.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gwembel",
+   "id": "789034461"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -401020,6 +401941,10 @@
   "url": "https://eldamo.org/content/words/word-3104670117.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gwindod",
+   "id": "2573915497"
+  },
   "elements": [
    {
     "lang": "s",
@@ -401224,7 +402149,11 @@
   "mark": "",
   "url": "https://eldamo.org/content/words/word-1396734921.html",
   "neo": true,
-  "alt_lang": "en"
+  "alt_lang": "en",
+  "alt_source": {
+   "form": "gwesg",
+   "id": "3546365969"
+  }
  },
  {
   "id": "454844637",
@@ -401310,6 +402239,10 @@
   "url": "https://eldamo.org/content/words/word-2635606399.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gwil-",
+   "id": "743789241"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -401412,6 +402345,10 @@
   "url": "https://eldamo.org/content/words/word-3189005655.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gwailtha-",
+   "id": "2978530541"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -401633,6 +402570,10 @@
   "url": "https://eldamo.org/content/words/word-2792827167.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gwingil",
+   "id": "3026321019"
+  },
   "elements": [
    {
     "lang": "s",
@@ -401678,6 +402619,10 @@
   "url": "https://eldamo.org/content/words/word-443896263.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gwidh-",
+   "id": "2789497959"
+  },
   "parents": [
    {
     "lang": "p",
@@ -401787,6 +402732,10 @@
   "url": "https://eldamo.org/content/words/word-3144920365.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "cwiril",
+   "id": "1662655013"
+  },
   "parents": [
    {
     "lang": "p",
@@ -402040,7 +402989,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-4046709713.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "ui²",
+   "id": "1876710321"
+  }
  },
  {
   "id": "963020759",
@@ -402052,6 +403005,10 @@
   "url": "https://eldamo.org/content/words/word-963020759.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gui",
+   "id": "3878218815"
+  },
   "links": {
    "cognate": [
     {
@@ -402092,6 +403049,10 @@
   "url": "https://eldamo.org/content/words/word-1605843785.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "gwib",
+   "id": "3322286431"
+  },
   "links": {
    "cognate": [
     {
@@ -402149,6 +403110,10 @@
   "url": "https://eldamo.org/content/words/word-3209941931.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "giothra-",
+   "id": "3406023287"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -402185,6 +403150,10 @@
   "url": "https://eldamo.org/content/words/word-2466316283.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "giothrin",
+   "id": "2055399853"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -402313,6 +403282,10 @@
   "url": "https://eldamo.org/content/words/word-3724757909.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "giol",
+   "id": "3287797797"
+  },
   "parents": [
    {
     "lang": "np",
@@ -402344,6 +403317,10 @@
   "url": "https://eldamo.org/content/words/word-1536884817.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gioth",
+   "id": "2672125503"
+  },
   "parents": [
    {
     "lang": "np",
@@ -402375,6 +403352,10 @@
   "url": "https://eldamo.org/content/words/word-1871419017.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "hacha",
+   "id": "3382614847"
+  },
   "links": {
    "cognate": [
     {
@@ -402415,6 +403396,10 @@
   "url": "https://eldamo.org/content/words/word-3268961825.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "hadang",
+   "id": "1051724179"
+  },
   "elements": [
    {
     "lang": "n",
@@ -402478,6 +403463,10 @@
   "url": "https://eldamo.org/content/words/word-2065886281.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "haf-",
+   "id": "1788977513"
+  },
   "parents": [
    {
     "lang": "p",
@@ -402509,6 +403498,10 @@
   "url": "https://eldamo.org/content/words/word-1127798455.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "haglath",
+   "id": "1035955347"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -402633,6 +403626,10 @@
   "url": "https://eldamo.org/content/words/word-4097283123.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "heir",
+   "id": "2857892501"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -402741,6 +403738,10 @@
   "url": "https://eldamo.org/content/words/word-2645550305.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "hann",
+   "id": "516645471"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -402878,6 +403879,10 @@
   "url": "https://eldamo.org/content/words/word-3794922955.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "hant²",
+   "id": "2363598133"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -403267,7 +404272,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-1201418317.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "harw",
+   "id": "382186175"
+  }
  },
  {
   "id": "771003223",
@@ -403354,6 +404363,10 @@
   "url": "https://eldamo.org/content/words/word-145330397.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "haug",
+   "id": "678502043"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -403404,6 +404417,10 @@
   "url": "https://eldamo.org/content/words/word-3496638545.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "hau-",
+   "id": "3985875687"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -403509,6 +404526,10 @@
   "url": "https://eldamo.org/content/words/word-2769140963.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "hel-",
+   "id": "2287161805"
+  },
   "links": {
    "cognate": [
     {
@@ -403719,6 +404740,10 @@
   "url": "https://eldamo.org/content/words/word-4147935595.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "hemp",
+   "id": "4271268161"
+  },
   "links": {
    "cognate": [
     {
@@ -403856,6 +404881,10 @@
   "url": "https://eldamo.org/content/words/word-1016601419.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "hent",
+   "id": "845120481"
+  },
   "parents": [
    {
     "lang": "p",
@@ -403914,6 +404943,10 @@
   "url": "https://eldamo.org/content/words/word-2718064077.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "herma",
+   "id": "1735725963"
+  },
   "parents": [
    {
     "lang": "p",
@@ -403945,6 +404978,10 @@
   "url": "https://eldamo.org/content/words/word-2055003165.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "hesc",
+   "id": "832870363"
+  },
   "parents": [
    {
     "lang": "np",
@@ -403976,6 +405013,10 @@
   "url": "https://eldamo.org/content/words/word-34038699.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "hest",
+   "id": "397782913"
+  },
   "links": {
    "cognate": [
     {
@@ -404046,6 +405087,10 @@
   "url": "https://eldamo.org/content/words/word-3678663307.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "hethw",
+   "id": "3148616547"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -404078,7 +405123,11 @@
   "mark": "",
   "url": "https://eldamo.org/content/words/word-3945500149.html",
   "neo": true,
-  "alt_lang": "en"
+  "alt_lang": "en",
+  "alt_source": {
+   "form": "hich-",
+   "id": "1854863861"
+  }
  },
  {
   "id": "4174070473",
@@ -404129,6 +405178,10 @@
   "url": "https://eldamo.org/content/words/word-1091054515.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "hilm",
+   "id": "66115359"
+  },
   "links": {
    "cognate": [
     {
@@ -404169,6 +405222,10 @@
   "url": "https://eldamo.org/content/words/word-3910491457.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "hilming",
+   "id": "4152480253"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -404283,6 +405340,10 @@
   "url": "https://eldamo.org/content/words/word-873518547.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "hithw",
+   "id": "3750864667"
+  },
   "parents": [
    {
     "lang": "p",
@@ -404314,6 +405375,10 @@
   "url": "https://eldamo.org/content/words/word-1946974901.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "hautha-",
+   "id": "1050514287"
+  },
   "parents": [
    {
     "lang": "p",
@@ -404345,6 +405410,10 @@
   "url": "https://eldamo.org/content/words/word-3662278793.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "haugrin",
+   "id": "2781926227"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -404519,6 +405588,10 @@
   "url": "https://eldamo.org/content/words/word-1223381111.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "hosta-",
+   "id": "2785751903"
+  },
   "links": {
    "cognate": [
     {
@@ -404559,6 +405632,10 @@
   "url": "https://eldamo.org/content/words/word-3828288257.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "hothron",
+   "id": "1479582007"
+  },
   "elements": [
    {
     "lang": "s",
@@ -404599,6 +405676,10 @@
   "url": "https://eldamo.org/content/words/word-4090255183.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "saur",
+   "id": "82961691"
+  },
   "links": {
    "cognate": [
     {
@@ -404669,6 +405750,10 @@
   "url": "https://eldamo.org/content/words/word-2558846895.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "uil",
+   "id": "3272318331"
+  },
   "links": {
    "cognate": [
     {
@@ -404716,6 +405801,10 @@
   "url": "https://eldamo.org/content/words/word-679236185.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "huil",
+   "id": "1387506361"
+  },
   "links": {
    "cognate": [
     {
@@ -404755,7 +405844,11 @@
   "mark": "",
   "url": "https://eldamo.org/content/words/word-2934847245.html",
   "neo": true,
-  "alt_lang": "g"
+  "alt_lang": "g",
+  "alt_source": {
+   "form": "hunc",
+   "id": "2431020033"
+  }
  },
  {
   "id": "3632901929",
@@ -404989,6 +406082,10 @@
   "url": "https://eldamo.org/content/words/word-22929327.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "iant",
+   "id": "586651327"
+  },
   "links": {
    "cognate": [
     {
@@ -405029,6 +406126,10 @@
   "url": "https://eldamo.org/content/words/word-3521924481.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "ilt-",
+   "id": "1834911027"
+  },
   "parents": [
    {
     "lang": "np",
@@ -405129,6 +406230,10 @@
   "url": "https://eldamo.org/content/words/word-2864988973.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gaust",
+   "id": "3552758983"
+  },
   "links": {
    "cognate": [
     {
@@ -405169,6 +406274,10 @@
   "url": "https://eldamo.org/content/words/word-3822264559.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "gav-",
+   "id": "3975372553"
+  },
   "links": {
    "cognate": [
     {
@@ -405209,6 +406318,10 @@
   "url": "https://eldamo.org/content/words/word-104761649.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "ivrin",
+   "id": "2576246157"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -405240,6 +406353,10 @@
   "url": "https://eldamo.org/content/words/word-1926713883.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "idher",
+   "id": "3820184177"
+  },
   "parents": [
    {
     "lang": "np",
@@ -405275,7 +406392,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-3753462699.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "idhrin",
+   "id": "1265682005"
+  }
  },
  {
   "id": "1959094351",
@@ -406069,6 +407190,10 @@
   "url": "https://eldamo.org/content/words/word-4073123935.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "inw",
+   "id": "1392334577"
+  },
   "parents": [
    {
     "lang": "p",
@@ -406280,6 +407405,10 @@
   "url": "https://eldamo.org/content/words/word-1411126939.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "girdh",
+   "id": "842623071"
+  },
   "links": {
    "cognate": [
     {
@@ -406307,6 +407436,10 @@
   "url": "https://eldamo.org/content/words/word-1823502889.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "irn",
+   "id": "3767366659"
+  },
   "parents": [
    {
     "lang": "p",
@@ -406338,6 +407471,10 @@
   "url": "https://eldamo.org/content/words/word-2677471111.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "irt",
+   "id": "3510610815"
+  },
   "parents": [
    {
     "lang": "np",
@@ -406369,6 +407506,10 @@
   "url": "https://eldamo.org/content/words/word-3951164167.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "irtha-",
+   "id": "934226405"
+  },
   "parents": [
    {
     "lang": "np",
@@ -406851,6 +407992,10 @@
   "url": "https://eldamo.org/content/words/word-2409630273.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "laboth",
+   "id": "2824075665"
+  },
   "elements": [
    {
     "lang": "s",
@@ -406977,6 +408122,10 @@
   "url": "https://eldamo.org/content/words/word-156629383.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "ladog",
+   "id": "1079521893"
+  },
   "links": {
    "cognate": [
     {
@@ -406997,6 +408146,10 @@
   "url": "https://eldamo.org/content/words/word-3382835009.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lhae",
+   "id": "4059732599"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -407152,6 +408305,10 @@
   "url": "https://eldamo.org/content/words/word-3803998441.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lhaeg",
+   "id": "1471307999"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -407215,6 +408372,10 @@
   "url": "https://eldamo.org/content/words/word-1517909041.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "laigos",
+   "id": "2408909353"
+  },
   "elements": [
    {
     "lang": "s",
@@ -407357,6 +408518,10 @@
   "url": "https://eldamo.org/content/words/word-3589532397.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lhaes",
+   "id": "1256724625"
+  },
   "links": {
    "deprecated": [
     {
@@ -407376,7 +408541,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-654681845.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "lhaew",
+   "id": "2616841369"
+  }
  },
  {
   "id": "1872444607",
@@ -407423,6 +408592,10 @@
   "url": "https://eldamo.org/content/words/word-2767761975.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lhagr",
+   "id": "2672999119"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -407486,6 +408659,10 @@
   "url": "https://eldamo.org/content/words/word-3254510029.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lhain",
+   "id": "920808677"
+  },
   "parents": [
    {
     "lang": "p",
@@ -407591,6 +408768,10 @@
   "url": "https://eldamo.org/content/words/word-3895505447.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lhalorn",
+   "id": "2222043839"
+  },
   "links": {
    "deprecated": [
     {
@@ -407960,7 +409141,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-2037374815.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "lhang",
+   "id": "3999534489"
+  }
  },
  {
   "id": "2313467295",
@@ -408077,6 +409262,10 @@
   "url": "https://eldamo.org/content/words/word-19980619.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lhant",
+   "id": "1978507563"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -408145,6 +409334,10 @@
   "url": "https://eldamo.org/content/words/word-4132784221.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "laf",
+   "id": "271721939"
+  },
   "links": {
    "cognate": [
     {
@@ -408185,6 +409378,10 @@
   "url": "https://eldamo.org/content/words/word-2256164217.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lasbelin",
+   "id": "4127649551"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -408410,6 +409607,10 @@
   "url": "https://eldamo.org/content/words/word-3346730295.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lhath",
+   "id": "1013922523"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -408439,6 +409640,10 @@
   "url": "https://eldamo.org/content/words/word-3722381321.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lhathr(ad)a-",
+   "id": "3578514081"
+  },
   "parents": [
    {
     "lang": "p",
@@ -408470,6 +409675,10 @@
   "url": "https://eldamo.org/content/words/word-359848037.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lhathron",
+   "id": "2304810975"
+  },
   "parents": [
    {
     "lang": "p",
@@ -408501,6 +409710,10 @@
   "url": "https://eldamo.org/content/words/word-1104500555.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "laub",
+   "id": "1956365285"
+  },
   "links": {
    "cognate": [
     {
@@ -408541,6 +409754,10 @@
   "url": "https://eldamo.org/content/words/word-1786405967.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "laud",
+   "id": "1147078241"
+  },
   "parents": [
    {
     "lang": "p",
@@ -408572,6 +409789,10 @@
   "url": "https://eldamo.org/content/words/word-447074217.html",
   "neo": true,
   "alt_lang": "s",
+  "alt_source": {
+   "form": "laudh",
+   "id": "3413873241"
+  },
   "links": {
    "cognate": [
     {
@@ -408618,7 +409839,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-661780437.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "lhaug",
+   "id": "2623939961"
+  }
  },
  {
   "id": "451845353",
@@ -408630,6 +409855,10 @@
   "url": "https://eldamo.org/content/words/word-451845353.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lhaws",
+   "id": "2017340639"
+  },
   "links": {
    "deprecated": [
     {
@@ -408650,6 +409879,10 @@
   "url": "https://eldamo.org/content/words/word-4209602089.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "lav-",
+   "id": "3580550505"
+  },
   "links": {
    "cognate": [
     {
@@ -408688,6 +409921,10 @@
   "url": "https://eldamo.org/content/words/word-2713171143.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "lavra-",
+   "id": "1864929713"
+  },
   "parents": [
    {
     "lang": "p",
@@ -408797,6 +410034,10 @@
   "url": "https://eldamo.org/content/words/word-952779657.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "leb-",
+   "id": "288907785"
+  },
   "links": {
    "cognate": [
     {
@@ -409172,6 +410413,10 @@
   "url": "https://eldamo.org/content/words/word-2956019781.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "lempa-",
+   "id": "2228850761"
+  },
   "parents": [
    {
     "lang": "p",
@@ -409203,6 +410448,10 @@
   "url": "https://eldamo.org/content/words/word-355973179.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lhend",
+   "id": "2318132853"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -409356,7 +410605,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-1618842695.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "lhethril",
+   "id": "1902689477"
+  }
  },
  {
   "id": "2219310527",
@@ -409368,6 +410621,10 @@
   "url": "https://eldamo.org/content/words/word-2219310527.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "lim²",
+   "id": "3950618949"
+  },
   "links": {
    "cognate": [
     {
@@ -409438,6 +410695,10 @@
   "url": "https://eldamo.org/content/words/word-641135411.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "thlib-",
+   "id": "1806030455"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -409515,7 +410776,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-3980475895.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "flaew",
+   "id": "598563409"
+  }
  },
  {
   "id": "2943070115",
@@ -409526,7 +410791,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-2943070115.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "thlein",
+   "id": "977521197"
+  }
  },
  {
   "id": "4258922217",
@@ -409577,6 +410846,10 @@
   "url": "https://eldamo.org/content/words/word-1617697639.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "thlid-",
+   "id": "2564353335"
+  },
   "links": {
    "cognate": [
     {
@@ -409655,7 +410928,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-3913588461.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "thlinn",
+   "id": "3793000209"
+  }
  },
  {
   "id": "1691591693",
@@ -409666,7 +410943,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-1691591693.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "thling",
+   "id": "4249631767"
+  }
  },
  {
   "id": "343979253",
@@ -409677,7 +410958,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-343979253.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "thlingril",
+   "id": "37708351"
+  }
  },
  {
   "id": "2779886153",
@@ -409908,6 +411193,10 @@
   "url": "https://eldamo.org/content/words/word-719835967.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "floss",
+   "id": "1544561409"
+  },
   "links": {
    "cognate": [
     {
@@ -410064,7 +411353,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-3487771607.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "thlê",
+   "id": "4034080895"
+  }
  },
  {
   "id": "4173899671",
@@ -410076,6 +411369,10 @@
   "url": "https://eldamo.org/content/words/word-4173899671.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "thlid",
+   "id": "540334743"
+  },
   "links": {
    "cognate": [
     {
@@ -410115,7 +411412,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-15311145.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "fliw",
+   "id": "906306671"
+  }
  },
  {
   "id": "744999159",
@@ -410157,6 +411458,10 @@
   "url": "https://eldamo.org/content/words/word-3446239567.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "lalt",
+   "id": "2349554985"
+  },
   "links": {
    "cognate": [
     {
@@ -410197,6 +411502,10 @@
   "url": "https://eldamo.org/content/words/word-421241295.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "laltha-",
+   "id": "1485724981"
+  },
   "links": {
    "cognate": [
     {
@@ -410237,6 +411546,10 @@
   "url": "https://eldamo.org/content/words/word-2873279651.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lhim",
+   "id": "3549167261"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -410270,6 +411583,10 @@
   "url": "https://eldamo.org/content/words/word-2337969955.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "limig",
+   "id": "2712716613"
+  },
   "links": {
    "cognate": [
     {
@@ -410371,6 +411688,10 @@
   "url": "https://eldamo.org/content/words/word-2729212823.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lhimlug",
+   "id": "3634191995"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -410472,7 +411793,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-2677974761.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "lhimmid(a)-",
+   "id": "3044972063"
+  }
  },
  {
   "id": "1889639019",
@@ -410483,7 +411808,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-1889639019.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "lhimp",
+   "id": "3820489253"
+  }
  },
  {
   "id": "3017143639",
@@ -410721,6 +412050,10 @@
   "url": "https://eldamo.org/content/words/word-2070709419.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "list",
+   "id": "1015768517"
+  },
   "links": {
    "cognate": [
     {
@@ -410866,6 +412199,10 @@
   "url": "https://eldamo.org/content/words/word-2726281273.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "lib-",
+   "id": "3797823045"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -410936,6 +412273,10 @@
   "url": "https://eldamo.org/content/words/word-163345741.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "lob-",
+   "id": "2618742111"
+  },
   "links": {
    "cognate": [
     {
@@ -410976,6 +412317,10 @@
   "url": "https://eldamo.org/content/words/word-270906509.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "lobrob",
+   "id": "2889999327"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -411007,6 +412352,10 @@
   "url": "https://eldamo.org/content/words/word-3062235511.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lhoch",
+   "id": "729427859"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -411040,6 +412389,10 @@
   "url": "https://eldamo.org/content/words/word-4219826861.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lhoda-",
+   "id": "185910665"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -411085,6 +412438,10 @@
   "url": "https://eldamo.org/content/words/word-3550911193.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "loctha",
+   "id": "1886036313"
+  },
   "parents": [
    {
     "lang": "p",
@@ -411116,6 +412473,10 @@
   "url": "https://eldamo.org/content/words/word-833824473.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "loctha-",
+   "id": "2302375097"
+  },
   "parents": [
    {
     "lang": "p",
@@ -411246,6 +412607,10 @@
   "url": "https://eldamo.org/content/words/word-1734658689.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "logrin",
+   "id": "1544138739"
+  },
   "elements": [
    {
     "lang": "p",
@@ -411359,6 +412724,10 @@
   "url": "https://eldamo.org/content/words/word-621288811.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lhom",
+   "id": "1294465441"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -411392,6 +412761,10 @@
   "url": "https://eldamo.org/content/words/word-1351678345.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "lonc",
+   "id": "717266761"
+  },
   "parents": [
    {
     "lang": "p",
@@ -411423,6 +412796,10 @@
   "url": "https://eldamo.org/content/words/word-2826311689.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lhong",
+   "id": "489871457"
+  },
   "under": "446568693",
   "links": {
    "deprecated": [
@@ -411535,6 +412912,10 @@
   "url": "https://eldamo.org/content/words/word-1323392803.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "lor-",
+   "id": "4175935537"
+  },
   "parents": [
    {
     "lang": "p",
@@ -411566,6 +412947,10 @@
   "url": "https://eldamo.org/content/words/word-2417972167.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lhorn²",
+   "id": "213774969"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -411595,6 +412980,10 @@
   "url": "https://eldamo.org/content/words/word-1270754831.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "lortha-",
+   "id": "3556378017"
+  },
   "links": {
    "cognate": [
     {
@@ -411635,6 +413024,10 @@
   "url": "https://eldamo.org/content/words/word-927426031.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "losbas",
+   "id": "3881008701"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -411690,7 +413083,11 @@
   "mark": "",
   "url": "https://eldamo.org/content/words/word-369111905.html",
   "neo": true,
-  "alt_lang": "g"
+  "alt_lang": "g",
+  "alt_source": {
+   "form": "losc",
+   "id": "269929073"
+  }
  },
  {
   "id": "1677700121",
@@ -411741,6 +413138,10 @@
   "url": "https://eldamo.org/content/words/word-3590728303.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "luitha-",
+   "id": "1029676647"
+  },
   "links": {
    "cognate": [
     {
@@ -411885,6 +413286,10 @@
   "url": "https://eldamo.org/content/words/word-4277356945.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "lui",
+   "id": "3430883107"
+  },
   "parents": [
    {
     "lang": "p",
@@ -412007,6 +413412,10 @@
   "url": "https://eldamo.org/content/words/word-2661464047.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "lum",
+   "id": "2685933449"
+  },
   "roots": [
    {
     "lang": "ep",
@@ -412036,6 +413445,10 @@
   "url": "https://eldamo.org/content/words/word-3690141687.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "lumbri",
+   "id": "827335243"
+  },
   "links": {
    "cognate": [
     {
@@ -412076,6 +413489,10 @@
   "url": "https://eldamo.org/content/words/word-3622833673.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lhumren",
+   "id": "1921663615"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -412190,6 +413607,10 @@
   "url": "https://eldamo.org/content/words/word-3052431643.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lhunt",
+   "id": "603376661"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -412394,6 +413815,10 @@
   "url": "https://eldamo.org/content/words/word-4017635688.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "laith(r)a-",
+   "id": "2030818183"
+  },
   "parents": [
    {
     "lang": "p",
@@ -412575,6 +414000,10 @@
   "url": "https://eldamo.org/content/words/word-2091514811.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "lûtha-",
+   "id": "619862727"
+  },
   "links": {
    "cognate": [
     {
@@ -412615,6 +414044,10 @@
   "url": "https://eldamo.org/content/words/word-1290949141.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lhûtha-",
+   "id": "378176397"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -412681,6 +414114,10 @@
   "url": "https://eldamo.org/content/words/word-3092141245.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "lu",
+   "id": "103224639"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -412742,6 +414179,10 @@
   "url": "https://eldamo.org/content/words/word-3404127197.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "lûgi",
+   "id": "613077887"
+  },
   "links": {
    "cognate": [
     {
@@ -412782,6 +414223,10 @@
   "url": "https://eldamo.org/content/words/word-1104885433.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "lûr",
+   "id": "141868457"
+  },
   "links": {
    "cognate": [
     {
@@ -412822,6 +414267,10 @@
   "url": "https://eldamo.org/content/words/word-1698290647.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "lhûth",
+   "id": "3656812941"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -412853,6 +414302,10 @@
   "url": "https://eldamo.org/content/words/word-3973688583.html",
   "neo": true,
   "alt_lang": "on",
+  "alt_source": {
+   "form": "map-",
+   "id": "1764469573"
+  },
   "parents": [
    {
     "lang": "p",
@@ -412946,6 +414399,10 @@
   "url": "https://eldamo.org/content/words/word-3027662971.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "mavlantos",
+   "id": "1727798533"
+  },
   "elements": [
    {
     "lang": "s",
@@ -413005,6 +414462,10 @@
   "url": "https://eldamo.org/content/words/word-387457395.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "mabwed",
+   "id": "3036977759"
+  },
   "elements": [
    {
     "lang": "s",
@@ -413061,6 +414522,10 @@
   "url": "https://eldamo.org/content/words/word-3906338673.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "mabwedri",
+   "id": "753658567"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -413221,7 +414686,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-1518163497.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "moe",
+   "id": "1404977149"
+  }
  },
  {
   "id": "1016769383",
@@ -413233,6 +414702,10 @@
   "url": "https://eldamo.org/content/words/word-1016769383.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "moeas",
+   "id": "4055234735"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -413430,6 +414903,10 @@
   "url": "https://eldamo.org/content/words/word-1975078773.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "moel",
+   "id": "1565981391"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -413458,7 +414935,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-3350673301.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "hmael",
+   "id": "2843029565"
+  }
  },
  {
   "id": "131796515",
@@ -413536,6 +415017,10 @@
   "url": "https://eldamo.org/content/words/word-2285870045.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "moelui",
+   "id": "3653467363"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -413727,6 +415212,10 @@
   "url": "https://eldamo.org/content/words/word-3450224733.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "maithri",
+   "id": "2290641221"
+  },
   "elements": [
    {
     "lang": "s",
@@ -413763,6 +415252,10 @@
   "url": "https://eldamo.org/content/words/word-1734477163.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "maithog",
+   "id": "1172775721"
+  },
   "elements": [
    {
     "lang": "s",
@@ -413928,6 +415421,10 @@
   "url": "https://eldamo.org/content/words/word-4116509503.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "mectha",
+   "id": "4152326337"
+  },
   "parents": [
    {
     "lang": "np",
@@ -414026,6 +415523,10 @@
   "url": "https://eldamo.org/content/words/word-1440238687.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "malthos",
+   "id": "1344328469"
+  },
   "elements": [
    {
     "lang": "s",
@@ -414071,6 +415572,10 @@
   "url": "https://eldamo.org/content/words/word-3029573391.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "hmalw",
+   "id": "3063163145"
+  },
   "roots": [
    {
     "lang": "ep",
@@ -414100,6 +415605,10 @@
   "url": "https://eldamo.org/content/words/word-4244141585.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "mam",
+   "id": "381827095"
+  },
   "parents": [
    {
     "lang": "np",
@@ -414131,6 +415640,10 @@
   "url": "https://eldamo.org/content/words/word-1374263547.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "manc",
+   "id": "1669533429"
+  },
   "parents": [
    {
     "lang": "p",
@@ -414162,6 +415675,10 @@
   "url": "https://eldamo.org/content/words/word-2166487325.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "mang",
+   "id": "50959341"
+  },
   "links": {
    "cognate": [
     {
@@ -414202,6 +415719,10 @@
   "url": "https://eldamo.org/content/words/word-879953053.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "manca-",
+   "id": "3783340661"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -414238,6 +415759,10 @@
   "url": "https://eldamo.org/content/words/word-2404778889.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "mann",
+   "id": "121972223"
+  },
   "under": "3475842805",
   "links": {
    "deprecated": [
@@ -414357,6 +415882,10 @@
   "url": "https://eldamo.org/content/words/word-3462391435.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "mast",
+   "id": "785325451"
+  },
   "parents": [
    {
     "lang": "p",
@@ -414388,6 +415917,10 @@
   "url": "https://eldamo.org/content/words/word-3133431307.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "masta-",
+   "id": "215889675"
+  },
   "parents": [
    {
     "lang": "p",
@@ -414426,6 +415959,10 @@
   "url": "https://eldamo.org/content/words/word-3475842805.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "mann",
+   "id": "121972223"
+  },
   "links": {
    "cognate": [
     {
@@ -414564,6 +416101,10 @@
   "url": "https://eldamo.org/content/words/word-581851593.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "maus",
+   "id": "4017540783"
+  },
   "parents": [
    {
     "lang": "np",
@@ -414595,6 +416136,10 @@
   "url": "https://eldamo.org/content/words/word-43747303.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "mav-",
+   "id": "1783599177"
+  },
   "parents": [
    {
     "lang": "np",
@@ -414626,6 +416171,10 @@
   "url": "https://eldamo.org/content/words/word-77131495.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "mavri",
+   "id": "2894086751"
+  },
   "parents": [
    {
     "lang": "np",
@@ -414657,6 +416206,10 @@
   "url": "https://eldamo.org/content/words/word-1907881481.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "mavros",
+   "id": "1527857745"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -414693,6 +416246,10 @@
   "url": "https://eldamo.org/content/words/word-2472108841.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "mavrin",
+   "id": "403473995"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -414787,7 +416344,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-197409575.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "hmaw",
+   "id": "2980945125"
+  }
  },
  {
   "id": "2283310591",
@@ -415005,6 +416566,10 @@
   "url": "https://eldamo.org/content/words/word-1306661069.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "mechor",
+   "id": "1402993861"
+  },
   "links": {
    "cognate": [
     {
@@ -415111,7 +416676,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-1873304745.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "megli",
+   "id": "2314741507"
+  }
  },
  {
   "id": "3516317331",
@@ -415122,7 +416691,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-3516317331.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "meglin",
+   "id": "2873232951"
+  }
  },
  {
   "id": "4257111829",
@@ -415133,7 +416706,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-4257111829.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "meglivorn",
+   "id": "3300122877"
+  }
  },
  {
   "id": "1163083107",
@@ -415184,6 +416761,10 @@
   "url": "https://eldamo.org/content/words/word-1438586311.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "mectha-",
+   "id": "169211233"
+  },
   "parents": [
    {
     "lang": "np",
@@ -415215,6 +416796,10 @@
   "url": "https://eldamo.org/content/words/word-3598806459.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "mecthos",
+   "id": "297417441"
+  },
   "parents": [
    {
     "lang": "np",
@@ -415246,6 +416831,10 @@
   "url": "https://eldamo.org/content/words/word-4218659701.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "melethli",
+   "id": "3933783269"
+  },
   "elements": [
    {
     "lang": "n",
@@ -415722,6 +417311,10 @@
   "url": "https://eldamo.org/content/words/word-3282911343.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "beren²",
+   "id": "37746073"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -415900,6 +417493,10 @@
   "url": "https://eldamo.org/content/words/word-679167625.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "mib",
+   "id": "266831655"
+  },
   "links": {
    "cognate": [
     {
@@ -416028,6 +417625,10 @@
   "url": "https://eldamo.org/content/words/word-2029151985.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "minei",
+   "id": "219790031"
+  },
   "parents": [
    {
     "lang": "p",
@@ -416228,7 +417829,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-589773741.html",
   "neo": true,
-  "alt_lang": "g"
+  "alt_lang": "g",
+  "alt_source": {
+   "form": "mîr",
+   "id": "1447684363"
+  }
  },
  {
   "id": "1407507023",
@@ -416240,6 +417845,10 @@
   "url": "https://eldamo.org/content/words/word-1407507023.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "mirwelthin",
+   "id": "2552354853"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -416317,6 +417926,10 @@
   "url": "https://eldamo.org/content/words/word-982571341.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "mirobin",
+   "id": "3392636207"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -416509,6 +418122,10 @@
   "url": "https://eldamo.org/content/words/word-3995804803.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "molnaith",
+   "id": "3737014435"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -416678,6 +418295,10 @@
   "url": "https://eldamo.org/content/words/word-2015925453.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "mathrin",
+   "id": "3270068817"
+  },
   "elements": [
    {
     "lang": "s",
@@ -416803,6 +418424,10 @@
   "url": "https://eldamo.org/content/words/word-1743388143.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "muig",
+   "id": "868537315"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -416834,6 +418459,10 @@
   "url": "https://eldamo.org/content/words/word-2458668581.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "muig",
+   "id": "3036178363"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -416865,6 +418494,10 @@
   "url": "https://eldamo.org/content/words/word-1589758049.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "muis",
+   "id": "307488467"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -416975,6 +418608,10 @@
   "url": "https://eldamo.org/content/words/word-133734123.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "mûst",
+   "id": "592742557"
+  },
   "elements": [
    {
     "lang": "s",
@@ -417035,6 +418672,10 @@
   "url": "https://eldamo.org/content/words/word-213130505.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "mâd",
+   "id": "2468551871"
+  },
   "links": {
    "cognate": [
     {
@@ -417074,7 +418715,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-1278099465.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "hmâl",
+   "id": "4058060095"
+  }
  },
  {
   "id": "955009599",
@@ -417495,6 +419140,10 @@
   "url": "https://eldamo.org/content/words/word-4102772263.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "nab-",
+   "id": "1775993711"
+  },
   "parents": [
    {
     "lang": "p",
@@ -417584,6 +419233,10 @@
   "url": "https://eldamo.org/content/words/word-773418943.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "nabos",
+   "id": "3870161303"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -417620,6 +419273,10 @@
   "url": "https://eldamo.org/content/words/word-969932417.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "nabhru",
+   "id": "1483295165"
+  },
   "parents": [
    {
     "lang": "p",
@@ -417780,6 +419437,10 @@
   "url": "https://eldamo.org/content/words/word-1355154555.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "nathrin",
+   "id": "328441009"
+  },
   "elements": [
    {
     "lang": "n",
@@ -417940,6 +419601,10 @@
   "url": "https://eldamo.org/content/words/word-1622829673.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "naigros",
+   "id": "2006130637"
+  },
   "elements": [
    {
     "lang": "n",
@@ -417976,6 +419641,10 @@
   "url": "https://eldamo.org/content/words/word-3138671019.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "negra-",
+   "id": "283033343"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -418079,6 +419748,10 @@
   "url": "https://eldamo.org/content/words/word-3314295675.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "nacthanaith",
+   "id": "3061043817"
+  },
   "elements": [
    {
     "lang": "n",
@@ -418141,7 +419814,11 @@
   "mark": "",
   "url": "https://eldamo.org/content/words/word-642851027.html",
   "neo": true,
-  "alt_lang": "g"
+  "alt_lang": "g",
+  "alt_source": {
+   "form": "nâla",
+   "id": "421556073"
+  }
  },
  {
   "id": "2533857839",
@@ -418221,6 +419898,10 @@
   "url": "https://eldamo.org/content/words/word-931789011.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "nanc",
+   "id": "4167549397"
+  },
   "parents": [
    {
     "lang": "p",
@@ -418557,6 +420238,10 @@
   "url": "https://eldamo.org/content/words/word-3592397675.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "nast",
+   "id": "3283342349"
+  },
   "links": {
    "cognate": [
     {
@@ -419067,6 +420752,10 @@
   "url": "https://eldamo.org/content/words/word-1901559379.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "nedhw",
+   "id": "43249277"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -419575,7 +421264,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-614198199.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "nenn",
+   "id": "1837658015"
+  }
  },
  {
   "id": "2112506369",
@@ -419838,6 +421531,10 @@
   "url": "https://eldamo.org/content/words/word-554060969.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "nethron",
+   "id": "1741693225"
+  },
   "parents": [
    {
     "lang": "np",
@@ -419938,6 +421635,10 @@
   "url": "https://eldamo.org/content/words/word-1098495623.html",
   "neo": true,
   "alt_lang": "ilk",
+  "alt_source": {
+   "form": "nivra-",
+   "id": "3147872529"
+  },
   "parents": [
    {
     "lang": "p",
@@ -420008,6 +421709,10 @@
   "url": "https://eldamo.org/content/words/word-1556186409.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "ni-",
+   "id": "2587919049"
+  },
   "links": {
    "cognate": [
     {
@@ -420038,6 +421743,10 @@
   "url": "https://eldamo.org/content/words/word-1483857085.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "nib",
+   "id": "2754344489"
+  },
   "links": {
    "cognate": [
     {
@@ -420097,6 +421806,10 @@
   "url": "https://eldamo.org/content/words/word-1675813737.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "nig(la)",
+   "id": "4038806907"
+  },
   "parents": [
    {
     "lang": "p",
@@ -420128,6 +421841,10 @@
   "url": "https://eldamo.org/content/words/word-172325659.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "nigrin",
+   "id": "3297537407"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -420228,6 +421945,10 @@
   "url": "https://eldamo.org/content/words/word-2020021439.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "ninn",
+   "id": "1055298079"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -420257,6 +421978,10 @@
   "url": "https://eldamo.org/content/words/word-2021605353.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "ninna-",
+   "id": "2672060009"
+  },
   "elements": [
    {
     "lang": "s",
@@ -420369,6 +422094,10 @@
   "url": "https://eldamo.org/content/words/word-3257439079.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "niogrim",
+   "id": "1494379807"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -420406,6 +422135,10 @@
   "url": "https://eldamo.org/content/words/word-3320460531.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "nocha",
+   "id": "3431322231"
+  },
   "links": {
    "cognate": [
     {
@@ -420426,6 +422159,10 @@
   "url": "https://eldamo.org/content/words/word-3979101005.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "nudin",
+   "id": "279929033"
+  },
   "parents": [
    {
     "lang": "p",
@@ -420516,6 +422253,10 @@
   "url": "https://eldamo.org/content/words/word-2776561765.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "nogin",
+   "id": "2790400681"
+  },
   "parents": [
    {
     "lang": "p",
@@ -420605,6 +422346,10 @@
   "url": "https://eldamo.org/content/words/word-2733395907.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "norn",
+   "id": "3827748337"
+  },
   "parents": [
    {
     "lang": "p",
@@ -420636,6 +422381,10 @@
   "url": "https://eldamo.org/content/words/word-1053273133.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "nurna-",
+   "id": "4021828159"
+  },
   "parents": [
    {
     "lang": "p",
@@ -420867,6 +422616,10 @@
   "url": "https://eldamo.org/content/words/word-128418913.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "noth",
+   "id": "1389005093"
+  },
   "parents": [
    {
     "lang": "p",
@@ -420973,6 +422726,10 @@
   "url": "https://eldamo.org/content/words/word-3884389517.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "nui",
+   "id": "4110941539"
+  },
   "parents": [
    {
     "lang": "p",
@@ -420994,6 +422751,10 @@
   "url": "https://eldamo.org/content/words/word-3490089389.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "nus-",
+   "id": "1478926765"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -421090,6 +422851,10 @@
   "url": "https://eldamo.org/content/words/word-3075503789.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "nud-",
+   "id": "2820843679"
+  },
   "parents": [
    {
     "lang": "p",
@@ -421121,6 +422886,10 @@
   "url": "https://eldamo.org/content/words/word-3686601933.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "nur-",
+   "id": "3286381197"
+  },
   "links": {
    "cognate": [
     {
@@ -421260,6 +423029,10 @@
   "url": "https://eldamo.org/content/words/word-3308810173.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "nîriol",
+   "id": "2944939243"
+  },
   "elements": [
    {
     "lang": "n",
@@ -421335,6 +423108,10 @@
   "url": "https://eldamo.org/content/words/word-2148390779.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "nictha-",
+   "id": "3777229343"
+  },
   "parents": [
    {
     "lang": "p",
@@ -421411,6 +423188,10 @@
   "url": "https://eldamo.org/content/words/word-3196788759.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "niost",
+   "id": "602232561"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -421523,6 +423304,10 @@
   "url": "https://eldamo.org/content/words/word-2859895159.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "nui",
+   "id": "1307654391"
+  },
   "links": {
    "cognate": [
     {
@@ -421562,7 +423347,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-51769737.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "hniof",
+   "id": "3007509707"
+  }
  },
  {
   "id": "113787646",
@@ -421574,6 +423363,10 @@
   "url": "https://eldamo.org/content/words/word-113787646.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "och",
+   "id": "110047159"
+  },
   "links": {
    "cognate": [
     {
@@ -421648,7 +423441,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-2184220279.html",
   "neo": true,
-  "alt_lang": "g"
+  "alt_lang": "g",
+  "alt_source": {
+   "form": "ochlad",
+   "id": "487196675"
+  }
  },
  {
   "id": "1605479571",
@@ -421930,6 +423727,10 @@
   "url": "https://eldamo.org/content/words/word-955717459.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "auth",
+   "id": "748348177"
+  },
   "links": {
    "deprecated": [
     {
@@ -421950,6 +423751,10 @@
   "url": "https://eldamo.org/content/words/word-2677808211.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "uitha-",
+   "id": "2100039321"
+  },
   "parents": [
    {
     "lang": "np",
@@ -422081,6 +423886,10 @@
   "url": "https://eldamo.org/content/words/word-113787645.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "octha",
+   "id": "1105524601"
+  },
   "links": {
    "cognate": [
     {
@@ -422249,6 +424058,10 @@
   "url": "https://eldamo.org/content/words/word-1838803015.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "ulm",
+   "id": "798321339"
+  },
   "elements": [
    {
     "lang": "p",
@@ -422309,6 +424122,10 @@
   "url": "https://eldamo.org/content/words/word-586667651.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "ulna-",
+   "id": "1272492699"
+  },
   "parents": [
    {
     "lang": "p",
@@ -422496,7 +424313,11 @@
   "mark": "",
   "url": "https://eldamo.org/content/words/word-3820375071.html",
   "neo": true,
-  "alt_lang": "g"
+  "alt_lang": "g",
+  "alt_source": {
+   "form": "omlos",
+   "id": "222329045"
+  }
  },
  {
   "id": "395088897",
@@ -422553,6 +424374,10 @@
   "url": "https://eldamo.org/content/words/word-1155851135.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "untha",
+   "id": "768746265"
+  },
   "parents": [
    {
     "lang": "p",
@@ -422614,6 +424439,10 @@
   "url": "https://eldamo.org/content/words/word-11864223.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "glonthen",
+   "id": "3378949669"
+  },
   "elements": [
    {
     "lang": "s",
@@ -422928,6 +424757,10 @@
   "url": "https://eldamo.org/content/words/word-3879038761.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "urf",
+   "id": "747655845"
+  },
   "links": {
    "cognate": [
     {
@@ -423017,6 +424850,10 @@
   "url": "https://eldamo.org/content/words/word-1794387659.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "orfing",
+   "id": "3773109063"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -423077,6 +424914,10 @@
   "url": "https://eldamo.org/content/words/word-89716167.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "urna-",
+   "id": "2046991059"
+  },
   "links": {
    "cognate": [
     {
@@ -423192,6 +425033,10 @@
   "url": "https://eldamo.org/content/words/word-3456614821.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "ortha",
+   "id": "3045496081"
+  },
   "links": {
    "cognate": [
     {
@@ -423427,6 +425272,10 @@
   "url": "https://eldamo.org/content/words/word-3604191975.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "osta-",
+   "id": "1744719249"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -423511,6 +425360,10 @@
   "url": "https://eldamo.org/content/words/word-827447393.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "ostor",
+   "id": "1316403991"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -423905,6 +425758,10 @@
   "url": "https://eldamo.org/content/words/word-3077504969.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "othlon",
+   "id": "2925083865"
+  },
   "links": {
    "deprecated": [
     {
@@ -423987,6 +425844,10 @@
   "url": "https://eldamo.org/content/words/word-3977268853.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "uthra-",
+   "id": "1350566369"
+  },
   "links": {
    "cognate": [
     {
@@ -425091,6 +426952,10 @@
   "url": "https://eldamo.org/content/words/word-29407779.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "pactha-",
+   "id": "1917204485"
+  },
   "links": {
    "cognate": [
     {
@@ -425131,6 +426996,10 @@
   "url": "https://eldamo.org/content/words/word-1839722563.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "paithwen",
+   "id": "3695634157"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -425202,6 +427071,10 @@
   "url": "https://eldamo.org/content/words/word-478849435.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "paithron",
+   "id": "3400830749"
+  },
   "elements": [
    {
     "lang": "s",
@@ -425237,7 +427110,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-2939047125.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "peich",
+   "id": "1357567791"
+  }
  },
  {
   "id": "3019935505",
@@ -425331,6 +427208,10 @@
   "url": "https://eldamo.org/content/words/word-929340427.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "paltha",
+   "id": "3706244373"
+  },
   "parents": [
    {
     "lang": "p",
@@ -425362,6 +427243,10 @@
   "url": "https://eldamo.org/content/words/word-1102474923.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "pan",
+   "id": "141934717"
+  },
   "parents": [
    {
     "lang": "p",
@@ -425393,6 +427278,10 @@
   "url": "https://eldamo.org/content/words/word-3678390865.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "pann²",
+   "id": "1923326433"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -425422,6 +427311,10 @@
   "url": "https://eldamo.org/content/words/word-2003133195.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "panta-",
+   "id": "1910593709"
+  },
   "links": {
    "cognate": [
     {
@@ -425492,6 +427385,10 @@
   "url": "https://eldamo.org/content/words/word-538160459.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "pant²",
+   "id": "3714014391"
+  },
   "parents": [
    {
     "lang": "p",
@@ -425746,6 +427643,10 @@
   "url": "https://eldamo.org/content/words/word-2073888153.html",
   "neo": true,
   "alt_lang": "on",
+  "alt_source": {
+   "form": "partha-",
+   "id": "3274012851"
+  },
   "links": {
    "cognate": [
     {
@@ -425865,6 +427766,10 @@
   "url": "https://eldamo.org/content/words/word-3850622695.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "cwast",
+   "id": "551850967"
+  },
   "parents": [
    {
     "lang": "np",
@@ -425896,6 +427801,10 @@
   "url": "https://eldamo.org/content/words/word-1020567685.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "cwas-",
+   "id": "2026853723"
+  },
   "parents": [
    {
     "lang": "np",
@@ -425996,6 +427905,10 @@
   "url": "https://eldamo.org/content/words/word-1558359615.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "pathw",
+   "id": "170725679"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -426033,6 +427946,10 @@
   "url": "https://eldamo.org/content/words/word-672941059.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "cwancha-",
+   "id": "3375109981"
+  },
   "links": {
    "cognate": [
     {
@@ -426323,6 +428240,10 @@
   "url": "https://eldamo.org/content/words/word-4020658405.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "cwîl",
+   "id": "1512306021"
+  },
   "links": {
    "cognate": [
     {
@@ -426363,6 +428284,10 @@
   "url": "https://eldamo.org/content/words/word-411994477.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "pelu-",
+   "id": "1503255465"
+  },
   "parents": [
    {
     "lang": "p",
@@ -426675,6 +428600,10 @@
   "url": "https://eldamo.org/content/words/word-274783825.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "cwinglios",
+   "id": "3915144341"
+  },
   "elements": [
    {
     "lang": "n",
@@ -426715,6 +428644,10 @@
   "url": "https://eldamo.org/content/words/word-437795183.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "cwingron",
+   "id": "2381485091"
+  },
   "elements": [
    {
     "lang": "n",
@@ -426755,6 +428688,10 @@
   "url": "https://eldamo.org/content/words/word-1385598821.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "panthig",
+   "id": "816415969"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -426791,6 +428728,10 @@
   "url": "https://eldamo.org/content/words/word-502937799.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "penninar",
+   "id": "674657133"
+  },
   "elements": [
    {
     "lang": "s",
@@ -426962,6 +428903,10 @@
   "url": "https://eldamo.org/content/words/word-1570977363.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "ceral",
+   "id": "2856865533"
+  },
   "parents": [
    {
     "lang": "p",
@@ -427218,6 +429163,10 @@
   "url": "https://eldamo.org/content/words/word-914778733.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "pess",
+   "id": "4223397311"
+  },
   "links": {
    "cognate": [
     {
@@ -427610,6 +429559,10 @@
   "url": "https://eldamo.org/content/words/word-1672707803.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "pibin",
+   "id": "1680769997"
+  },
   "parents": [
    {
     "lang": "p",
@@ -427777,6 +429730,10 @@
   "url": "https://eldamo.org/content/words/word-588896731.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "lhinn",
+   "id": "748092483"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -428132,6 +430089,10 @@
   "url": "https://eldamo.org/content/words/word-4028727639.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "cwir-",
+   "id": "734626341"
+  },
   "parents": [
    {
     "lang": "np",
@@ -428207,6 +430168,10 @@
   "url": "https://eldamo.org/content/words/word-2115692201.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "cwiruin",
+   "id": "2450311295"
+  },
   "parents": [
    {
     "lang": "np",
@@ -428277,6 +430242,10 @@
   "url": "https://eldamo.org/content/words/word-3960029709.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "plados",
+   "id": "1272639225"
+  },
   "elements": [
    {
     "lang": "p",
@@ -428308,6 +430277,10 @@
   "url": "https://eldamo.org/content/words/word-2587483519.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "blant",
+   "id": "406981153"
+  },
   "parents": [
    {
     "lang": "p",
@@ -428378,6 +430351,10 @@
   "url": "https://eldamo.org/content/words/word-3996754567.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "hug-",
+   "id": "2122272731"
+  },
   "parents": [
    {
     "lang": "np",
@@ -428409,6 +430386,10 @@
   "url": "https://eldamo.org/content/words/word-2149773591.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "huigion",
+   "id": "1738322199"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -428569,6 +430550,10 @@
   "url": "https://eldamo.org/content/words/word-2842021611.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "polod",
+   "id": "1438569793"
+  },
   "parents": [
    {
     "lang": "p",
@@ -428600,6 +430585,10 @@
   "url": "https://eldamo.org/content/words/word-1274482211.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "polodrin",
+   "id": "220557197"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -428675,6 +430664,10 @@
   "url": "https://eldamo.org/content/words/word-1941876921.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "porogwil",
+   "id": "360706107"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -428742,6 +430735,10 @@
   "url": "https://eldamo.org/content/words/word-1452704003.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "porog",
+   "id": "2500344293"
+  },
   "links": {
    "cognate": [
     {
@@ -428789,6 +430786,10 @@
   "url": "https://eldamo.org/content/words/word-3586543025.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "porogog",
+   "id": "3463059621"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -428894,6 +430895,10 @@
   "url": "https://eldamo.org/content/words/word-542286615.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "paptha-",
+   "id": "44273085"
+  },
   "parents": [
    {
     "lang": "np",
@@ -428955,6 +430960,10 @@
   "url": "https://eldamo.org/content/words/word-3550037753.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "pruin",
+   "id": "3205325623"
+  },
   "parents": [
    {
     "lang": "p",
@@ -429026,6 +431035,10 @@
   "url": "https://eldamo.org/content/words/word-1386854455.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "huch",
+   "id": "1703251395"
+  },
   "links": {
    "cognate": [
     {
@@ -429066,6 +431079,10 @@
   "url": "https://eldamo.org/content/words/word-2930384141.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "puidra-",
+   "id": "1701421303"
+  },
   "links": {
    "cognate": [
     {
@@ -429211,6 +431228,10 @@
   "url": "https://eldamo.org/content/words/word-2977640221.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "hoith",
+   "id": "3997767841"
+  },
   "parents": [
    {
     "lang": "np",
@@ -429242,6 +431263,10 @@
   "url": "https://eldamo.org/content/words/word-1321339933.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "hoitha-",
+   "id": "2882015905"
+  },
   "parents": [
    {
     "lang": "np",
@@ -429441,6 +431466,10 @@
   "url": "https://eldamo.org/content/words/word-2342809563.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "cwîr",
+   "id": "3379239205"
+  },
   "parents": [
    {
     "lang": "np",
@@ -429681,6 +431710,10 @@
   "url": "https://eldamo.org/content/words/word-728037083.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "raib",
+   "id": "4274175999"
+  },
   "parents": [
    {
     "lang": "np",
@@ -429712,6 +431745,10 @@
   "url": "https://eldamo.org/content/words/word-703506783.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "raibrog",
+   "id": "1076974881"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -429823,6 +431860,10 @@
   "url": "https://eldamo.org/content/words/word-283529505.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhoeg",
+   "id": "439774007"
+  },
   "links": {
    "cognate": [
     {
@@ -429934,6 +431975,10 @@
   "url": "https://eldamo.org/content/words/word-516458689.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhaen",
+   "id": "4238613523"
+  },
   "under": "2715805237",
   "links": {
    "deprecated": [
@@ -429955,6 +432000,10 @@
   "url": "https://eldamo.org/content/words/word-1942775765.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "ractha",
+   "id": "768312805"
+  },
   "parents": [
    {
     "lang": "p",
@@ -429986,6 +432035,10 @@
   "url": "https://eldamo.org/content/words/word-2249018147.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "rhaith",
+   "id": "3708888901"
+  },
   "links": {
    "cognate": [
     {
@@ -430026,6 +432079,10 @@
   "url": "https://eldamo.org/content/words/word-2330232291.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "raitha-",
+   "id": "787957743"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -430056,7 +432113,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-1429241585.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "rhaew",
+   "id": "856425373"
+  }
  },
  {
   "id": "3636684693",
@@ -430068,6 +432129,10 @@
   "url": "https://eldamo.org/content/words/word-3636684693.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "rag-",
+   "id": "2730789953"
+  },
   "links": {
    "cognate": [
     {
@@ -430143,6 +432208,10 @@
   "url": "https://eldamo.org/content/words/word-2156672911.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhain²",
+   "id": "3954757913"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -430175,7 +432244,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-781078383.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "rhain¹",
+   "id": "3455359857"
+  }
  },
  {
   "id": "1448120011",
@@ -430187,6 +432260,10 @@
   "url": "https://eldamo.org/content/words/word-1448120011.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhanc",
+   "id": "875307549"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -430256,6 +432333,10 @@
   "url": "https://eldamo.org/content/words/word-3936556365.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhand",
+   "id": "3363743903"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -430604,6 +432685,10 @@
   "url": "https://eldamo.org/content/words/word-3073365715.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "ranoth",
+   "id": "4197834137"
+  },
   "elements": [
    {
     "lang": "p",
@@ -430665,6 +432750,10 @@
   "url": "https://eldamo.org/content/words/word-1829367185.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhasg",
+   "id": "1256550973"
+  },
   "links": {
    "deprecated": [
     {
@@ -430690,6 +432779,10 @@
   "url": "https://eldamo.org/content/words/word-1708753189.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhaudh",
+   "id": "1163503505"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -430763,6 +432856,10 @@
   "url": "https://eldamo.org/content/words/word-1675525471.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhaun",
+   "id": "1097346879"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -430792,6 +432889,10 @@
   "url": "https://eldamo.org/content/words/word-1479011967.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhafn",
+   "id": "4043023539"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -430825,6 +432926,10 @@
   "url": "https://eldamo.org/content/words/word-3509842981.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhaw²",
+   "id": "2351472029"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -430854,6 +432959,10 @@
   "url": "https://eldamo.org/content/words/word-659275807.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhaw³",
+   "id": "544017567"
+  },
   "links": {
    "cognate": [
     {
@@ -430962,6 +433071,10 @@
   "url": "https://eldamo.org/content/words/word-218472163.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhedh-",
+   "id": "3968366505"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -431030,6 +433143,10 @@
   "url": "https://eldamo.org/content/words/word-1502746825.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "redhin",
+   "id": "3922742695"
+  },
   "parents": [
    {
     "lang": "np",
@@ -431174,6 +433291,10 @@
   "url": "https://eldamo.org/content/words/word-1183869111.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "bregil",
+   "id": "3222888969"
+  },
   "elements": [
    {
     "lang": "mp",
@@ -431225,6 +433346,10 @@
   "url": "https://eldamo.org/content/words/word-1250744513.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhein",
+   "id": "2579163385"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -431332,6 +433457,10 @@
   "url": "https://eldamo.org/content/words/word-330418673.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhem",
+   "id": "4289444897"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -431399,6 +433528,10 @@
   "url": "https://eldamo.org/content/words/word-1130529199.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhenn",
+   "id": "3989587047"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -431444,6 +433577,10 @@
   "url": "https://eldamo.org/content/words/word-272794593.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "ren(d)",
+   "id": "1143778415"
+  },
   "links": {
    "cognate": [
     {
@@ -431484,6 +433621,10 @@
   "url": "https://eldamo.org/content/words/word-1333309733.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhenia-¹",
+   "id": "3472963367"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -431512,7 +433653,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-429730693.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "rhenia-²",
+   "id": "2569384327"
+  }
  },
  {
   "id": "2424679521",
@@ -431621,6 +433766,10 @@
   "url": "https://eldamo.org/content/words/word-3137980641.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "ress",
+   "id": "2160305077"
+  },
   "links": {
    "cognate": [
     {
@@ -431720,6 +433869,10 @@
   "url": "https://eldamo.org/content/words/word-2715805237.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhaen",
+   "id": "4238613523"
+  },
   "parents": [
    {
     "lang": "p",
@@ -431750,7 +433903,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-2120992351.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "thrib-",
+   "id": "1656998837"
+  }
  },
  {
   "id": "1839040009",
@@ -432078,6 +434235,10 @@
   "url": "https://eldamo.org/content/words/word-1390808787.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhîf",
+   "id": "2167473611"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -432155,6 +434316,10 @@
   "url": "https://eldamo.org/content/words/word-3991568481.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "rib",
+   "id": "4114461233"
+  },
   "parents": [
    {
     "lang": "np",
@@ -432186,6 +434351,10 @@
   "url": "https://eldamo.org/content/words/word-3129526337.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhib-",
+   "id": "2556858025"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -432215,6 +434384,10 @@
   "url": "https://eldamo.org/content/words/word-2096295201.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "rig-",
+   "id": "1158860721"
+  },
   "links": {
    "cognate": [
     {
@@ -432300,7 +434473,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-1694229497.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "rhim²",
+   "id": "3027191883"
+  }
  },
  {
   "id": "2665090629",
@@ -432312,6 +434489,10 @@
   "url": "https://eldamo.org/content/words/word-2665090629.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "rimp",
+   "id": "2697481259"
+  },
   "parents": [
    {
     "lang": "np",
@@ -432343,6 +434524,10 @@
   "url": "https://eldamo.org/content/words/word-777977879.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "rin-",
+   "id": "1391583445"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -432374,6 +434559,10 @@
   "url": "https://eldamo.org/content/words/word-20210455.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhinc",
+   "id": "3741471559"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -432423,6 +434612,10 @@
   "url": "https://eldamo.org/content/words/word-2536352439.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhinn",
+   "id": "1183559881"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -432467,7 +434660,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-69102489.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "rhingorn",
+   "id": "356612635"
+  }
  },
  {
   "id": "4281316195",
@@ -432479,6 +434676,10 @@
   "url": "https://eldamo.org/content/words/word-4281316195.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rista-",
+   "id": "1032242055"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -432522,6 +434723,10 @@
   "url": "https://eldamo.org/content/words/word-929426627.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "rod",
+   "id": "3461488485"
+  },
   "parents": [
    {
     "lang": "p",
@@ -432603,6 +434808,10 @@
   "url": "https://eldamo.org/content/words/word-3521101927.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "rogli",
+   "id": "1474583973"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -432701,6 +434910,10 @@
   "url": "https://eldamo.org/content/words/word-1274210721.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhomru",
+   "id": "556950473"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -432891,6 +435104,10 @@
   "url": "https://eldamo.org/content/words/word-2606922115.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhoss²",
+   "id": "461716609"
+  },
   "links": {
    "deprecated": [
     {
@@ -432998,6 +435215,10 @@
   "url": "https://eldamo.org/content/words/word-155542755.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "ruf-",
+   "id": "608123615"
+  },
   "parents": [
    {
     "lang": "np",
@@ -433028,7 +435249,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-3098339341.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "rhui(w)",
+   "id": "2761471959"
+  }
  },
  {
   "id": "1909317709",
@@ -433342,7 +435567,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-3568416223.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "rhîn",
+   "id": "3227080191"
+  }
  },
  {
   "id": "3692653431",
@@ -433354,6 +435583,10 @@
   "url": "https://eldamo.org/content/words/word-3692653431.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhîs",
+   "id": "3351201149"
+  },
   "links": {
    "deprecated": [
     {
@@ -433462,6 +435695,10 @@
   "url": "https://eldamo.org/content/words/word-1313624043.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "rôn²",
+   "id": "2700941727"
+  },
   "parents": [
    {
     "lang": "p",
@@ -433536,7 +435773,11 @@
   "mark": "^†",
   "url": "https://eldamo.org/content/words/word-664164793.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "rhû",
+   "id": "1624525541"
+  }
  },
  {
   "id": "1546344697",
@@ -433578,6 +435819,10 @@
   "url": "https://eldamo.org/content/words/word-760290801.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "rhŷn",
+   "id": "418954769"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -433727,6 +435972,10 @@
   "url": "https://eldamo.org/content/words/word-1014648453.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "saib",
+   "id": "2477224641"
+  },
   "parents": [
    {
     "lang": "np",
@@ -433758,6 +436007,10 @@
   "url": "https://eldamo.org/content/words/word-857119833.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "haib",
+   "id": "3165667"
+  },
   "links": {
    "cognate": [
     {
@@ -433837,6 +436090,10 @@
   "url": "https://eldamo.org/content/words/word-480050499.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "hais",
+   "id": "3639039221"
+  },
   "links": {
    "cognate": [
     {
@@ -434122,6 +436379,10 @@
   "url": "https://eldamo.org/content/words/word-1333160899.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "saitha-",
+   "id": "2141267471"
+  },
   "parents": [
    {
     "lang": "np",
@@ -434190,7 +436451,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-4158148799.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "sein",
+   "id": "1890024585"
+  }
  },
  {
   "id": "1809708873",
@@ -434202,6 +436467,10 @@
   "url": "https://eldamo.org/content/words/word-1809708873.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "salc",
+   "id": "3092668767"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -434233,6 +436502,10 @@
   "url": "https://eldamo.org/content/words/word-2138489289.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "salca-",
+   "id": "530555615"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -434264,6 +436537,10 @@
   "url": "https://eldamo.org/content/words/word-71079029.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "salff",
+   "id": "1834118047"
+  },
   "links": {
    "cognate": [
     {
@@ -434306,6 +436583,10 @@
   "url": "https://eldamo.org/content/words/word-4055849155.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "sabli",
+   "id": "3887357331"
+  },
   "links": {
    "cognate": [
     {
@@ -434346,6 +436627,10 @@
   "url": "https://eldamo.org/content/words/word-3914594485.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "sard",
+   "id": "2580716893"
+  },
   "parents": [
    {
     "lang": "p",
@@ -434832,6 +437117,10 @@
   "url": "https://eldamo.org/content/words/word-4157008277.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "sibra-",
+   "id": "1357402263"
+  },
   "parents": [
    {
     "lang": "np",
@@ -434863,6 +437152,10 @@
   "url": "https://eldamo.org/content/words/word-2887892487.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "siel",
+   "id": "4092046377"
+  },
   "elements": [
    {
     "lang": "s",
@@ -434933,6 +437226,10 @@
   "url": "https://eldamo.org/content/words/word-149293205.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "sinc",
+   "id": "2202587287"
+  },
   "links": {
    "cognate": [
     {
@@ -434981,6 +437278,10 @@
   "url": "https://eldamo.org/content/words/word-1623926549.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "sing",
+   "id": "587588119"
+  },
   "links": {
    "cognate": [
     {
@@ -435021,6 +437322,10 @@
   "url": "https://eldamo.org/content/words/word-1356300739.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "singrin",
+   "id": "661487713"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -435128,6 +437433,10 @@
   "url": "https://eldamo.org/content/words/word-1722010559.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "sion",
+   "id": "2389935827"
+  },
   "elements": [
    {
     "lang": "s",
@@ -435168,6 +437477,10 @@
   "url": "https://eldamo.org/content/words/word-4121069395.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "siriol",
+   "id": "409753817"
+  },
   "elements": [
    {
     "lang": "n",
@@ -435209,6 +437522,10 @@
   "url": "https://eldamo.org/content/words/word-2960992309.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "cith",
+   "id": "3053329037"
+  },
   "elements": [
    {
     "lang": "s",
@@ -435249,6 +437566,10 @@
   "url": "https://eldamo.org/content/words/word-3862322961.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "socthor",
+   "id": "2624081541"
+  },
   "elements": [
    {
     "lang": "p",
@@ -435411,6 +437732,10 @@
   "url": "https://eldamo.org/content/words/word-621764709.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "sô-",
+   "id": "3873049759"
+  },
   "links": {
    "cognate": [
     {
@@ -435451,6 +437776,10 @@
   "url": "https://eldamo.org/content/words/word-1461053719.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "suith",
+   "id": "2893018687"
+  },
   "parents": [
    {
     "lang": "p",
@@ -435482,6 +437811,10 @@
   "url": "https://eldamo.org/content/words/word-3849107191.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "suithlas",
+   "id": "1595552475"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -435545,6 +437878,10 @@
   "url": "https://eldamo.org/content/words/word-4013417933.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "hunt",
+   "id": "1997754483"
+  },
   "parents": [
    {
     "lang": "p",
@@ -435670,6 +438007,10 @@
   "url": "https://eldamo.org/content/words/word-2847636119.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "sûtha-",
+   "id": "2582797525"
+  },
   "parents": [
    {
     "lang": "p",
@@ -435701,6 +438042,10 @@
   "url": "https://eldamo.org/content/words/word-2406976089.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "sû",
+   "id": "1562122399"
+  },
   "links": {
    "cognate": [
     {
@@ -435845,6 +438190,10 @@
   "url": "https://eldamo.org/content/words/word-2207906631.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "tadhos",
+   "id": "3094605455"
+  },
   "parents": [
    {
     "lang": "np",
@@ -435876,6 +438225,10 @@
   "url": "https://eldamo.org/content/words/word-986307877.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "taglon",
+   "id": "81276487"
+  },
   "elements": [
    {
     "lang": "p",
@@ -436077,7 +438430,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-3483740441.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "talagand",
+   "id": "1671960619"
+  }
  },
  {
   "id": "1304150249",
@@ -436089,6 +438446,10 @@
   "url": "https://eldamo.org/content/words/word-1304150249.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "talc",
+   "id": "1295717409"
+  },
   "parents": [
    {
     "lang": "p",
@@ -436338,6 +438699,10 @@
   "url": "https://eldamo.org/content/words/word-3539101517.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "taleg",
+   "id": "3502614725"
+  },
   "elements": [
    {
     "lang": "s",
@@ -436629,6 +438994,10 @@
   "url": "https://eldamo.org/content/words/word-3933187051.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "dalw",
+   "id": "1234727995"
+  },
   "parents": [
    {
     "lang": "p",
@@ -436660,6 +439029,10 @@
   "url": "https://eldamo.org/content/words/word-2081402737.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "tambos",
+   "id": "3917340027"
+  },
   "parents": [
    {
     "lang": "p",
@@ -436834,7 +439207,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-1086134195.html",
   "neo": true,
-  "alt_lang": "en"
+  "alt_lang": "en",
+  "alt_source": {
+   "form": "archos",
+   "id": "2015133865"
+  }
  },
  {
   "id": "341925265",
@@ -436846,6 +439223,10 @@
   "url": "https://eldamo.org/content/words/word-341925265.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "tarf",
+   "id": "4269445787"
+  },
   "parents": [
    {
     "lang": "np",
@@ -436877,6 +439258,10 @@
   "url": "https://eldamo.org/content/words/word-2756072227.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "taru¹",
+   "id": "281402061"
+  },
   "links": {
    "cognate": [
     {
@@ -436915,6 +439300,10 @@
   "url": "https://eldamo.org/content/words/word-72075679.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "tast¹",
+   "id": "2975961263"
+  },
   "links": {
    "cognate": [
     {
@@ -437151,6 +439540,10 @@
   "url": "https://eldamo.org/content/words/word-1300296741.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "teiar",
+   "id": "3633558759"
+  },
   "links": {
    "cognate": [
     {
@@ -437445,7 +439838,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-1711570685.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "tellen",
+   "id": "1912530059"
+  }
  },
  {
   "id": "2962319977",
@@ -437457,6 +439854,10 @@
   "url": "https://eldamo.org/content/words/word-2962319977.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "telt",
+   "id": "76486313"
+  },
   "parents": [
    {
     "lang": "p",
@@ -437589,6 +439990,10 @@
   "url": "https://eldamo.org/content/words/word-2571140009.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "tent",
+   "id": "756546605"
+  },
   "parents": [
    {
     "lang": "p",
@@ -437670,6 +440075,10 @@
   "url": "https://eldamo.org/content/words/word-2753945531.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "tertha-",
+   "id": "2250030137"
+  },
   "parents": [
    {
     "lang": "np",
@@ -437701,6 +440110,10 @@
   "url": "https://eldamo.org/content/words/word-3126140765.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "teraith",
+   "id": "2787640099"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -438172,6 +440585,10 @@
   "url": "https://eldamo.org/content/words/word-42352607.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "thalos",
+   "id": "416397045"
+  },
   "elements": [
    {
     "lang": "p",
@@ -438241,7 +440658,11 @@
   "mark": "?",
   "url": "https://eldamo.org/content/words/word-2493479359.html",
   "neo": true,
-  "alt_lang": "ilk"
+  "alt_lang": "ilk",
+  "alt_source": {
+   "form": "thall",
+   "id": "1000288725"
+  }
  },
  {
   "id": "3883462581",
@@ -438252,7 +440673,11 @@
   "mark": "?",
   "url": "https://eldamo.org/content/words/word-3883462581.html",
   "neo": true,
-  "alt_lang": "ilk"
+  "alt_lang": "ilk",
+  "alt_source": {
+   "form": "thalos",
+   "id": "977220827"
+  }
  },
  {
   "id": "2187777449",
@@ -438263,7 +440688,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-2187777449.html",
   "neo": true,
-  "alt_lang": "en"
+  "alt_lang": "en",
+  "alt_source": {
+   "form": "thalf",
+   "id": "1493145965"
+  }
  },
  {
   "id": "353533575",
@@ -438275,6 +440704,10 @@
   "url": "https://eldamo.org/content/words/word-353533575.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "thann",
+   "id": "1886135275"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -438304,6 +440737,10 @@
   "url": "https://eldamo.org/content/words/word-1362286357.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "thar-",
+   "id": "3889330007"
+  },
   "links": {
    "cognate": [
     {
@@ -438397,6 +440834,10 @@
   "url": "https://eldamo.org/content/words/word-2830082173.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "tharm",
+   "id": "2185204557"
+  },
   "links": {
    "cognate": [
     {
@@ -438437,6 +440878,10 @@
   "url": "https://eldamo.org/content/words/word-3860303255.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "thas-",
+   "id": "3692816533"
+  },
   "parents": [
    {
     "lang": "np",
@@ -438468,6 +440913,10 @@
   "url": "https://eldamo.org/content/words/word-3750030411.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "thasc",
+   "id": "2879637849"
+  },
   "parents": [
    {
     "lang": "np",
@@ -438499,6 +440948,10 @@
   "url": "https://eldamo.org/content/words/word-4125409611.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "thasgim",
+   "id": "1434416361"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -438558,6 +441011,10 @@
   "url": "https://eldamo.org/content/words/word-1229674109.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "thast",
+   "id": "2221417527"
+  },
   "parents": [
    {
     "lang": "np",
@@ -438589,6 +441046,10 @@
   "url": "https://eldamo.org/content/words/word-1312719405.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "thafn",
+   "id": "3456217527"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -438803,6 +441264,10 @@
   "url": "https://eldamo.org/content/words/word-3004285915.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "theres",
+   "id": "626443131"
+  },
   "parents": [
    {
     "lang": "np",
@@ -438870,6 +441335,10 @@
   "url": "https://eldamo.org/content/words/word-4045620221.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "thibin",
+   "id": "1462863343"
+  },
   "parents": [
    {
     "lang": "np",
@@ -438901,6 +441370,10 @@
   "url": "https://eldamo.org/content/words/word-95101315.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "thibinweg",
+   "id": "3143330795"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -438937,6 +441410,10 @@
   "url": "https://eldamo.org/content/words/word-2306335327.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "thim",
+   "id": "1301445167"
+  },
   "parents": [
    {
     "lang": "np",
@@ -438968,6 +441445,10 @@
   "url": "https://eldamo.org/content/words/word-2795644251.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "thimpa-",
+   "id": "1285256217"
+  },
   "parents": [
    {
     "lang": "np",
@@ -438999,6 +441480,10 @@
   "url": "https://eldamo.org/content/words/word-2890308379.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "thimp",
+   "id": "722395161"
+  },
   "parents": [
    {
     "lang": "np",
@@ -439399,6 +441884,10 @@
   "url": "https://eldamo.org/content/words/word-446447455.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "sirp",
+   "id": "453195123"
+  },
   "parents": [
    {
     "lang": "np",
@@ -439430,6 +441919,10 @@
   "url": "https://eldamo.org/content/words/word-1816822611.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "thisin",
+   "id": "3829378307"
+  },
   "links": {
    "cognate": [
     {
@@ -439470,6 +441963,10 @@
   "url": "https://eldamo.org/content/words/word-2230629595.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "thista-",
+   "id": "1373265625"
+  },
   "parents": [
    {
     "lang": "np",
@@ -439501,6 +441998,10 @@
   "url": "https://eldamo.org/content/words/word-3998405837.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "thin-",
+   "id": "3190246797"
+  },
   "parents": [
    {
     "lang": "np",
@@ -439532,6 +442033,10 @@
   "url": "https://eldamo.org/content/words/word-1095962603.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "thimli",
+   "id": "2941560629"
+  },
   "parents": [
    {
     "lang": "np",
@@ -439563,6 +442068,10 @@
   "url": "https://eldamo.org/content/words/word-1270345947.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "thol-",
+   "id": "1391503159"
+  },
   "roots": [
    {
     "lang": "ep",
@@ -439592,6 +442101,10 @@
   "url": "https://eldamo.org/content/words/word-4023576131.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "tholos¹",
+   "id": "3027727721"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -439849,6 +442362,10 @@
   "url": "https://eldamo.org/content/words/word-383982291.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "thribin",
+   "id": "3496039905"
+  },
   "parents": [
    {
     "lang": "np",
@@ -439880,6 +442397,10 @@
   "url": "https://eldamo.org/content/words/word-3901425597.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "thrimp",
+   "id": "907147255"
+  },
   "parents": [
    {
     "lang": "np",
@@ -439911,6 +442432,10 @@
   "url": "https://eldamo.org/content/words/word-1408478919.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "thuith",
+   "id": "1904249871"
+  },
   "links": {
    "cognate": [
     {
@@ -439950,7 +442475,11 @@
   "mark": "",
   "url": "https://eldamo.org/content/words/word-3442399145.html",
   "neo": true,
-  "alt_lang": "g"
+  "alt_lang": "g",
+  "alt_source": {
+   "form": "thaf",
+   "id": "3555805741"
+  }
  },
  {
   "id": "3953428285",
@@ -440027,6 +442556,10 @@
   "url": "https://eldamo.org/content/words/word-1610441649.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "thugli",
+   "id": "2911643073"
+  },
   "parents": [
    {
     "lang": "np",
@@ -440088,6 +442621,10 @@
   "url": "https://eldamo.org/content/words/word-2923256099.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "timp",
+   "id": "3398545839"
+  },
   "parents": [
    {
     "lang": "np",
@@ -440226,6 +442763,10 @@
   "url": "https://eldamo.org/content/words/word-3160524315.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "tintiltha-",
+   "id": "3935665143"
+  },
   "elements": [
    {
     "lang": "p",
@@ -440337,6 +442878,10 @@
   "url": "https://eldamo.org/content/words/word-3996094197.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "siptha-",
+   "id": "192657071"
+  },
   "parents": [
    {
     "lang": "np",
@@ -440368,6 +442913,10 @@
   "url": "https://eldamo.org/content/words/word-3012894239.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "tifin",
+   "id": "2023803733"
+  },
   "parents": [
    {
     "lang": "np",
@@ -440399,6 +442948,10 @@
   "url": "https://eldamo.org/content/words/word-770446549.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "tisc",
+   "id": "4253265657"
+  },
   "parents": [
    {
     "lang": "np",
@@ -440430,6 +442983,10 @@
   "url": "https://eldamo.org/content/words/word-756777977.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "tisca-",
+   "id": "236753017"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -440466,6 +443023,10 @@
   "url": "https://eldamo.org/content/words/word-3090075059.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "tith",
+   "id": "60158873"
+  },
   "links": {
    "cognate": [
     {
@@ -440486,6 +443047,10 @@
   "url": "https://eldamo.org/content/words/word-1570068789.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "tubla-",
+   "id": "318724501"
+  },
   "parents": [
    {
     "lang": "p",
@@ -440556,6 +443121,10 @@
   "url": "https://eldamo.org/content/words/word-534823959.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "tulga-",
+   "id": "1038865737"
+  },
   "links": {
    "cognate": [
     {
@@ -440954,6 +443523,10 @@
   "url": "https://eldamo.org/content/words/word-607362913.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "tonn",
+   "id": "1984028425"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -441141,6 +443714,10 @@
   "url": "https://eldamo.org/content/words/word-2721871901.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "tofn",
+   "id": "3551374073"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -441232,6 +443809,10 @@
   "url": "https://eldamo.org/content/words/word-2568453957.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "trug",
+   "id": "1549711995"
+  },
   "parents": [
    {
     "lang": "p",
@@ -441263,6 +443844,10 @@
   "url": "https://eldamo.org/content/words/word-3392874311.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "tuth",
+   "id": "215500695"
+  },
   "links": {
    "cognate": [
     {
@@ -441338,6 +443923,10 @@
   "url": "https://eldamo.org/content/words/word-2647001803.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "tuig",
+   "id": "1174779907"
+  },
   "parents": [
    {
     "lang": "p",
@@ -441423,6 +444012,10 @@
   "url": "https://eldamo.org/content/words/word-1337762725.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "tethlas",
+   "id": "639514525"
+  },
   "elements": [
    {
     "lang": "n",
@@ -441536,6 +444129,10 @@
   "url": "https://eldamo.org/content/words/word-2950178893.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "tump",
+   "id": "1040505951"
+  },
   "links": {
    "cognate": [
     {
@@ -441576,6 +444173,10 @@
   "url": "https://eldamo.org/content/words/word-194418539.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "tunc",
+   "id": "2342446157"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -441607,6 +444208,10 @@
   "url": "https://eldamo.org/content/words/word-2710560523.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "tunn",
+   "id": "804947551"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -441652,6 +444257,10 @@
   "url": "https://eldamo.org/content/words/word-3813328555.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "tund",
+   "id": "4086180013"
+  },
   "links": {
    "cognate": [
     {
@@ -441757,6 +444366,10 @@
   "url": "https://eldamo.org/content/words/word-2110421245.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "tîf",
+   "id": "3915227231"
+  },
   "parents": [
    {
     "lang": "np",
@@ -441788,6 +444401,10 @@
   "url": "https://eldamo.org/content/words/word-3982889789.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "tîl",
+   "id": "650349321"
+  },
   "parents": [
    {
     "lang": "p",
@@ -441819,6 +444436,10 @@
   "url": "https://eldamo.org/content/words/word-697636931.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "tôdhi",
+   "id": "2671931361"
+  },
   "parents": [
    {
     "lang": "np",
@@ -441850,6 +444471,10 @@
   "url": "https://eldamo.org/content/words/word-2232227977.html",
   "neo": true,
   "alt_lang": "en",
+  "alt_source": {
+   "form": "tô",
+   "id": "1465032785"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -442091,6 +444716,10 @@
   "url": "https://eldamo.org/content/words/word-3264026793.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "eil-",
+   "id": "3353053535"
+  },
   "roots": [
    {
     "lang": "mp",
@@ -442162,7 +444791,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-755325655.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "ulun",
+   "id": "1007491373"
+  }
  },
  {
   "id": "3425033221",
@@ -442214,6 +444847,10 @@
   "url": "https://eldamo.org/content/words/word-4271741277.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "unt",
+   "id": "1906535323"
+  },
   "parents": [
    {
     "lang": "p",
@@ -442280,6 +444917,10 @@
   "url": "https://eldamo.org/content/words/word-3079820251.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "urm",
+   "id": "2665249873"
+  },
   "parents": [
    {
     "lang": "p",
@@ -442350,6 +444991,10 @@
   "url": "https://eldamo.org/content/words/word-3649952321.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "uthwen",
+   "id": "1168393391"
+  },
   "elements": [
    {
     "lang": "np",
@@ -442626,7 +445271,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-2019191973.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "chwann",
+   "id": "1876268241"
+  }
  },
  {
   "id": "2525838849",
@@ -442638,6 +445287,10 @@
   "url": "https://eldamo.org/content/words/word-2525838849.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "fweg",
+   "id": "3102239547"
+  },
   "parents": [
    {
     "lang": "np",
@@ -442669,6 +445322,10 @@
   "url": "https://eldamo.org/content/words/word-3369290013.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "fwegli",
+   "id": "2882167515"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -442705,6 +445362,10 @@
   "url": "https://eldamo.org/content/words/word-3847413233.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "fwegra-",
+   "id": "1102846749"
+  },
   "elements": [
    {
     "lang": "ns",
@@ -442759,7 +445420,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-1534837597.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "chwinn",
+   "id": "533039335"
+  }
  },
  {
   "id": "2448986651",
@@ -442770,7 +445435,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-2448986651.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "chwinia-",
+   "id": "2851948785"
+  }
  },
  {
   "id": "790121185",
@@ -442781,7 +445450,11 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-790121185.html",
   "neo": true,
-  "alt_lang": "n"
+  "alt_lang": "n",
+  "alt_source": {
+   "form": "chwiniol",
+   "id": "4276171793"
+  }
  },
  {
   "id": "1356013629",
@@ -442793,6 +445466,10 @@
   "url": "https://eldamo.org/content/words/word-1356013629.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "fwion",
+   "id": "1368673629"
+  },
   "links": {
    "cognate": [
     {
@@ -442813,6 +445490,10 @@
   "url": "https://eldamo.org/content/words/word-1698548981.html",
   "neo": true,
   "alt_lang": "n",
+  "alt_source": {
+   "form": "chwîn",
+   "id": "2374128703"
+  },
   "links": {
    "cognate": [
     {
@@ -442833,6 +445514,10 @@
   "url": "https://eldamo.org/content/words/word-1287025805.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "ulin",
+   "id": "461282829"
+  },
   "parents": [
    {
     "lang": "p",
@@ -443214,7 +445899,11 @@
   "mark": "",
   "url": "https://eldamo.org/content/words/word-501937183.html",
   "neo": true,
-  "alt_lang": "g"
+  "alt_lang": "g",
+  "alt_source": {
+   "form": "ôf",
+   "id": "115202713"
+  }
  },
  {
   "id": "3418484543",
@@ -443715,6 +446404,10 @@
   "url": "https://eldamo.org/content/words/word-1734474655.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "ûm",
+   "id": "2233166395"
+  },
   "links": {
    "deprecated": [
     {
@@ -443767,6 +446460,10 @@
   "url": "https://eldamo.org/content/words/word-1888993185.html",
   "neo": true,
   "alt_lang": "on",
+  "alt_source": {
+   "form": "yūta-",
+   "id": "3920386465"
+  },
   "parents": [
    {
     "lang": "on",
@@ -443874,6 +446571,10 @@
   "url": "https://eldamo.org/content/words/word-2207058047.html",
   "neo": true,
   "alt_lang": "g",
+  "alt_source": {
+   "form": "iol",
+   "id": "1058895523"
+  },
   "links": {
    "cognate": [
     {
@@ -444898,35 +447599,13 @@
      ],
      [
       "e",
-      "13427299"
+      "2242689257"
      ],
      [
       "d",
       "1490024387"
      ]
     ],
-    "part": 0,
-    "via": "element"
-   },
-   {
-    "lang": "mp",
-    "form": "NDOR",
-    "id": "3559253579",
-    "path": [
-     [
-      "d",
-      "3486955641"
-     ],
-     [
-      "e",
-      "3307581903"
-     ],
-     [
-      "d",
-      "3559253579"
-     ]
-    ],
-    "part": 1,
     "via": "element"
    }
   ]
@@ -463577,12 +466256,35 @@
   "elements": [
    {
     "lang": "p",
+    "form": "awa-",
+    "id": "890621249",
+    "from_ref": true
+   },
+   {
+    "lang": "p",
     "form": "edelō",
     "id": "2997397723",
     "from_ref": true
    }
   ],
   "roots": [
+   {
+    "lang": "p",
+    "form": "WĀ/AWA",
+    "id": "3617829545",
+    "path": [
+     [
+      "e",
+      "890621249"
+     ],
+     [
+      "d",
+      "3617829545"
+     ]
+    ],
+    "part": 0,
+    "via": "element"
+   },
    {
     "lang": "p",
     "form": "DEL¹",
@@ -463597,6 +466299,7 @@
       "4136487061"
      ]
     ],
+    "part": 1,
     "via": "element"
    }
   ],
@@ -463791,12 +466494,35 @@
   "elements": [
    {
     "lang": "p",
+    "form": "awa-",
+    "id": "890621249",
+    "from_ref": true
+   },
+   {
+    "lang": "p",
     "form": "edelō",
     "id": "2997397723",
     "from_ref": true
    }
   ],
   "roots": [
+   {
+    "lang": "p",
+    "form": "WĀ/AWA",
+    "id": "3617829545",
+    "path": [
+     [
+      "e",
+      "890621249"
+     ],
+     [
+      "d",
+      "3617829545"
+     ]
+    ],
+    "part": 0,
+    "via": "element"
+   },
    {
     "lang": "p",
     "form": "DEL¹",
@@ -463811,6 +466537,7 @@
       "4136487061"
      ]
     ],
+    "part": 1,
     "via": "element"
    }
   ],
@@ -464984,6 +467711,10 @@
   "mark": "",
   "url": "https://eldamo.org/content/words/word-1546382139.html",
   "alt_lang": "mp",
+  "alt_source": {
+   "form": "Ndanithārō",
+   "id": "2203026159"
+  },
   "elements": [
    {
     "lang": "p",
@@ -474803,6 +477534,10 @@
   "mark": "*",
   "url": "https://eldamo.org/content/words/word-1085526721.html",
   "alt_lang": "mp",
+  "alt_source": {
+   "form": "kotse",
+   "id": "1108220169"
+  },
   "parents": [
    {
     "lang": "p",
@@ -479643,6 +482378,10 @@
   "mark": "*",
   "url": "https://eldamo.org/content/words/word-2656854151.html",
   "alt_lang": "mp",
+  "alt_source": {
+   "form": "smaldā",
+   "id": "3844095353"
+  },
   "parents": [
    {
     "lang": "p",
@@ -494760,9 +497499,48 @@
   "elements": [
    {
     "lang": "p",
+    "form": "tankā",
+    "id": "3555403615",
+    "from_ref": true
+   },
+   {
+    "lang": "p",
     "form": "-tā",
     "id": "2138392313",
     "from_ref": true
+   }
+  ],
+  "roots": [
+   {
+    "lang": "p",
+    "form": "TAK",
+    "id": "3733569235",
+    "path": [
+     [
+      "e",
+      "3555403615"
+     ],
+     [
+      "d",
+      "3733569235"
+     ]
+    ],
+    "part": 0,
+    "via": "element"
+   }
+  ],
+  "root_gaps": [
+   {
+    "lang": "p",
+    "form": "-tā",
+    "id": "2138392313",
+    "path": [
+     [
+      "e",
+      "2138392313"
+     ]
+    ],
+    "part": 1
    }
   ],
   "proto_forms": [
@@ -498884,6 +501662,10 @@
   "mark": "^",
   "url": "https://eldamo.org/content/words/word-4023266209.html",
   "alt_lang": "mp",
+  "alt_source": {
+   "form": "Weirē",
+   "id": "2096272709"
+  },
   "parents": [
    {
     "lang": "p",
@@ -531963,6 +534745,10 @@
   "mark": "?",
   "url": "https://eldamo.org/content/words/word-2392499487.html",
   "alt_lang": "ilk",
+  "alt_source": {
+   "form": "bril",
+   "id": "3980972909"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -586651,6 +589437,31 @@
   "roots": [
    {
     "lang": "p",
+    "form": "WĀ/AWA",
+    "id": "3617829545",
+    "path": [
+     [
+      "d",
+      "2486360943"
+     ],
+     [
+      "d",
+      "1592428057"
+     ],
+     [
+      "e",
+      "890621249"
+     ],
+     [
+      "d",
+      "3617829545"
+     ]
+    ],
+    "part": 0,
+    "via": "element"
+   },
+   {
+    "lang": "p",
     "form": "DEL¹",
     "id": "4136487061",
     "path": [
@@ -586671,6 +589482,7 @@
       "4136487061"
      ]
     ],
+    "part": 1,
     "via": "element"
    }
   ]
@@ -597143,6 +599955,10 @@
   "mark": "",
   "url": "https://eldamo.org/content/words/word-178485755.html",
   "alt_lang": "n",
+  "alt_source": {
+   "form": "Ivann",
+   "id": "2731156485"
+  },
   "parents": [
    {
     "lang": "mp",
@@ -649678,6 +652494,35 @@
    },
    {
     "lang": "p",
+    "form": "WĀ/AWA",
+    "id": "3617829545",
+    "path": [
+     [
+      "e",
+      "365331841"
+     ],
+     [
+      "d",
+      "2486360943"
+     ],
+     [
+      "d",
+      "1592428057"
+     ],
+     [
+      "e",
+      "890621249"
+     ],
+     [
+      "d",
+      "3617829545"
+     ]
+    ],
+    "part": 1,
+    "via": "element"
+   },
+   {
+    "lang": "p",
     "form": "DEL¹",
     "id": "4136487061",
     "path": [
@@ -649702,7 +652547,7 @@
       "4136487061"
      ]
     ],
-    "part": 1,
+    "part": 2,
     "via": "element"
    }
   ]
@@ -658201,6 +661046,27 @@
   "roots": [
    {
     "lang": "p",
+    "form": "WĀ/AWA",
+    "id": "3617829545",
+    "path": [
+     [
+      "d",
+      "1592428057"
+     ],
+     [
+      "e",
+      "890621249"
+     ],
+     [
+      "d",
+      "3617829545"
+     ]
+    ],
+    "part": 0,
+    "via": "element"
+   },
+   {
+    "lang": "p",
     "form": "DEL¹",
     "id": "4136487061",
     "path": [
@@ -658217,6 +661083,7 @@
       "4136487061"
      ]
     ],
+    "part": 1,
     "via": "element"
    }
   ]

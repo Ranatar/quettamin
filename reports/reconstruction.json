@@ -221,11 +221,11 @@
  },
  "joint primitive mq": {
   "cases": 30,
-  "alone_first": 10,
-  "alone_any": 24,
-  "joint_first": 10,
-  "joint_any": 22,
-  "words": 471
+  "alone_first": 7,
+  "alone_any": 21,
+  "joint_first": 7,
+  "joint_any": 20,
+  "words": 470
  },
  "joint primitive s": {
   "cases": 30,
@@ -239,9 +239,9 @@
   "cases": 30,
   "alone_first": 3,
   "alone_any": 9,
-  "joint_first": 7,
-  "joint_any": 20,
-  "words": 583
+  "joint_first": 5,
+  "joint_any": 19,
+  "words": 579
  },
  "root_candidates": {
   "q": {

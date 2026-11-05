@@ -692,8 +692,8 @@
   "en": "Forms of other conceptions"
  },
  "par.bands": {
-  "ru": "полосами: поздняя, средняя, ранняя",
-  "en": "in bands: late, middle, early"
+  "ru": "полосами: нео, поздняя, средняя, ранняя",
+  "en": "in bands: neo, late, middle, early"
  },
  "par.stack": {
   "ru": "под своим словом, как на странице Eldamo",
@@ -704,16 +704,16 @@
   "en": "apart, as ordinary arrows"
  },
  "band.0": {
-  "ru": "поздняя концепция и нео",
-  "en": "late conception and neo"
+  "ru": "нео-эльдарин",
+  "en": "Neo-Eldarin"
  },
  "band.1": {
-  "ru": "средняя концепция («Этимологии»)",
-  "en": "middle conception (Etymologies)"
+  "ru": "поздняя концепция",
+  "en": "late conception"
  },
  "band.2": {
-  "ru": "ранняя концепция",
-  "en": "early conception"
+  "ru": "средняя концепция («Этимологии»)",
+  "en": "middle conception (Etymologies)"
  },
  "act.collapseDer": {
   "ru": "Свернуть производные",
@@ -1108,8 +1108,8 @@
   "en": "middle (Etymologies)"
  },
  "conc.2": {
-  "ru": "поздняя и нео",
-  "en": "late and neo"
+  "ru": "поздняя",
+  "en": "late"
  },
  "path.none.apart": {
   "ru": "Концы пути в разных концепциях ({a} и {b}), а переходы между концепциями запрещены.",
@@ -1126,5 +1126,21 @@
  "card.cognates": {
   "ru": "Когнаты ({n})",
   "en": "Cognates ({n})"
+ },
+ "band.3": {
+  "ru": "ранняя концепция",
+  "en": "early conception"
+ },
+ "conc.3": {
+  "ru": "нео-эльдарин",
+  "en": "Neo-Eldarin"
+ },
+ "path.base": {
+  "ru": "основа:",
+  "en": "base:"
+ },
+ "path.base.title": {
+  "ru": "слово Толкина, из которого сделано это нео-слово (язык в скобках у его маркера); форма у него другая",
+  "en": "Tolkien's word this neo word is made from (the language in brackets by its marker); its form differs"
  }
 }

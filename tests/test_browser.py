@@ -337,7 +337,8 @@ class Browser(unittest.TestCase):
         # the graph of origins works offline (d3 embedded): S. Mithrandir with its tree down to the roots
         graph = (ROOT / 'app' / 'graph.html').as_uri()
         page = self.page(graph + '#n-2655041701')
-        page.wait_for_function("document.querySelectorAll('#graph g.node').length >= 8")
+        # the graph is drawn on a canvas: its card and the nodes shown tell what is there
+        page.wait_for_function("document.getElementById('card').textContent.includes('Mithrandir')")
         self.assertIn('Mithrandir', page.inner_text('#card'))
         self.assertIn('index.html#w=2655041701', page.inner_html('#card'))
         page.click('#mode-roots')

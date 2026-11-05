@@ -150,7 +150,7 @@
 
 ## Частичные когнаты
 
-Связей `<cognate>` Eldamo между ветвями, где у обоих слов известны собственные корни, — 3273; из них 386 связывают слова, совпадающие лишь частью состава (другое число частей или часть с другим корнем; варианты и расширения корня — один корень). При реконструкции такая связь идёт после законов («⇋ частичный когнат») и не служит когнатом составляющей. Список — и в `reports/audit.json`.
+Связей `<cognate>` Eldamo между ветвями, где у обоих слов известны собственные корни, — 3273; из них 392 связывают слова, совпадающие лишь частью состава (другое число частей или часть с другим корнем; варианты и расширения корня — один корень). При реконструкции такая связь идёт после законов («⇋ частичный когнат») и не служит когнатом составляющей. Список — и в `reports/audit.json`.
 
 | Quenya / Qenya | корни | Sindarin / Noldorin | корни |
 |---|---|---|---|
@@ -380,14 +380,17 @@
 | eq. [nierwes](https://eldamo.org/content/words/word-2018535101.html) | NEHE | g. [niost](https://eldamo.org/content/words/word-602232561.html) | NEHE + OSO² |
 | eq. [nindon](https://eldamo.org/content/words/word-3882428547.html) | NINI + ƷONO | g. [nind](https://eldamo.org/content/words/word-46176045.html) | NINI |
 | eq. [Noldo](https://eldamo.org/content/words/word-2665511273.html) | ŊOLO | g. [Goldothrim](https://eldamo.org/content/words/word-1184215219.html) | ŊOLO + HOSO |
-| q. [Noldo](https://eldamo.org/content/words/word-840869727.html) | ÑGOL¹/ÑGOLOD/ÑGOL² | s. [Gódhel](https://eldamo.org/content/words/word-365331841.html) | DEL¹ |
+| q. [Noldo](https://eldamo.org/content/words/word-840869727.html) | ÑGOL¹/ÑGOLOD/ÑGOL² | s. [Gódhel](https://eldamo.org/content/words/word-365331841.html) | WĀ/AWA + DEL¹ |
 | eq. [Noldomar](https://eldamo.org/content/words/word-1430415081.html) | ŊOLO + MBARA | g. [Goldobar](https://eldamo.org/content/words/word-427331973.html) | ŊOLO |
 | q. [Norsus](https://eldamo.org/content/words/word-1830754881.html) | ÑGOR + THUS | s. [Gorthaur](https://eldamo.org/content/words/word-16626271.html) | ÑGOR |
 | eq. [Nosse Tuilinda](https://eldamo.org/content/words/word-3588644341.html) | NŌ + TUẎU + LIÐI | g. [Nos Duilin](https://eldamo.org/content/words/word-123443075.html) | NŌ + DUYU + INI |
 | nq. [nostarë](https://eldamo.org/content/words/word-2884003461.html) | NŌ/ONO + ER | ns. [oronnad](https://eldamo.org/content/words/word-1550919009.html) | UR + NŌ/ONO |
 | q. [Návarot](https://eldamo.org/content/words/word-521037545.html) | ROT | s. [Nogrod](https://eldamo.org/content/words/word-3455220253.html) | NUK + ROT |
 | q. [númen](https://eldamo.org/content/words/word-1285367433.html) | NDU + MEN | s. [annûn](https://eldamo.org/content/words/word-1864027637.html) | NDU |
+| mq. [númen](https://eldamo.org/content/words/word-4179017607.html) | NDŪ + MEN | n. [annûn](https://eldamo.org/content/words/word-121731071.html) | NDŪ |
+| mq. [númen](https://eldamo.org/content/words/word-4179017607.html) | NDŪ + MEN | n. [dúven](https://eldamo.org/content/words/word-2427322527.html) | NDŪ |
 | q. [númen](https://eldamo.org/content/words/word-1285367433.html) | NDU + MEN | s. [dûn](https://eldamo.org/content/words/word-4010460053.html) | NDU |
+| mq. [númen](https://eldamo.org/content/words/word-4179017607.html) | NDŪ + MEN | n. [dûn](https://eldamo.org/content/words/word-3365046303.html) | NDŪ |
 | mq. [Oiolosse](https://eldamo.org/content/words/word-3203011053.html) | OY¹ + GOLOS | n. [Amon Uilos](https://eldamo.org/content/words/word-1347868551.html) | AM² + OY¹ + GOLOS |
 | mq. [Oiolosse](https://eldamo.org/content/words/word-3203011053.html) | OY¹ + GOLOS | on. [Uigolosse](https://eldamo.org/content/words/word-3663823667.html) | OY¹ |
 | q. [Oiolossë](https://eldamo.org/content/words/word-2557589703.html) | OY + (G)LOS | s. [Amon Uilos](https://eldamo.org/content/words/word-1502997501.html) | AM²/MBON + OY + (G)LOS |
@@ -514,6 +517,8 @@
 | eq. [Vala](https://eldamo.org/content/words/word-3104279967.html) | WALA | g. [Ban¹](https://eldamo.org/content/words/word-1158175361.html) | VANA |
 | mq. [Valakirka](https://eldamo.org/content/words/word-1383345177.html) | BAL + KIRIK | n. [Cerch iMbelain](https://eldamo.org/content/words/word-3350307483.html) | KIRIK + I¹ + BAL |
 | q. [Valanya](https://eldamo.org/content/words/word-84450489.html) | BAL | s. [Orbelain](https://eldamo.org/content/words/word-3884665251.html) | UR + BAL |
+| mq. [Valinor](https://eldamo.org/content/words/word-2643047643.html) | BAL + NDOR/NŌ/ONO | on. [Balandor](https://eldamo.org/content/words/word-2982359283.html) | BAL |
+| mq. [Valinor](https://eldamo.org/content/words/word-2643047643.html) | BAL + NDOR/NŌ/ONO | n. [Balannor](https://eldamo.org/content/words/word-2577340481.html) | BAL |
 | eq. [Valinor](https://eldamo.org/content/words/word-2425770369.html) | WALA + NŌ | g. [Gwalien](https://eldamo.org/content/words/word-3079100023.html) | WALA |
 | q. [Valinórë](https://eldamo.org/content/words/word-1314183409.html) | BAL + NDOR/NŌ/ONO/DOR | s. [Dor-Rodyn](https://eldamo.org/content/words/word-1761423637.html) | NDOR/DOR + ARAT/RĀ/ARA/RAT² |
 | eq. [Varastirion](https://eldamo.org/content/words/word-533915689.html) | VṚÐṚ + TIÐI | g. [Gwarestrin](https://eldamo.org/content/words/word-235955515.html) | WARA + EKE + TIRI |
@@ -537,6 +542,7 @@
 | q. [Yavannildi](https://eldamo.org/content/words/word-3467128665.html) | YAB + NA/ANA/HAN/AMA + N(D)IL | s. [Ivonwin](https://eldamo.org/content/words/word-2973818817.html) | YAB + WEN(ED) |
 | q. [Yavannië](https://eldamo.org/content/words/word-655244079.html) | YAB + NA/ANA/HAN/AMA | s. [Ivanneth](https://eldamo.org/content/words/word-1013902241.html) | YAB |
 | mq. [yelme¹](https://eldamo.org/content/words/word-3425665737.html) | DYEL | n. [deloth](https://eldamo.org/content/words/word-3052169735.html) | DYEL + GOS |
+| mq. [Yénie Valinóren](https://eldamo.org/content/words/word-344305909.html) | YEN¹ + BAL + NDOR/NŌ/ONO | n. [Inias Valannor](https://eldamo.org/content/words/word-2015000957.html) | YEN¹ + BAL |
 | eq. [Úrion](https://eldamo.org/content/words/word-333505487.html) | ƷUÐU | g. [Auros](https://eldamo.org/content/words/word-2877358213.html) | URU |
 | q. [úsahtië](https://eldamo.org/content/words/word-897821827.html) | UG/Ū + SAK/THAG | s. [úthaes](https://eldamo.org/content/words/word-1889777045.html) | THAG |
 | mq. [úvanimo](https://eldamo.org/content/words/word-1322838637.html) | GŪ/UMU + BAN | n. [úan](https://eldamo.org/content/words/word-724907889.html) | BAN |

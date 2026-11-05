@@ -59,7 +59,7 @@
    },
    "lexicon": {
     "entries": 18421,
-    "roots": 13842,
+    "roots": 13843,
     "derivations": 2892,
     "stages": 2772,
     "parents": 2216,
@@ -5057,7 +5057,7 @@
    },
    "lexicon": {
     "entries": 14706,
-    "roots": 10567,
+    "roots": 10568,
     "derivations": 2083,
     "stages": 1939,
     "elements": 4649,
@@ -13921,7 +13921,7 @@
      "s",
      "Gódhel",
      "365331841",
-     "DEL¹"
+     "WĀ/AWA + DEL¹"
     ]
    },
    {
@@ -14010,6 +14010,34 @@
    },
    {
     "quenya": [
+     "mq",
+     "númen",
+     "4179017607",
+     "NDŪ + MEN"
+    ],
+    "sindarin": [
+     "n",
+     "annûn",
+     "121731071",
+     "NDŪ"
+    ]
+   },
+   {
+    "quenya": [
+     "mq",
+     "númen",
+     "4179017607",
+     "NDŪ + MEN"
+    ],
+    "sindarin": [
+     "n",
+     "dúven",
+     "2427322527",
+     "NDŪ"
+    ]
+   },
+   {
+    "quenya": [
      "q",
      "númen",
      "1285367433",
@@ -14020,6 +14048,20 @@
      "dûn",
      "4010460053",
      "NDU"
+    ]
+   },
+   {
+    "quenya": [
+     "mq",
+     "númen",
+     "4179017607",
+     "NDŪ + MEN"
+    ],
+    "sindarin": [
+     "n",
+     "dûn",
+     "3365046303",
+     "NDŪ"
     ]
    },
    {
@@ -15788,6 +15830,34 @@
    },
    {
     "quenya": [
+     "mq",
+     "Valinor",
+     "2643047643",
+     "BAL + NDOR/NŌ/ONO"
+    ],
+    "sindarin": [
+     "on",
+     "Balandor",
+     "2982359283",
+     "BAL"
+    ]
+   },
+   {
+    "quenya": [
+     "mq",
+     "Valinor",
+     "2643047643",
+     "BAL + NDOR/NŌ/ONO"
+    ],
+    "sindarin": [
+     "n",
+     "Balannor",
+     "2577340481",
+     "BAL"
+    ]
+   },
+   {
+    "quenya": [
      "eq",
      "Valinor",
      "2425770369",
@@ -16106,6 +16176,20 @@
      "deloth",
      "3052169735",
      "DYEL + GOS"
+    ]
+   },
+   {
+    "quenya": [
+     "mq",
+     "Yénie Valinóren",
+     "344305909",
+     "YEN¹ + BAL + NDOR/NŌ/ONO"
+    ],
+    "sindarin": [
+     "n",
+     "Inias Valannor",
+     "2015000957",
+     "YEN¹ + BAL"
     ]
    },
    {

@@ -90,6 +90,8 @@ def build(branches: dict) -> dict:
                 n['u'] = 1
             if e.get('alt_lang'):
                 n['al'] = e['alt_lang']
+            if e.get('alt_source'):
+                n['as'] = [e['alt_source'].get('id') or '', e['alt_source']['form']]   # its base: ᴱQ. aiko for ᴺQ.[ᴱQ.] aico
             # x: 'd' a deprecated word (Eldamo suggests another instead), 'm' a form of another
             # conception merged into a word (shown under it on Eldamo's page)
             links = e.get('links') or {}

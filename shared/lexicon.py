@@ -196,32 +196,37 @@ def _is_root(w) -> bool:
     return w.get('l') in ('p', 'mp', 'ep', 'np') and bool(letters) and letters.isupper()
 
 
-def alt_lang(w) -> str | None:
-    """Eldamo's c:alt-lang (common.xq), the language its indexes print in brackets after a word's
-    own (ᴺQ. [ᴱQ.] ulumpë): for a neo word marked ^, that of the nested word merged into it by
-    <combine>; for a word without references of its own (not marked !, not phonetics, grammar or
-    text), that of its first nested word with references in another language. A root (root-
-    index.xq): without references, the language of its first nested word (N√LUP [√]). From
-    neo-roots (neo_roots.py: alt_lang, root_alt_lang)."""
+def alt_word(w):
+    """Eldamo's c:alt-lang (common.xq): the word whose language its indexes print in brackets after
+    a word's own (ᴺQ. [ᴱQ.] ulumpë), Tolkien's form a neo word is made from: for a neo word marked ^,
+    the nested word merged into it by <combine>; for a word without references of its own (not
+    marked !, not phonetics, grammar or text), its first nested word with references in another
+    language. A root (root-index.xq): without references, its first nested word (N√LUP [√]). From
+    neo-roots (neo_roots.py: alt_word, root_alt_lang)."""
     lang, mark = w.get('l'), w.get('mark')
     if w.get('speech') == 'root':
         if w.find('ref') is not None:
             return None
         first = next((c for c in w if c.tag == 'word'), None)
-        al = first.get('l') if first is not None else None
-        return al if al and al != lang else None
+        return first if first is not None and first.get('l') and first.get('l') != lang else None
     if mark == '^':
         for x in w.iter('word'):
             c = x.find('combine') if x is not w else None
             if c is not None and c.get('l') == lang and c.get('v') == w.get('v'):
-                return x.get('l')
+                return x
     sp = w.get('speech') or ''
     if mark != '!' and w.find('ref') is None and not (sp.startswith('phon') or sp in ('grammar', 'text')):
         for p in w.iter():
             first = next((c for c in p if c.tag == 'word' and c.find('ref') is not None), None)
             if first is not None and first.get('l') and first.get('l') != lang:
-                return first.get('l')
+                return first
     return None
+
+
+def alt_lang(w) -> str | None:
+    """The language in brackets (alt_word)."""
+    x = alt_word(w)
+    return x.get('l') if x is not None else None
 
 
 def _live_in(el, w) -> bool:
@@ -313,6 +318,16 @@ def _names_itself(ref, w) -> bool:
     return False
 
 
+def _ref_key(form: str | None) -> str:
+    """A form as neo-roots compares a reference's with the word's (neo_roots.py: _loose): without
+    diacritics, marks, brackets, hyphens and spaces, k as c: aw(a)delo = awa-delo, tankatā- =
+    tañkātā̆, balīndore = balī́-ndō̆re."""
+    import unicodedata
+    s = unicodedata.normalize('NFD', (form or '').lower())
+    s = ''.join(ch for ch in s if not unicodedata.combining(ch))
+    return re.sub(r'[¹²³⁴⁵⁶⁷⁸⁹⁰√✶*!^#†()\-\s]', '', s).replace('k', 'c')
+
+
 def _ref_elements(w) -> list:
     """Elements Eldamo records only inside a <ref> (the word page has none of its own): from the
     refs with the word's own form, else from all; of those, the one with the most elements (the
@@ -321,7 +336,7 @@ def _ref_elements(w) -> list:
     refs = [r for r in w.findall('ref') if _live_in(r, w) and r.findall('element') and not _names_itself(r, w)]
     if not refs:
         return []
-    own = [r for r in refs if _loose(r.get('v')) == _loose(w.get('v'))]
+    own = [r for r in refs if _ref_key(r.get('v')) == _ref_key(w.get('v'))]
     pool = own or refs
     most = max(len(r.findall('element')) for r in pool)
     return [e for e in next(r for r in pool if len(r.findall('element')) == most).findall('element') if _live_in(e, w)]
@@ -352,9 +367,12 @@ def build_lexicon(branch: str, derivations: list) -> list:
         }
         if lang in NEO or '!' in entry['mark']:
             entry['neo'] = True
-        al = alt_lang(w)
-        if al:
-            entry['alt_lang'] = al
+        aw = alt_word(w)
+        if aw is not None:
+            entry['alt_lang'] = aw.get('l')
+            if w.get('speech') != 'root':
+                # Tolkien's word a neo word is made from (ᴱQ. aiko for ᴺQ.[ᴱQ.] aico; neo-roots: alt_source)
+                entry['alt_source'] = {'form': aw.get('v'), 'id': aw.get('page-id')}
         if parent is not None and parent.tag == 'word' and parent.get('page-id'):
             entry['under'] = parent.get('page-id')   # nested page: an earlier or later version
         cls = [c.get('form') for c in w.findall('class') if c.get('form', '').endswith(('verb', 'formative', 'causative', 'stem'))]
